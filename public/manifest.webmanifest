@@ -1,7 +1,7 @@
 {
   "name": "DataVizLab — Do dado à forma certa",
   "short_name": "DataVizLab",
-  "description": "Atlas, recomendador e estúdio local de visualização de dados.",
+  "description": "Catálogo, recomendador e estúdio local de visualização de dados.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0b1020",

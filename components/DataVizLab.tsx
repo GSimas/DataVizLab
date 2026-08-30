@@ -164,6 +164,8 @@ export default function DataVizLab() {
   const [intent, setIntent] = useState<Intent>("comparison");
   const [pasteOpen, setPasteOpen] = useState(false);
   const [pasteValue, setPasteValue] = useState("");
+  const [columnModalOpen, setColumnModalOpen] = useState(false);
+  const [columnInputName, setColumnInputName] = useState("");
   const [toast, setToast] = useState("");
   const [dataName, setDataName] = useState("energia-comunitaria.csv");
   const [mobileNav, setMobileNav] = useState(false);
@@ -223,7 +225,7 @@ export default function DataVizLab() {
   }, [toast]);
 
   useEffect(() => {
-    const close = (event: KeyboardEvent) => { if (event.key === "Escape") { setDetail(null); setPasteOpen(false); } };
+    const close = (event: KeyboardEvent) => { if (event.key === "Escape") { setDetail(null); setPasteOpen(false); setColumnModalOpen(false); } };
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
   }, []);
@@ -314,6 +316,28 @@ export default function DataVizLab() {
   const updateCell = (rowIndex: number, column: string, value: string) => setRows((current) => current.map((row, index) => index === rowIndex ? { ...row, [column]: columnKinds[column] === "numeric" && value !== "" && Number.isFinite(Number(value.replace(",", "."))) ? Number(value.replace(",", ".")) : value } : row));
   const removeRow = (rowIndex: number) => setRows((current) => current.filter((_, index) => index !== rowIndex));
   const addRow = () => setRows((current) => [...current, Object.fromEntries(columns.map((column) => [column, ""]))]);
+  const openAddColumnModal = () => {
+    setColumnInputName(`${locale === "pt" ? "Coluna" : "Column"}_${columns.length + 1}`);
+    setColumnModalOpen(true);
+  };
+  const submitAddColumn = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const defaultName = `${locale === "pt" ? "Coluna" : "Column"}_${columns.length + 1}`;
+    let colName = columnInputName.trim() || defaultName;
+    if (columns.includes(colName)) {
+      let counter = 2;
+      while (columns.includes(`${colName}_${counter}`)) counter++;
+      colName = `${colName}_${counter}`;
+    }
+    setRows((current) => {
+      if (current.length === 0) {
+        return [{ [colName]: "" }];
+      }
+      return current.map((row) => ({ ...row, [colName]: "" }));
+    });
+    setColumnModalOpen(false);
+    setColumnInputName("");
+  };
 
   const pickChart = (entry: VizEntry, scroll = true) => {
     setConfig((current) => ({ ...current, chartId: entry.id, title: entry.name[locale] }));
@@ -351,7 +375,10 @@ export default function DataVizLab() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="DataVizLab home">
           <span className="brand-mark"><span /><span /><span /></span>
-          <span>DataViz<span>Lab</span></span>
+          <span className="brand-text">
+            <span className="brand-title">DataViz<span>Lab</span></span>
+            <span className="brand-subtitle">{tr("scientataApp")}</span>
+          </span>
         </a>
         <nav className={mobileNav ? "main-nav is-open" : "main-nav"} aria-label="Primary">
           {navItems.map(([href, key]) => <a key={href} href={`#${href}`} onClick={() => setMobileNav(false)}>{tr(key)}</a>)}
@@ -359,6 +386,7 @@ export default function DataVizLab() {
         <div className="header-actions">
           <button className="icon-button language-button" type="button" onClick={() => setLocale((value) => value === "pt" ? "en" : "pt")} aria-label={tr("language")} title={tr("language")}><Languages size={17} /><span>{locale.toUpperCase()}</span></button>
           <button className="icon-button" type="button" onClick={() => setDark((value) => !value)} aria-label={dark ? tr("themeLight") : tr("themeDark")} title={dark ? tr("themeLight") : tr("themeDark")}>{dark ? <Sun size={18} /> : <Moon size={18} />}</button>
+          <a className="icon-button spark-button" href="https://scientata.com" target="_blank" rel="noreferrer" aria-label="Scientata" title="Scientata"><Sparkles size={17} /><span>Scientata</span></a>
           <button className="mobile-menu" type="button" onClick={() => setMobileNav((value) => !value)} aria-expanded={mobileNav} aria-label="Menu"><Grid3X3 size={19} /></button>
         </div>
       </header>
@@ -494,7 +522,7 @@ export default function DataVizLab() {
           </div>
 
           <div className="table-panel">
-            <div className="table-header"><div><Table2 size={19} /><span><strong>{tr("tableEditor")}</strong><small>{tr("tableHint")}</small></span></div><div><button onClick={addRow}><Plus size={15} />{tr("addRow")}</button><button className="danger" onClick={() => { setRows([]); localStorage.removeItem("datavizlab-project"); }}><Trash2 size={15} />{tr("clear")}</button></div></div>
+            <div className="table-header"><div><Table2 size={19} /><span><strong>{tr("tableEditor")}</strong><small>{tr("tableHint")}</small></span></div><div><button onClick={addRow}><Plus size={15} />{tr("addRow")}</button><button onClick={openAddColumnModal}><Plus size={15} />{tr("addColumn")}</button><button className="danger" onClick={() => { setRows([]); localStorage.removeItem("datavizlab-project"); }}><Trash2 size={15} />{tr("clear")}</button></div></div>
             <div className="data-table-wrap">
               <table className="data-table"><thead><tr><th>#</th>{columns.map((column) => <th key={column}><span>{column}</span><small>{tr(columnKinds[column])}</small></th>)}<th /></tr></thead><tbody>{rows.slice(0, 120).map((row, rowIndex) => <tr key={rowIndex}><td>{rowIndex + 1}</td>{columns.map((column) => <td key={column}><input aria-label={`${column}, row ${rowIndex + 1}`} value={String(row[column] ?? "")} onChange={(event) => updateCell(rowIndex, column, event.target.value)} /></td>)}<td><button onClick={() => removeRow(rowIndex)} aria-label={`Remove row ${rowIndex + 1}`}><X size={14} /></button></td></tr>)}</tbody></table>
               {rows.length > 120 && <div className="table-limit">+ {rows.length - 120} {tr("rows")} · {locale === "pt" ? "prévia limitada para manter a edição fluida" : "preview limited to keep editing responsive"}</div>}
@@ -514,9 +542,9 @@ export default function DataVizLab() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-brand"><a className="brand" href="#top"><span className="brand-mark"><span /><span /><span /></span><span>DataViz<span>Lab</span></span></a><p>{tr("footerText")}</p></div>
+        <div className="footer-brand"><a className="brand" href="#top"><span className="brand-mark"><span /><span /><span /></span><span className="brand-text"><span className="brand-title">DataViz<span>Lab</span></span><span className="brand-subtitle">{tr("scientataApp")}</span></span></a><p>{tr("footerText")}</p></div>
         <div className="footer-links">{navItems.map(([href, key]) => <a key={href} href={`#${href}`}>{tr(key)}</a>)}</div>
-        <div className="footer-credit"><span>{tr("developed")} <a href="https://gustavosimas.com/" target="_blank" rel="noreferrer">Gustavo Simas</a></span><small>© {new Date().getFullYear()} · DataVizLab</small></div>
+        <div className="footer-credit"><span><a href="https://scientata.com" target="_blank" rel="noreferrer">{tr("scientataApp")}</a></span><small>© {new Date().getFullYear()} · DataVizLab</small></div>
       </footer>
 
       <a className="coffee-button" href="https://link.mercadopago.com.br/strangerhits" target="_blank" rel="noreferrer" aria-label={tr("coffee")}><span><Coffee size={22} /></span><b>{tr("coffee")}</b><i /></a>
@@ -524,6 +552,8 @@ export default function DataVizLab() {
       {detail && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setDetail(null); }}><section className="detail-modal" role="dialog" aria-modal="true" aria-labelledby="detail-title"><button className="modal-close" onClick={() => setDetail(null)} aria-label={tr("close")}><X size={19} /></button><div className="detail-top" style={{ "--family": familyColors[detail.family] } as React.CSSProperties}><div><span><i />{familyLabels[detail.family][locale]}</span><h2 id="detail-title">{detail.name[locale]}</h2><p>{detail.aliases.join(" · ")}</p></div><div className="detail-viz"><MiniViz entry={detail} index={catalog.indexOf(detail)} /></div></div><div className="detail-body"><p className="detail-definition">{detail.what[locale]}</p><div className="detail-grid"><article><Check size={18} /><div><h3>{tr("when")}</h3><p>{detail.when[locale]}</p></div></article><article className="warning"><CircleAlert size={18} /><div><h3>{tr("avoid")}</h3><p>{detail.avoid[locale]}</p></div></article><article><Table2 size={18} /><div><h3>{tr("fields")}</h3><code>{detail.fields[locale]}</code></div></article><article><BarChart3 size={18} /><div><h3>{locale === "pt" ? "Família e nível" : "Family & level"}</h3><p>{familyLabels[detail.family][locale]} · {detail.complexity}</p></div></article></div><div className="detail-actions"><button className="button primary" onClick={() => pickChart(detail)}>{tr("useInStudio")}<ArrowDownRight size={18} /></button><button className="button ghost" onClick={() => setDetail(null)}>{tr("close")}</button></div></div></section></div>}
 
       {pasteOpen && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setPasteOpen(false); }}><section className="paste-modal" role="dialog" aria-modal="true" aria-labelledby="paste-title"><button className="modal-close" onClick={() => setPasteOpen(false)} aria-label={tr("close")}><X size={19} /></button><div><p className="eyebrow"><Clipboard size={14} />DataVizLab / Paste</p><h2 id="paste-title">{tr("pasteTitle")}</h2><p>{tr("pasteHelp")}</p></div><textarea autoFocus value={pasteValue} onChange={(event) => setPasteValue(event.target.value)} placeholder={'Categoria,Valor\nA,32\nB,48'} /><div className="detail-actions"><button className="button primary" onClick={importPaste}>{tr("importData")}<ArrowDownRight size={18} /></button><button className="button ghost" onClick={() => setPasteOpen(false)}>{tr("cancel")}</button></div></section></div>}
+
+      {columnModalOpen && <div className="modal-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) setColumnModalOpen(false); }}><section className="paste-modal column-modal" role="dialog" aria-modal="true" aria-labelledby="column-modal-title"><button className="modal-close" onClick={() => setColumnModalOpen(false)} aria-label={tr("close")}><X size={19} /></button><form onSubmit={submitAddColumn}><div><p className="eyebrow"><Table2 size={14} />DataVizLab / Table</p><h2 id="column-modal-title">{tr("addColumnTitle")}</h2><p>{tr("addColumnDesc")}</p></div><label className="field-label" style={{ marginTop: 18 }}>{tr("newColumnPrompt")}<input autoFocus value={columnInputName} onChange={(event) => setColumnInputName(event.target.value)} placeholder={tr("columnNamePlaceholder")} className="column-modal-input" /></label><div className="detail-actions" style={{ marginTop: 22 }}><button type="submit" className="button primary">{tr("addColumn")}<ArrowDownRight size={18} /></button><button type="button" className="button ghost" onClick={() => setColumnModalOpen(false)}>{tr("cancel")}</button></div></form></section></div>}
 
       {toast && <div className="toast" role="status"><Check size={16} />{toast}</div>}
     </div>

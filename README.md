@@ -1,6 +1,6 @@
 # DataVizLab
 
-Atlas bilíngue, recomendador determinístico e estúdio local de visualização de dados. A aplicação ajuda a explorar métodos, escolher uma forma adequada para uma pergunta e gerar visualizações a partir de CSV, TSV, XLS, XLSX ou uma tabela editável — sem enviar os dados brutos para servidores.
+Catálogo bilíngue, recomendador determinístico e estúdio local de visualização de dados. A aplicação ajuda a explorar métodos, escolher uma forma adequada para uma pergunta e gerar visualizações a partir de CSV, TSV, XLS, XLSX ou uma tabela editável — sem enviar os dados brutos para servidores.
 
 ## Funcionalidades
 
@@ -92,6 +92,6 @@ O atlas documenta técnicas mais amplas do que as opções rápidas do seletor. 
 
 ## Créditos
 
-Desenvolvido por [Gustavo Simas](https://gustavosimas.com/).
+Uma aplicação [Scientata](https://scientata.com/).
 
 Referências conceituais: Data Viz Project, The Data Visualisation Catalogue e From Data to Viz. Os textos, exemplos, interface e sistema visual do DataVizLab são originais.
