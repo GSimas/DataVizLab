@@ -71,17 +71,18 @@ export const familyLabels: Record<VizFamily, Bilingual> = {
   text: bi("Texto e conceitos", "Text & concepts"),
 };
 
+/** Family swatches resolve to theme tokens defined in globals.css. */
 export const familyColors: Record<VizFamily, string> = {
-  comparison: "#356bff",
-  distribution: "#e85d3f",
-  relationship: "#9c68ff",
-  time: "#00a88f",
-  composition: "#e6a524",
-  hierarchy: "#cf4f83",
-  flow: "#3e8fc5",
-  geo: "#4f9b4c",
-  finance: "#ec7f31",
-  text: "#71788b",
+  comparison: "var(--fam-comparison)",
+  distribution: "var(--fam-distribution)",
+  relationship: "var(--fam-relationship)",
+  time: "var(--fam-time)",
+  composition: "var(--fam-composition)",
+  hierarchy: "var(--fam-hierarchy)",
+  flow: "var(--fam-flow)",
+  geo: "var(--fam-geo)",
+  finance: "var(--fam-finance)",
+  text: "var(--fam-text)",
 };
 
 export const catalog: VizEntry[] = [

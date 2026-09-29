@@ -4,7 +4,7 @@
   "description": "Catálogo, recomendador e estúdio local de visualização de dados.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#0b1020",
+  "background_color": "#07110f",
+  "theme_color": "#07110f",
   "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
 }

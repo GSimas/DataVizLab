@@ -45,7 +45,9 @@ export default defineConfig(async () => {
 
   return {
     server: {
-      host: "0.0.0.0",
+      // `true` listens on every interface, IPv6 included, so `localhost` also
+      // works on Windows, where it usually resolves to ::1 first.
+      host: true,
       allowedHosts: ["terminal.local"],
       ...(isCodexSeatbeltSandbox
         ? { watch: { useFsEvents: false, usePolling: true } }

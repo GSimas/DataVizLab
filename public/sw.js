@@ -1,4 +1,4 @@
-const CACHE_NAME = "datavizlab-v1";
+const CACHE_NAME = "datavizlab-v2";
 const CORE = ["/", "/favicon.svg", "/manifest.webmanifest", "/sample-energy.csv", "/og.png"];
 
 self.addEventListener("install", (event) => {

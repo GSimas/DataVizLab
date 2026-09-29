@@ -1,5 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import "@fontsource-variable/manrope";
+import "@fontsource/instrument-serif/400.css";
+import "@fontsource/instrument-serif/400-italic.css";
+import "@fontsource/dm-mono/400.css";
+import "@fontsource/dm-mono/500.css";
 import "./globals.css";
+import { prefsBootstrap } from "../lib/prefs";
+
+export const viewport: Viewport = { themeColor: "#07110f", colorScheme: "dark light" };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://datavizlab.site"),
@@ -42,7 +50,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" data-theme="dark" data-contrast="normal" data-motion="full" data-font="md" suppressHydrationWarning>
+      <head>
+        {/* Applies saved theme, contrast, motion and text size before first paint. */}
+        <script dangerouslySetInnerHTML={{ __html: prefsBootstrap }} />
+      </head>
       <body className="antialiased">
         {children}
         <script
