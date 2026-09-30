@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 138.5L704 138.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-timeline-cls-1287"></path>
+<path d="M16 261.5L704 261.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-timeline-cls-1287"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-timeline-cls-1287"></path>
+<path d="M16 261.5L704 261.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-timeline-cls-1287"></path>
+<path d="M16.5 16L16.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M23.5 16L23.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M89.5 16L89.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M150.5 16L150.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M216.5 16L216.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M279.5 16L279.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M345.5 16L345.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M408.5 16L408.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M474.5 16L474.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M540.5 16L540.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M603.5 16L603.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M669.5 16L669.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M704.5 16L704.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" stroke-dasharray="4,2" class="t-timeline-cls-1287"></path>
+<path d="M16.5 16L16.5 384" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-timeline-cls-1287"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,52.8571,77.3333)" fill="#478809" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-timeline-cls-1288"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,97.3399,77.3333)" fill="#478809" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-timeline-cls-1288"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,165.1232,77.3333)" fill="#478809" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-timeline-cls-1288"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,186.3054,200)" fill="#6d47b8" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-timeline-cls-1289"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,328.2266,200)" fill="#6d47b8" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-timeline-cls-1289"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,379.064,200)" fill="#6d47b8" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-timeline-cls-1289"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,432.0197,200)" fill="#6d47b8" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-timeline-cls-1289"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,476.5025,200)" fill="#6d47b8" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-timeline-cls-1289"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,527.3399,322.6667)" fill="#be7100" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="2" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-timeline-cls-1290"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,571.8227,322.6667)" fill="#be7100" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="2" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-timeline-cls-1290"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,603.5961,322.6667)" fill="#be7100" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-timeline-cls-1290"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(7.5,0,0,7.5,667.1429,322.6667)" fill="#be7100" fill-opacity="0.8" stroke="#f7f5ee" stroke-width="0.26666666666666666" stroke-opacity="0.8" ecmeta_series_index="2" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-timeline-cls-1290"></path>
+<style ><![CDATA[
+.t-timeline-cls-1287:hover {
+pointer-events:none;
+}
+.t-timeline-cls-1288:hover {
+cursor:pointer;
+fill:rgba(78,149,9,1);
+}
+.t-timeline-cls-1289:hover {
+cursor:pointer;
+fill:rgba(119,78,202,1);
+}
+.t-timeline-cls-1290:hover {
+cursor:pointer;
+fill:rgba(209,124,0,1);
+}
+
+]]>
+
+</style>
+</svg>

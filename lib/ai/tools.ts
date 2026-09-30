@@ -1,8 +1,8 @@
 import type { ChartConfig, DataRow } from "../../components/ChartRenderer";
 import type { Route } from "../../components/app";
 import { catalog, familyLabels, getEntry, type Locale } from "../catalog";
-import { classifyColumn, columnsOf, type ColumnKind } from "../data";
-import { DEFAULT_EXPORT_SIZE, runExport, type ExportFormat } from "../export";
+import { COLUMN_TYPES, coerceCell, columnsOf, defaultCurrency, kindOfSpec, renameColumnSpec, resolveSpecs, withoutColumn, type CellValue, type ColumnKind, type ColumnSpec, type ColumnType } from "../columns";
+import type { ExportFormat } from "../export";
 import type { Prefs } from "../prefs";
 import { activeViz, createProject, makeViz, uid, type Project } from "../projects";
 import type { ToolDef } from "./providers";
@@ -75,13 +75,16 @@ const toNumber = (value: unknown) => {
   return String(value ?? "").trim() !== "" && Number.isFinite(parsed) ? parsed : null;
 };
 
-const cellValue = (kind: ColumnKind | undefined, value: unknown): string | number | boolean | null => {
+/** Brings a value from the assistant to the canonical form of its column; anything that does not fit the type is refused. */
+const cellValue = (spec: ColumnSpec | undefined, value: unknown, locale: Locale, column: string): CellValue => {
   if (value === null || value === undefined) return "";
-  if (typeof value === "number" || typeof value === "boolean") return value;
-  const text = String(value);
-  if (kind === "numeric") { const n = toNumber(text); if (n !== null) return n; }
-  return text;
+  if (!spec) return typeof value === "number" || typeof value === "boolean" ? value : String(value);
+  const result = coerceCell(spec, value, locale);
+  if (!result.valid) throw new ToolError(`Value ${JSON.stringify(value)} is not valid for column "${column}" (type: ${spec.type}${spec.type === "date" ? ", use YYYY-MM-DD" : spec.type === "time" ? ", use HH:MM" : ""}).`);
+  return result.value;
 };
+
+const specsOf = (project: Project, locale: Locale) => resolveSpecs(project.columnTypes, project.rows, locale);
 
 const quantile = (sorted: number[], q: number) => {
   if (!sorted.length) return null;
@@ -92,33 +95,34 @@ const quantile = (sorted: number[], q: number) => {
 };
 const round = (value: number | null) => (value === null ? null : Math.round(value * 1000) / 1000);
 
-function columnProfile(rows: DataRow[], column: string) {
-  const kind = classifyColumn(rows, column);
+function columnProfile(rows: DataRow[], column: string, spec: ColumnSpec) {
+  const kind: ColumnKind = kindOfSpec(spec);
   const values = rows.map((row) => row[column]);
   const missing = values.filter((value) => value === null || value === "").length;
   if (kind === "numeric") {
     const numbers = values.map(toNumber).filter((value): value is number => value !== null).sort((a, b) => a - b);
     const mean = numbers.reduce((sum, value) => sum + value, 0) / (numbers.length || 1);
     const std = Math.sqrt(numbers.reduce((sum, value) => sum + (value - mean) ** 2, 0) / Math.max(1, numbers.length - 1));
-    return { column, type: kind, count: numbers.length, missing, min: numbers[0] ?? null, q1: round(quantile(numbers, 0.25)), median: round(quantile(numbers, 0.5)), q3: round(quantile(numbers, 0.75)), max: numbers[numbers.length - 1] ?? null, mean: round(mean), std: round(std), sum: round(numbers.reduce((sum, value) => sum + value, 0)) };
+    return { column, type: spec.type, count: numbers.length, missing, min: numbers[0] ?? null, q1: round(quantile(numbers, 0.25)), median: round(quantile(numbers, 0.5)), q3: round(quantile(numbers, 0.75)), max: numbers[numbers.length - 1] ?? null, mean: round(mean), std: round(std), sum: round(numbers.reduce((sum, value) => sum + value, 0)) };
   }
   const counts = new Map<string, number>();
   values.forEach((value) => { if (value !== null && value !== "") counts.set(String(value), (counts.get(String(value)) ?? 0) + 1); });
   const top = [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12).map(([value, count]) => ({ value, count }));
   const sortedKeys = [...counts.keys()].sort();
-  return { column, type: kind, count: rows.length - missing, missing, unique: counts.size, top, ...(kind === "temporal" ? { first: sortedKeys[0], last: sortedKeys[sortedKeys.length - 1] } : {}) };
+  return { column, type: spec.type, count: rows.length - missing, missing, unique: counts.size, top, ...(kind === "temporal" ? { first: sortedKeys[0], last: sortedKeys[sortedKeys.length - 1] } : {}) };
 }
 
 /** Structure of a project as the assistant sees it at the "schema" level. */
-export function describeProject(project: Project, withStats: boolean) {
+export function describeProject(project: Project, withStats: boolean, locale: Locale = "pt") {
   const columns = columnsOf(project.rows);
+  const specs = specsOf(project, locale);
   return {
     id: project.id,
     name: project.name,
     description: project.description,
     dataName: project.dataName,
     rowCount: project.rows.length,
-    columns: withStats ? columns.map((column) => columnProfile(project.rows, column)) : columns.map((column) => ({ column, type: classifyColumn(project.rows, column) })),
+    columns: withStats ? columns.map((column) => columnProfile(project.rows, column, specs[column])) : columns.map((column) => ({ column, type: specs[column].type })),
     visualizations: project.visualizations.map((viz) => ({ id: viz.id, title: viz.title, chart_type: viz.chartId, x_field: viz.xField, y_field: viz.yField, series_field: viz.seriesField, size_field: viz.sizeField, subtitle: viz.subtitle, show_labels: viz.showLabels, accessible_patterns: viz.patterns, active: viz.id === project.activeVizId })),
   };
 }
@@ -182,7 +186,7 @@ export const TOOLS: ToolSpec[] = [
     description: "Project structure: columns with types and per-column statistics (count, missing, min/quartiles/max, mean, std for numbers; unique values and most frequent values for text), plus every visualization and its settings. Requires sharing level 'schema' or 'full'.",
     parameters: { type: "object", properties: projectIdProp, additionalProperties: false },
     summarize: (input, ctx) => L(ctx, `Leu a estrutura e as estatísticas de “${projectName(ctx, input)}”`, `Read structure and statistics of “${projectName(ctx, input)}”`),
-    run: (input, ctx) => { requireSharing(ctx, "schema"); return { content: json(describeProject(findProject(ctx, input), true)) }; },
+    run: (input, ctx) => { requireSharing(ctx, "schema"); return { content: json(describeProject(findProject(ctx, input), true, ctx.locale)) }; },
   },
   {
     name: "get_rows", kind: "read",
@@ -261,11 +265,13 @@ export const TOOLS: ToolSpec[] = [
   },
   {
     name: "create_project", kind: "action",
-    description: "Create a project (optionally with the community-energy sample data) and open it in the studio.",
-    parameters: { type: "object", additionalProperties: false, required: ["name"], properties: { name: { type: "string" }, description: { type: "string" }, with_sample_data: { type: "boolean" } } },
+    description: "Create a project and open it in the studio. With with_sample_data it starts with a fictional sample whose data suits chart_type (default: grouped-bar, community energy); every catalog chart has its own sample.",
+    parameters: { type: "object", additionalProperties: false, required: ["name"], properties: { name: { type: "string" }, description: { type: "string" }, with_sample_data: { type: "boolean" }, chart_type: { type: "string", description: "Catalog chart id the sample data should suit, e.g. scatter, sankey, candlestick." } } },
     summarize: (input, ctx) => L(ctx, `Criar o projeto “${str(input.name)}”${input.with_sample_data ? " com dados de exemplo" : ""}`, `Create project “${str(input.name)}”${input.with_sample_data ? " with sample data" : ""}`),
     run: (input, ctx) => {
-      const project = createProject({ name: str(input.name), description: str(input.description), locale: ctx.locale, withSample: Boolean(input.with_sample_data) });
+      const chartId = str(input.chart_type);
+      if (chartId && !catalog.some((entry) => entry.id === chartId)) throw new ToolError(`Unknown chart_type "${chartId}". Valid ids: ${catalog.map((entry) => entry.id).join(", ")}`);
+      const project = createProject({ name: str(input.name), description: str(input.description), locale: ctx.locale, withSample: Boolean(input.with_sample_data), chartId: chartId || undefined });
       ctx.addProject(project);
       ctx.navigate({ view: "studio", id: project.id });
       return { content: json({ ok: true, project_id: project.id, visualization_id: project.activeVizId }), undo: () => ctx.deleteProject(project.id) };
@@ -371,11 +377,13 @@ export const TOOLS: ToolSpec[] = [
         if (!Number.isInteger(row) || row < 1 || row > project.rows.length) throw new ToolError(`Row ${str(edit.row)} is out of range 1..${project.rows.length}.`);
         if (!columns.includes(str(edit.column))) throw new ToolError(`Column "${str(edit.column)}" does not exist. Columns: ${columns.join(", ")}`);
       });
-      const kinds = Object.fromEntries(columns.map((column) => [column, classifyColumn(project.rows, column)]));
+      const specs = specsOf(project, ctx.locale);
+      // Values are checked against the column types before anything changes, so a bad value fails the whole call.
+      const values = edits.map((edit) => cellValue(specs[str(edit.column)], edit.value, ctx.locale, str(edit.column)));
       const before = snapshot(project);
       ctx.updateProject(project.id, (current) => {
         const rows = current.rows.map((row) => ({ ...row }));
-        edits.forEach((edit) => { rows[Number(edit.row) - 1][str(edit.column)] = cellValue(kinds[str(edit.column)], edit.value); });
+        edits.forEach((edit, index) => { rows[Number(edit.row) - 1][str(edit.column)] = values[index]; });
         return { ...current, rows };
       });
       return { content: json({ ok: true, edited: edits.length }), undo: restore(ctx, before) };
@@ -389,8 +397,8 @@ export const TOOLS: ToolSpec[] = [
     run: (input, ctx) => {
       const project = findProject(ctx, input);
       const incoming = (Array.isArray(input.rows) ? input.rows : []) as Input[];
-      const kinds = Object.fromEntries(columnsOf(project.rows).map((column) => [column, classifyColumn(project.rows, column)]));
-      const rows = incoming.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, cellValue(kinds[key], value)]))) as DataRow[];
+      const specs = specsOf(project, ctx.locale);
+      const rows = incoming.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [key, cellValue(specs[key], value, ctx.locale, key)]))) as DataRow[];
       const before = snapshot(project);
       ctx.updateProject(project.id, (current) => ({ ...current, rows: [...current.rows, ...rows], dataName: current.dataName || L(ctx, "dados-do-assistente.csv", "assistant-data.csv") }));
       return { content: json({ ok: true, totalRows: project.rows.length + rows.length }), undo: restore(ctx, before) };
@@ -411,8 +419,8 @@ export const TOOLS: ToolSpec[] = [
   },
   {
     name: "add_column", kind: "action",
-    description: "Add a column (e.g. a derived or computed column). Give either values (one per row, in row order) or a single default_value.",
-    parameters: { type: "object", additionalProperties: false, required: ["name"], properties: { ...projectIdProp, name: { type: "string" }, values: { type: "array", items: { type: ["string", "number", "boolean", "null"] } }, default_value: { type: ["string", "number", "boolean", "null"] } } },
+    description: "Add a column (e.g. a derived or computed column). Give either values (one per row, in row order) or a single default_value. column_type sets how the column is edited and validated (dates as YYYY-MM-DD, times as HH:MM); without it the type is inferred from the values.",
+    parameters: { type: "object", additionalProperties: false, required: ["name"], properties: { ...projectIdProp, name: { type: "string" }, column_type: { type: "string", enum: COLUMN_TYPES }, values: { type: "array", items: { type: ["string", "number", "boolean", "null"] } }, default_value: { type: ["string", "number", "boolean", "null"] } } },
     summarize: (input, ctx) => L(ctx, `Adicionar a coluna “${str(input.name)}” em “${projectName(ctx, input)}”${Array.isArray(input.values) ? ` com ${input.values.length} valor(es)` : ""}`, `Add column “${str(input.name)}” to “${projectName(ctx, input)}”${Array.isArray(input.values) ? ` with ${input.values.length} value(s)` : ""}`),
     run: (input, ctx) => {
       const project = findProject(ctx, input);
@@ -421,8 +429,16 @@ export const TOOLS: ToolSpec[] = [
       if (columnsOf(project.rows).includes(name)) throw new ToolError(`Column "${name}" already exists; use edit_cells to change it.`);
       const values = Array.isArray(input.values) ? input.values : null;
       if (values && values.length !== project.rows.length) throw new ToolError(`values has ${values.length} items but the project has ${project.rows.length} rows.`);
+      const type = str(input.column_type);
+      if (type && !COLUMN_TYPES.includes(type as ColumnType)) throw new ToolError(`Unknown column_type "${type}". Valid: ${COLUMN_TYPES.join(", ")}`);
+      const spec: ColumnSpec | undefined = type ? { type: type as ColumnType, ...(type === "currency" ? { currency: defaultCurrency(ctx.locale) } : {}) } : undefined;
+      const cells = project.rows.map((_, index) => cellValue(spec, values ? values[index] : input.default_value ?? "", ctx.locale, name));
       const before = snapshot(project);
-      ctx.updateProject(project.id, (current) => ({ ...current, rows: current.rows.length ? current.rows.map((row, index) => ({ ...row, [name]: cellValue(undefined, values ? values[index] : input.default_value ?? "") })) : [{ [name]: "" }] }));
+      ctx.updateProject(project.id, (current) => ({
+        ...current,
+        rows: current.rows.length ? current.rows.map((row, index) => ({ ...row, [name]: cells[index] })) : [{ [name]: "" }],
+        columnTypes: spec ? { ...resolveSpecs(current.columnTypes, current.rows, ctx.locale), [name]: spec.type === "category" ? { ...spec, options: [...new Set(cells.map(String).filter(Boolean))] } : spec } : current.columnTypes,
+      }));
       return { content: json({ ok: true }), undo: restore(ctx, before) };
     },
   },
@@ -443,6 +459,7 @@ export const TOOLS: ToolSpec[] = [
       ctx.updateProject(project.id, (current) => ({
         ...current,
         rows: current.rows.map((row) => Object.fromEntries(Object.entries(row).map(([key, value]) => [swap(key), value]))),
+        columnTypes: renameColumnSpec(current.columnTypes, from, to),
         visualizations: current.visualizations.map((viz) => ({ ...viz, xField: swap(viz.xField), yField: swap(viz.yField), seriesField: swap(viz.seriesField), sizeField: swap(viz.sizeField) })),
       }));
       return { content: json({ ok: true }), undo: restore(ctx, before) };
@@ -462,6 +479,7 @@ export const TOOLS: ToolSpec[] = [
       ctx.updateProject(project.id, (current) => ({
         ...current,
         rows: current.rows.map((row) => { const next = { ...row }; delete next[column]; return next; }),
+        columnTypes: withoutColumn(current.columnTypes, column),
         visualizations: current.visualizations.map((viz) => ({ ...viz, xField: clear(viz.xField), yField: clear(viz.yField), seriesField: clear(viz.seriesField), sizeField: clear(viz.sizeField) })),
       }));
       return { content: json({ ok: true }), undo: restore(ctx, before) };
@@ -477,7 +495,7 @@ export const TOOLS: ToolSpec[] = [
       const column = str(input.column);
       if (!columnsOf(project.rows).includes(column)) throw new ToolError(`Column "${column}" does not exist.`);
       const sign = input.direction === "desc" ? -1 : 1;
-      const numeric = classifyColumn(project.rows, column) === "numeric";
+      const numeric = kindOfSpec(specsOf(project, ctx.locale)[column]) === "numeric";
       const before = snapshot(project);
       ctx.updateProject(project.id, (current) => ({
         ...current,
@@ -514,6 +532,8 @@ export const TOOLS: ToolSpec[] = [
       const prefs = ctx.getPrefs();
       const format = str(input.format) as ExportFormat;
       if (format !== "project" && !project.rows.length) throw new ToolError("The project has no data to draw.");
+      // Exporting draws the chart, so the chart library is only loaded when an export is asked for.
+      const { DEFAULT_EXPORT_SIZE, runExport } = await import("../export");
       await runExport(format, project, viz, { dark: (str(input.theme) || prefs.theme) === "dark", contrast: prefs.contrast === "high", fontScale: 1, ...DEFAULT_EXPORT_SIZE }, ctx.locale);
       return { content: json({ ok: true, downloaded: format }) };
     },
@@ -541,7 +561,7 @@ export function appState(ctx: AgentContext) {
     data_sharing: ctx.sharing,
     open_project: open ? (ctx.sharing === "none"
       ? { id: open.id, name: open.name, rowCount: open.rows.length, visualizations: open.visualizations.map((viz) => ({ id: viz.id, title: viz.title, chart_type: viz.chartId, active: viz.id === open.activeVizId })) }
-      : describeProject(open, false)) : null,
+      : describeProject(open, false, ctx.locale)) : null,
     projects: projects.map((project) => ({ id: project.id, name: project.name, rows: project.rows.length, visualizations: project.visualizations.length, updated: project.updatedAt.slice(0, 10) })),
     preferences: { theme: prefs.theme, language: prefs.locale, high_contrast: prefs.contrast === "high", reduced_motion: prefs.motion === "reduced", text_size: prefs.fontSize },
   };

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M0 0l680 0l0 296l-680 0Z" transform="translate(20 84)" fill="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l268.9 0l0 290l-268.9 0Z" transform="translate(23 87)" fill="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l187.6 0l0 290l-187.6 0Z" transform="translate(294.8832 87)" fill="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l211.5 0l0 186.4l-211.5 0Z" transform="translate(485.5264 87)" fill="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l141 0l0 100.6l-141 0Z" transform="translate(485.5264 276.4141)" fill="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l67.5 0l0 100.6l-67.5 0Z" transform="translate(629.5301 276.4141)" fill="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l164.7 0l0 222.4l-164.7 0Z" transform="translate(24 88)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l101.2 0l0 222.4l-101.2 0Z" transform="translate(189.7009 88)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l144.7 0l0 64.6l-144.7 0Z" transform="translate(24 311.3705)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l121.2 0l0 64.6l-121.2 0Z" transform="translate(169.6909 311.3705)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l185.6 0l0 133.6l-185.6 0Z" transform="translate(295.8832 88)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l126.1 0l0 153.4l-126.1 0Z" transform="translate(295.8832 222.6477)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l58.6 0l0 91.6l-58.6 0Z" transform="translate(422.9594 222.6477)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l58.6 0l0 60.7l-58.6 0Z" transform="translate(422.9594 315.2591)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l150.3 0l0 115.9l-150.3 0Z" transform="translate(486.5264 88)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l150.3 0l0 67.5l-150.3 0Z" transform="translate(486.5264 204.8915)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l58.2 0l0 112.3l-58.2 0Z" transform="translate(637.8043 88)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l58.2 0l0 71.1l-58.2 0Z" transform="translate(637.8043 201.3086)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l61.6 0l0 98.6l-61.6 0Z" transform="translate(486.5264 277.4141)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l76.4 0l0 56.5l-76.4 0Z" transform="translate(549.0812 277.4141)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l76.4 0l0 41.1l-76.4 0Z" transform="translate(549.0812 334.8675)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l34.2 0l0 72.6l-34.2 0Z" transform="translate(630.5301 277.4141)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l30.3 0l0 72.6l-30.3 0Z" transform="translate(665.72 277.4141)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l65.5 0l0 25l-65.5 0Z" transform="translate(630.5301 351.0211)" fill="#fff" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-treemap-cls-1810"></path>
+<path d="M0 0l164.7 0l0 222.4l-164.7 0Z" transform="translate(24 88)" fill="rgb(109,71,184)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-treemap-cls-1811"></path>
+<path d="M0 0l101.2 0l0 222.4l-101.2 0Z" transform="translate(189.7009 88)" fill="rgb(109,71,184)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-treemap-cls-1811"></path>
+<path d="M0 0l144.7 0l0 64.6l-144.7 0Z" transform="translate(24 311.3705)" fill="rgb(109,71,184)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-treemap-cls-1811"></path>
+<path d="M0 0l121.2 0l0 64.6l-121.2 0Z" transform="translate(169.6909 311.3705)" fill="rgb(109,71,184)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-treemap-cls-1811"></path>
+<path d="M0 0l185.6 0l0 133.6l-185.6 0Z" transform="translate(295.8832 88)" fill="rgb(71,136,9)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-treemap-cls-1812"></path>
+<path d="M0 0l126.1 0l0 153.4l-126.1 0Z" transform="translate(295.8832 222.6477)" fill="rgb(71,136,9)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-treemap-cls-1812"></path>
+<path d="M0 0l58.6 0l0 91.6l-58.6 0Z" transform="translate(422.9594 222.6477)" fill="rgb(71,136,9)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-treemap-cls-1812"></path>
+<path d="M0 0l58.6 0l0 60.7l-58.6 0Z" transform="translate(422.9594 315.2591)" fill="rgb(71,136,9)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-treemap-cls-1812"></path>
+<path d="M0 0l150.3 0l0 115.9l-150.3 0Z" transform="translate(486.5264 88)" fill="rgb(190,113,0)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-treemap-cls-1813"></path>
+<path d="M0 0l150.3 0l0 67.5l-150.3 0Z" transform="translate(486.5264 204.8915)" fill="rgb(190,113,0)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-treemap-cls-1813"></path>
+<path d="M0 0l58.2 0l0 112.3l-58.2 0Z" transform="translate(637.8043 88)" fill="rgb(190,113,0)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-treemap-cls-1813"></path>
+<path d="M0 0l58.2 0l0 71.1l-58.2 0Z" transform="translate(637.8043 201.3086)" fill="rgb(190,113,0)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-treemap-cls-1813"></path>
+<path d="M0 0l61.6 0l0 98.6l-61.6 0Z" transform="translate(486.5264 277.4141)" fill="rgb(0,139,158)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-treemap-cls-1814"></path>
+<path d="M0 0l76.4 0l0 56.5l-76.4 0Z" transform="translate(549.0812 277.4141)" fill="rgb(0,139,158)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-treemap-cls-1814"></path>
+<path d="M0 0l76.4 0l0 41.1l-76.4 0Z" transform="translate(549.0812 334.8675)" fill="rgb(0,139,158)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-treemap-cls-1814"></path>
+<path d="M0 0l34.2 0l0 72.6l-34.2 0Z" transform="translate(630.5301 277.4141)" fill="rgb(197,55,47)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-treemap-cls-1815"></path>
+<path d="M0 0l30.3 0l0 72.6l-30.3 0Z" transform="translate(665.72 277.4141)" fill="rgb(197,55,47)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-treemap-cls-1815"></path>
+<path d="M0 0l65.5 0l0 25l-65.5 0Z" transform="translate(630.5301 351.0211)" fill="rgb(197,55,47)" fill-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-treemap-cls-1815"></path>
+<style ><![CDATA[
+.t-treemap-cls-1810:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+}
+.t-treemap-cls-1811:hover {
+cursor:pointer;
+fill:rgba(119,78,202,0.72);
+}
+.t-treemap-cls-1812:hover {
+cursor:pointer;
+fill:rgba(78,149,9,0.72);
+}
+.t-treemap-cls-1813:hover {
+cursor:pointer;
+fill:rgba(209,124,0,0.72);
+}
+.t-treemap-cls-1814:hover {
+cursor:pointer;
+fill:rgba(0,152,173,0.72);
+}
+.t-treemap-cls-1815:hover {
+cursor:pointer;
+fill:rgba(216,60,51,0.72);
+}
+
+]]>
+
+</style>
+</svg>

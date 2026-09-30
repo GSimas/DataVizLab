@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 322.5L704 322.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 261.5L704 261.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 200.5L704 200.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 138.5L704 138.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 77.5L704 77.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 16.5L704 16.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-stacked-area-cls-186"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#34443d" stroke-linecap="round" class="t-stacked-area-cls-186"></path>
+<g clip-path="url(#t-stacked-area-c0)">
+<path d="M30.3 277.9L59 275.7L87.7 277.3L116.3 281.9L145 288.3L173.7 294.5L202.3 299.1L231 300.6L259.7 298.7L288.3 293.8L317 287.1L345.7 280.3L374.3 275.4L403 273.6L431.7 275.1L460.3 279.7L489 285.9L517.7 292.3L546.3 296.9L575 298.4L603.7 296.3L632.3 291.4L661 284.9L689.7 278.2L689.7 384L661 384L632.3 384L603.7 384L575 384L546.3 384L517.7 384L489 384L460.3 384L431.7 384L403 384L374.3 384L345.7 384L317 384L288.3 384L259.7 384L231 384L202.3 384L173.7 384L145 384L116.3 384L87.7 384L59 384L30.3 384Z" fill="#61a82d" fill-opacity="0.64" class="t-stacked-area-cls-188"></path>
+</g>
+<g clip-path="url(#t-stacked-area-c1)">
+<path d="M30.3 203.4L59 200L87.7 202.1L116.3 209.2L145 219L173.7 228.8L202.3 235.9L231 238L259.7 234.7L288.3 226.4L317 215.3L345.7 204.3L374.3 196L403 192.6L431.7 194.8L460.3 201.8L489 211.7L517.7 221.5L546.3 228.5L575 230.7L603.7 227.3L632.3 219L661 208L689.7 196.9L689.7 278.2L661 284.9L632.3 291.4L603.7 296.3L575 298.4L546.3 296.9L517.7 292.3L489 285.9L460.3 279.7L431.7 275.1L403 273.6L374.3 275.4L345.7 280.3L317 287.1L288.3 293.8L259.7 298.7L231 300.6L202.3 299.1L173.7 294.5L145 288.3L116.3 281.9L87.7 277.3L59 275.7L30.3 277.9Z" fill="#8a66d9" fill-opacity="0.64" class="t-stacked-area-cls-189"></path>
+</g>
+<g clip-path="url(#t-stacked-area-c2)">
+<path d="M30.3 52.8L59 49.1L87.7 52.2L116.3 59.5L145 68.4L173.7 79.5L202.3 84.7L231 85.3L259.7 81.3L288.3 73L317 61.4L345.7 51.6L374.3 42.1L403 40.5L431.7 41.1L460.3 49.1L489 58L517.7 64.8L546.3 74.9L575 76.4L603.7 70.6L632.3 61.4L661 51L689.7 39.6L689.7 196.9L661 208L632.3 219L603.7 227.3L575 230.7L546.3 228.5L517.7 221.5L489 211.7L460.3 201.8L431.7 194.8L403 192.6L374.3 196L345.7 204.3L317 215.3L288.3 226.4L259.7 234.7L231 238L202.3 235.9L173.7 228.8L145 219L116.3 209.2L87.7 202.1L59 200L30.3 203.4Z" fill="#c8800d" fill-opacity="0.64" class="t-stacked-area-cls-190"></path>
+</g>
+<g clip-path="url(#t-stacked-area-c0)">
+<path d="M30.3 277.9L59 275.7L87.7 277.3L116.3 281.9L145 288.3L173.7 294.5L202.3 299.1L231 300.6L259.7 298.7L288.3 293.8L317 287.1L345.7 280.3L374.3 275.4L403 273.6L431.7 275.1L460.3 279.7L489 285.9L517.7 292.3L546.3 296.9L575 298.4L603.7 296.3L632.3 291.4L661 284.9L689.7 278.2" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="2" stroke-linejoin="bevel" class="t-stacked-area-cls-191"></path>
+</g>
+<g clip-path="url(#t-stacked-area-c1)">
+<path d="M30.3 203.4L59 200L87.7 202.1L116.3 209.2L145 219L173.7 228.8L202.3 235.9L231 238L259.7 234.7L288.3 226.4L317 215.3L345.7 204.3L374.3 196L403 192.6L431.7 194.8L460.3 201.8L489 211.7L517.7 221.5L546.3 228.5L575 230.7L603.7 227.3L632.3 219L661 208L689.7 196.9" fill="none" pointer-events="visible" stroke="#8a66d9" stroke-width="2" stroke-linejoin="bevel" class="t-stacked-area-cls-191"></path>
+</g>
+<g clip-path="url(#t-stacked-area-c2)">
+<path d="M30.3 52.8L59 49.1L87.7 52.2L116.3 59.5L145 68.4L173.7 79.5L202.3 84.7L231 85.3L259.7 81.3L288.3 73L317 61.4L345.7 51.6L374.3 42.1L403 40.5L431.7 41.1L460.3 49.1L489 58L517.7 64.8L546.3 74.9L575 76.4L603.7 70.6L632.3 61.4L661 51L689.7 39.6" fill="none" pointer-events="visible" stroke="#c8800d" stroke-width="2" stroke-linejoin="bevel" class="t-stacked-area-cls-191"></path>
+</g>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,30.3333,277.8933)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,59,275.7467)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,87.6667,277.28)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,116.3333,281.88)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,145,288.32)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,173.6667,294.4533)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,202.3333,299.0533)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,231,300.5867)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,259.6667,298.7467)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,288.3333,293.84)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,317,287.0933)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,345.6667,280.3467)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,374.3333,275.44)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,403,273.6)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,431.6667,275.1333)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,460.3333,279.7333)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,489,285.8667)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,517.6667,292.3067)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,546.3333,296.9067)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,575,298.44)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,603.6667,296.2933)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,632.3333,291.3867)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,661,284.9467)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,689.6667,278.2)" fill="#fff" stroke="#61a82d" stroke-width="0.5714285714285714" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,30.3333,203.3733)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,59,200)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,87.6667,202.1467)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,116.3333,209.2)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,145,219.0133)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,173.6667,228.8267)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,202.3333,235.88)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,231,238.0267)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,259.6667,234.6533)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,288.3333,226.3733)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,317,215.3333)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,345.6667,204.2933)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,374.3333,196.0133)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,403,192.64)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,431.6667,194.7867)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,460.3333,201.84)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,489,211.6533)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,517.6667,221.4667)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,546.3333,228.52)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,575,230.6667)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,603.6667,227.2933)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,632.3333,219.0133)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,661,207.9733)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,689.6667,196.9333)" fill="#fff" stroke="#8a66d9" stroke-width="0.5714285714285714" ecmeta_series_index="1" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,30.3333,52.8)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,59,49.12)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,87.6667,52.1867)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,116.3333,59.5467)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,145,68.44)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,173.6667,79.48)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,202.3333,84.6933)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,231,85.3067)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,259.6667,81.32)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,288.3333,73.04)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,317,61.3867)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,345.6667,51.5733)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,374.3333,42.0667)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,403,40.5333)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,431.6667,41.1467)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,460.3333,49.12)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,489,58.0133)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,517.6667,64.76)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,546.3333,74.88)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,575,76.4133)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,603.6667,70.5867)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,632.3333,61.3867)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,661,50.96)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(3.5,0,0,3.5,689.6667,39.6133)" fill="#fff" stroke="#c8800d" stroke-width="0.5714285714285714" ecmeta_series_index="2" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-stacked-area-cls-192"></path>
+<defs >
+<clipPath id="t-stacked-area-c0">
+<path d="M15 15l690 0l0 370l-690 0Z" fill="#000" class="t-stacked-area-cls-187"></path>
+</clipPath>
+<clipPath id="t-stacked-area-c1">
+<path d="M15 15l690 0l0 370l-690 0Z" fill="#000" class="t-stacked-area-cls-187"></path>
+</clipPath>
+<clipPath id="t-stacked-area-c2">
+<path d="M15 15l690 0l0 370l-690 0Z" fill="#000" class="t-stacked-area-cls-187"></path>
+</clipPath>
+</defs>
+<style ><![CDATA[
+.t-stacked-area-cls-186:hover {
+pointer-events:none;
+}
+.t-stacked-area-cls-187:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+.t-stacked-area-cls-188:hover {
+cursor:pointer;
+fill:rgba(106,184,49,1);
+}
+.t-stacked-area-cls-189:hover {
+cursor:pointer;
+fill:rgba(151,112,238,1);
+}
+.t-stacked-area-cls-190:hover {
+cursor:pointer;
+fill:rgba(220,140,14,1);
+}
+.t-stacked-area-cls-191:hover {
+cursor:pointer;
+}
+.t-stacked-area-cls-192:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+}
+
+]]>
+
+</style>
+</svg>

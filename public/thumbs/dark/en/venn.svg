@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<circle cx="311.8" cy="187.9" r="86.5" fill="rgb(97,168,45)" fill-opacity="0.34" stroke="#61a82d" stroke-width="2" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-venn-cls-849"></circle>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 13px sans-serif" xml:space="preserve" x="251.24387096774194" y="85.48774193548387" fill="#c3cbc7">Store · 37</text>
+<circle cx="408.2" cy="187.9" r="86.5" fill="rgb(138,102,217)" fill-opacity="0.34" stroke="#8a66d9" stroke-width="2" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-venn-cls-850"></circle>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 13px sans-serif" xml:space="preserve" x="468.75612903225806" y="85.48774193548387" fill="#c3cbc7">App · 33</text>
+<circle cx="360" cy="268.3" r="86.5" fill="rgb(200,128,13)" fill-opacity="0.34" stroke="#c8800d" stroke-width="2" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-venn-cls-851"></circle>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 13px sans-serif" xml:space="preserve" x="360" y="372.79096774193545" fill="#c3cbc7">Site · 30</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="275.45032258064515" y="177.56516129032258" fill="#f0eee6">14</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="444.54967741935485" y="177.56516129032258" fill="#f0eee6">9</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="360" y="151.62967741935483" fill="#f0eee6">7</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="360" y="311.5651612903226" fill="#f0eee6">8</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="309.94451612903225" y="238.51354838709676" fill="#f0eee6">5</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="410.05548387096775" y="238.51354838709676" fill="#f0eee6">6</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: 700 20px sans-serif" x="360" y="216.34735483870966" fill="#f0eee6">11</text>
+<style ><![CDATA[
+.t-venn-cls-849:hover {
+cursor:pointer;
+fill:rgba(97, 168, 45, 0.58);
+stroke-width:3;
+}
+.t-venn-cls-850:hover {
+cursor:pointer;
+fill:rgba(138, 102, 217, 0.58);
+stroke-width:3;
+}
+.t-venn-cls-851:hover {
+cursor:pointer;
+fill:rgba(200, 128, 13, 0.58);
+stroke-width:3;
+}
+
+]]>
+
+</style>
+</svg>

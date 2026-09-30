@@ -1,49 +1,53 @@
-import { familyColors, type VizEntry } from "../lib/catalog";
+"use client";
 
-/** Small schematic glyph for a visualization method, tinted by its family. */
-export function MiniViz({ entry, index }: { entry: VizEntry; index: number }) {
-  const color = familyColors[entry.family];
-  const seed = (index % 5) + 2;
-  if (["flow", "hierarchy"].includes(entry.family)) {
-    return (
-      <svg viewBox="0 0 180 90" aria-hidden="true">
-        <path d={`M24 58 C60 ${20 + seed * 3}, 100 ${72 - seed * 4}, 154 28`} fill="none" stroke={color} strokeWidth="5" strokeLinecap="round" opacity=".38" />
-        <path d="M24 30 C62 70, 112 18, 154 62" fill="none" stroke={color} strokeWidth="2" opacity=".7" />
-        {["24,58", "24,30", "88,44", "154,28", "154,62"].map((coords, i) => {
-          const [cx, cy] = coords.split(",").map(Number);
-          return <circle key={coords} cx={cx} cy={cy} r={i === 2 ? 8 : 6} fill={i % 2 ? color : "var(--surface)"} stroke={color} strokeWidth="2" />;
-        })}
-      </svg>
-    );
-  }
-  if (["pie", "donut", "sunburst", "nightingale", "radial-bar"].includes(entry.id)) {
-    return (
-      <svg viewBox="0 0 180 90" aria-hidden="true">
-        <circle cx="90" cy="45" r="31" fill="none" stroke="var(--line-strong)" strokeWidth="16" />
-        <circle cx="90" cy="45" r="31" fill="none" stroke={color} strokeWidth="16" strokeDasharray={`${80 + seed * 5} 195`} transform="rotate(-90 90 45)" />
-      </svg>
-    );
-  }
-  if (["scatter", "bubble", "beeswarm", "strip", "dot-map"].includes(entry.id) || entry.family === "geo") {
-    return (
-      <svg viewBox="0 0 180 90" aria-hidden="true">
-        <path d="M22 70H160M22 70V14" stroke="var(--line-strong)" strokeWidth="1" />
-        {[0, 1, 2, 3, 4, 5, 6].map((n) => <circle key={n} cx={38 + n * 17} cy={61 - ((n * seed * 7) % 42)} r={3 + ((n + seed) % 4)} fill={color} opacity={0.5 + n * 0.07} />)}
-      </svg>
-    );
-  }
-  if (["line", "area", "stacked-area", "density", "ridgeline", "streamgraph"].includes(entry.id) || entry.family === "time") {
-    return (
-      <svg viewBox="0 0 180 90" aria-hidden="true">
-        <path d="M18 69 C42 65, 50 28, 74 42 S112 72, 132 34 S152 22, 164 30" fill="none" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M18 69 C42 65, 50 28, 74 42 S112 72, 132 34 S152 22, 164 30 L164 74 L18 74Z" fill={color} opacity=".14" />
-      </svg>
-    );
-  }
-  return (
-    <svg viewBox="0 0 180 90" aria-hidden="true">
-      <path d="M18 73H165" stroke="var(--line-strong)" />
-      {[0, 1, 2, 3, 4, 5].map((n) => <rect key={n} x={26 + n * 23} y={65 - ((n * seed * 9) % 47)} width="11" height={8 + ((n * seed * 9) % 47)} rx="2" fill={color} opacity={0.5 + n * 0.08} />)}
-    </svg>
-  );
+import { useCallback, useSyncExternalStore } from "react";
+import type { Locale, VizEntry } from "../lib/catalog";
+import { TEXT_THUMBS, THUMBS_VERSION } from "./thumbs.generated";
+
+/* Thumbnails are pre-rendered SVG files (scripts/build-thumbnails.ts): the real chart, drawn from that chart's
+   own sample. Most are shown as images, which the browser decodes and rasterizes off the main thread and which
+   add no DOM. The few that contain text are fetched and inlined, so they keep the page's web fonts. */
+
+const markup = new Map<string, string>();
+const loading = new Set<string>();
+const listeners = new Map<string, Set<() => void>>();
+
+const thumbUrl = (id: string, locale: Locale, dark: boolean) => `/thumbs/${dark ? "dark" : "light"}/${locale}/${id}.svg?v=${THUMBS_VERSION}`;
+
+function load(url: string) {
+  if (markup.has(url) || loading.has(url)) return;
+  loading.add(url);
+  fetch(url)
+    .then((response) => (response.ok ? response.text() : ""))
+    .catch(() => "")
+    .then((svg) => {
+      loading.delete(url);
+      // A failed request leaves the frame empty and is retried the next time the thumbnail mounts.
+      if (svg.startsWith("<svg")) markup.set(url, svg);
+      listeners.get(url)?.forEach((notify) => notify());
+    });
+}
+
+function subscribe(url: string, notify: () => void) {
+  const set = listeners.get(url) ?? new Set();
+  set.add(notify);
+  listeners.set(url, set);
+  load(url);
+  return () => { set.delete(notify); if (!set.size) listeners.delete(url); };
+}
+
+function InlineThumb({ url, label }: { url: string; label: string }) {
+  const watch = useCallback((notify: () => void) => subscribe(url, notify), [url]);
+  const svg = useSyncExternalStore(watch, () => markup.get(url) ?? "", () => "");
+  return <div className="chart-thumb" role="img" aria-label={label} dangerouslySetInnerHTML={{ __html: svg }} />;
+}
+
+/** Thumbnail of a visualization method: the real chart, drawn from that method's own sample data. */
+export function MiniViz({ entry, dark, locale = "pt" }: { entry: VizEntry; dark: boolean; locale?: Locale }) {
+  const url = thumbUrl(entry.id, locale, dark);
+  const label = entry.name[locale];
+  if (TEXT_THUMBS.has(entry.id)) return <InlineThumb url={url} label={label} />;
+  // A static, versioned vector file: next/image would add nothing (SVG is not optimized) but a server round trip.
+  // eslint-disable-next-line @next/next/no-img-element
+  return <div className="chart-thumb" role="img" aria-label={label}><img src={url} alt="" decoding="async" loading="lazy" draggable={false} /></div>;
 }

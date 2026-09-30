@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<g clip-path="url(#t-parallel-c0)">
+<polyline points="24 323.2 192 42.8 360 211.7 528 336.1 696 52.2" fill="none" pointer-events="visible" stroke="#478809" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 318.3 192 59.2 360 206.7 528 332.6 696 73.3" fill="none" pointer-events="visible" stroke="#478809" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 326.7 192 24 360 218.4 528 337.9 696 35.7" fill="none" pointer-events="visible" stroke="#478809" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 312.6 192 75.6 360 195 528 327.9 696 101.4" fill="none" pointer-events="visible" stroke="#478809" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 321.1 192 49.8 360 208.4 528 334.3 696 66.2" fill="none" pointer-events="visible" stroke="#478809" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 316.2 192 68.6 360 200 528 329.7 696 87.4" fill="none" pointer-events="visible" stroke="#478809" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+</g>
+<g clip-path="url(#t-parallel-c1)">
+<polyline points="24 270.4 192 146 360 114.5 528 283.3 696 155.4" fill="none" pointer-events="visible" stroke="#6d47b8" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 256.3 192 160.1 360 94.4 528 265.1 696 171.8" fill="none" pointer-events="visible" stroke="#6d47b8" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 245.8 192 169.5 360 76 528 250.5 696 183.6" fill="none" pointer-events="visible" stroke="#6d47b8" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 277.4 192 131.9 360 126.2 528 288.6 696 139" fill="none" pointer-events="visible" stroke="#6d47b8" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="1" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 235.2 192 178.9 360 65.9 528 232.3 696 197.7" fill="none" pointer-events="visible" stroke="#6d47b8" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="1" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 263.4 192 150.7 360 104.5 528 275.1 696 164.8" fill="none" pointer-events="visible" stroke="#6d47b8" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="1" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+</g>
+<g clip-path="url(#t-parallel-c2)">
+<polyline points="24 178.9 192 207 360 154.7 528 194.1 696 249.3" fill="none" pointer-events="visible" stroke="#be7100" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="2" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 136.6 192 223.5 360 141.3 528 144.3 696 268.1" fill="none" pointer-events="visible" stroke="#be7100" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="2" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 87.4 192 239.9 360 127.9 528 70.9 696 284.5" fill="none" pointer-events="visible" stroke="#be7100" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 196.5 192 197.7 360 159.8 528 207 696 239.9" fill="none" pointer-events="visible" stroke="#be7100" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="2" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 119 192 232.9 360 133 528 109.1 696 277.4" fill="none" pointer-events="visible" stroke="#be7100" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="2" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+<polyline points="24 164.8 192 214.1 360 149.7 528 176.5 696 256.3" fill="none" pointer-events="visible" stroke="#be7100" stroke-width="1.8" stroke-opacity="0.7" ecmeta_series_index="2" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-parallel-cls-1686"></polyline>
+</g>
+<path d="M24.5 376L24.5 24" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-parallel-cls-1687"></path>
+<path d="M192.5 376L192.5 24" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-parallel-cls-1687"></path>
+<path d="M360.5 376L360.5 24" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-parallel-cls-1687"></path>
+<path d="M528.5 376L528.5 24" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-parallel-cls-1687"></path>
+<path d="M696.5 376L696.5 24" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-parallel-cls-1687"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(32 376)" fill="#6b7772">0</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(32 305.6)" fill="#6b7772">100</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(32 235.2)" fill="#6b7772">200</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(32 164.8)" fill="#6b7772">300</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(32 94.4)" fill="#6b7772">400</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(32 24)" fill="#6b7772">500</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(200 376)" fill="#6b7772">0</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(200 305.6)" fill="#6b7772">3</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(200 235.2)" fill="#6b7772">6</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(200 164.8)" fill="#6b7772">9</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(200 94.4)" fill="#6b7772">12</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(200 24)" fill="#6b7772">15</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 376)" fill="#6b7772">0</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 325.7143)" fill="#6b7772">300</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 275.4286)" fill="#6b7772">600</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 225.1429)" fill="#6b7772">900</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 174.8571)" fill="#6b7772">1,200</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 124.5714)" fill="#6b7772">1,500</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 74.2857)" fill="#6b7772">1,800</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(368 24)" fill="#6b7772">2,100</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 376)" fill="#6b7772">0</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 317.3333)" fill="#6b7772">100,000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 258.6667)" fill="#6b7772">200,000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 200)" fill="#6b7772">300,000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 141.3333)" fill="#6b7772">400,000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 82.6667)" fill="#6b7772">500,000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(536 24)" fill="#6b7772">600,000</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(704 376)" fill="#6b7772">0</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(704 305.6)" fill="#6b7772">3</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(704 235.2)" fill="#6b7772">6</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(704 164.8)" fill="#6b7772">9</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(704 94.4)" fill="#6b7772">12</text>
+<text dominant-baseline="central" text-anchor="start" style="font-size:10px;font-family:'Manrope Variable', Manrope, Arial, sans-serif;" transform="translate(704 24)" fill="#6b7772">15</text>
+<defs >
+<clipPath id="t-parallel-c0">
+<path d="M24 24l672 0l0 352l-672 0Z" fill="#000" class="t-parallel-cls-1685"></path>
+</clipPath>
+<clipPath id="t-parallel-c1">
+<path d="M24 24l672 0l0 352l-672 0Z" fill="#000" class="t-parallel-cls-1685"></path>
+</clipPath>
+<clipPath id="t-parallel-c2">
+<path d="M24 24l672 0l0 352l-672 0Z" fill="#000" class="t-parallel-cls-1685"></path>
+</clipPath>
+</defs>
+<style ><![CDATA[
+.t-parallel-cls-1685:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+.t-parallel-cls-1686:hover {
+cursor:pointer;
+}
+.t-parallel-cls-1687:hover {
+pointer-events:none;
+}
+
+]]>
+
+</style>
+</svg>

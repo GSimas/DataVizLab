@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowUpRight, Check, Coffee, Compass, FolderPlus, Menu, X } from "lucide-react";
 import type { VizEntry } from "../lib/catalog";
 import { t, type TranslationKey } from "../lib/i18n";
@@ -9,9 +9,10 @@ import { MiniViz } from "./MiniViz";
 import { Modal } from "./Modal";
 import { HomeView } from "./HomeView";
 import { ProjectsView } from "./ProjectsView";
-import { StudioView } from "./StudioView";
+import { ErrorBoundary } from "./ErrorBoundary";
+import { lazyView } from "./lazyView";
 import { CatalogView } from "./CatalogView";
-import { parseHash, routeHref, type AppApi, type Route } from "./app";
+import { formatDate, parseHash, routeHref, type AppApi, type Route } from "./app";
 import { SettingsMenu } from "./SettingsMenu";
 import { TooltipLayer } from "./ui/TooltipLayer";
 import { Ambient } from "./Ambient";
@@ -20,10 +21,39 @@ import { applyPrefs, fontScale, readPrefs, savePrefs, type Prefs } from "../lib/
 import { TOUR_DONE_KEY } from "../lib/tour";
 import type { AgentContext } from "../lib/ai/tools";
 import { Assistant } from "./assistant/Assistant";
-import { Tour } from "./Tour";
+
+// The studio carries the chart library and the table editor; the tour only matters once it starts.
+// Both download on first use, and the studio also as soon as a visit is heading to it (see below).
+const StudioView = lazyView<{ api: AppApi; projectId: string }>(() => import("./StudioView").then(({ StudioView: View }) => ({ default: View })));
+const Tour = lazyView<React.ComponentProps<typeof import("./Tour").Tour>>(() => import("./Tour").then(({ Tour: View }) => ({ default: View })));
+
+type ProjectHistory = { past: Project[]; future: Project[]; lastAt: number };
+const HISTORY_LIMIT = 100;
+/** Edits closer together than this (typing, dragging through values) are undone as one step. */
+const HISTORY_BURST_MS = 800;
+
+/** Links and buttons that lead to the studio: hovering or focusing them starts its download. */
+const TOWARDS_STUDIO = 'a[href^="#/projetos/"], [data-tour="new-project"], .project-card, .picker-list button, .launch-link';
+
 
 export function BrandMark() {
   return <span className="brand-mark" aria-hidden="true"><i /><i /><i /><b>+</b></span>;
+}
+
+/** Shown in place of a view that failed to load or crashed; the header, navigation and other views keep working. */
+function ViewError({ tr, retry }: { tr: (key: TranslationKey) => string; retry: () => void }) {
+  return (
+    <section className="page studio-page">
+      <div className="empty-state" role="alert">
+        <h2>{tr("partErrorTitle")}</h2>
+        <p>{tr("partErrorText")}</p>
+        <div className="empty-actions">
+          <button className="button button-primary" type="button" onClick={retry}>{tr("retry")}</button>
+          <a className="launch-link" href={routeHref({ view: "projects" })}>{tr("backToProjects")}<span><ArrowUpRight size={15} /></span></a>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default function DataVizLab() {
@@ -40,6 +70,9 @@ export default function DataVizLab() {
   const [assistantOpen, setAssistantOpen] = useState(false);
   const [tourActive, setTourActive] = useState(false);
   const [tourInvite, setTourInvite] = useState(false);
+  // Once started, the tour stays mounted so its closing animation can play.
+  const [tourLoaded, setTourLoaded] = useState(false);
+  if (tourActive && !tourLoaded) setTourLoaded(true);
   // Latest state for the assistant's tools, which run outside React renders.
   const projectsRef = useRef<Project[]>([]);
   const routeRef = useRef<Route>({ view: "home" });
@@ -105,6 +138,23 @@ export default function DataVizLab() {
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => undefined);
   }, []);
 
+  // Start downloading the studio when the visit is heading there, so opening a project does not wait.
+  useEffect(() => {
+    const onIntent = (event: Event) => { if (event.target instanceof Element && event.target.closest(TOWARDS_STUDIO)) StudioView.preload(); };
+    document.addEventListener("pointerover", onIntent, { passive: true });
+    document.addEventListener("focusin", onIntent);
+    return () => { document.removeEventListener("pointerover", onIntent); document.removeEventListener("focusin", onIntent); };
+  }, []);
+  useEffect(() => {
+    if (route.view !== "projects") return;
+    const idle = window.requestIdleCallback ?? ((fn: () => void) => window.setTimeout(fn, 1200));
+    const cancel = window.cancelIdleCallback ?? window.clearTimeout;
+    // Also build the date formatter project cards use: the first one of a session loads locale data (~100 ms on
+    // a phone), better spent now than when the first project is created.
+    const handle = idle(() => { StudioView.preload(); formatDate(new Date().toISOString(), locale); }, { timeout: 3000 });
+    return () => cancel(handle);
+  }, [route.view, locale]);
+
   useEffect(() => {
     if (!toast.visible) return;
     const timer = window.setTimeout(() => setToast((current) => ({ ...current, visible: false })), 2600);
@@ -113,16 +163,23 @@ export default function DataVizLab() {
 
   const notify = useCallback((message: string) => setToast({ message, visible: true }), []);
 
-  // Theme and contrast swaps cross-fade the whole page; other preferences apply instantly.
+  // Theme, contrast, language and text-size swaps cross-fade the whole page; motion applies instantly.
   const updatePrefs = useCallback((next: Partial<Prefs>) => {
     const apply = () => setPrefs((current) => {
       const merged = { ...current, ...next };
       applyPrefs(merged);
       return merged;
     });
-    if (next.theme !== undefined && next.theme !== prefs.theme || next.contrast !== undefined && next.contrast !== prefs.contrast) withViewTransition(apply, "theme");
+    const changed = (key: keyof Prefs) => next[key] !== undefined && next[key] !== prefs[key];
+    if (changed("theme") || changed("contrast")) withViewTransition(apply, "theme");
+    else if (changed("fontSize")) {
+      // A partial zoom hints at the direction of the change without the old page visibly overshooting.
+      const ratio = fontScale[next.fontSize!] / fontScale[prefs.fontSize];
+      withViewTransition(apply, "font", 1 + (ratio - 1) * 0.4);
+    }
+    else if (changed("locale")) withViewTransition(apply, "locale");
     else apply();
-  }, [prefs.theme, prefs.contrast]);
+  }, [prefs]);
 
   // Persist edits that are still waiting for their debounce when the tab is hidden.
   useEffect(() => {
@@ -149,13 +206,7 @@ export default function DataVizLab() {
     saveProject(project).catch(() => undefined);
   }, []);
 
-  const updateProject = useCallback((id: string, updater: (project: Project) => Project) => {
-    setProjects((current) => current.map((project) => {
-      if (project.id !== id) return project;
-      const next = { ...updater(project), updatedAt: new Date().toISOString() };
-      pendingSaves.current.set(id, next);
-      return next;
-    }));
+  const scheduleSave = useCallback((id: string) => {
     window.clearTimeout(saveTimers.current.get(id));
     saveTimers.current.set(id, window.setTimeout(() => {
       const project = pendingSaves.current.get(id);
@@ -165,16 +216,67 @@ export default function DataVizLab() {
     }, 400));
   }, []);
 
+  // Undo/redo history of each project: the state before every edit (a burst of edits, like typing a title,
+  // is one step). Kept for the session, up to HISTORY_LIMIT steps per project.
+  const histories = useRef(new Map<string, ProjectHistory>());
+  const [historyTick, setHistoryTick] = useState(0);
+
+  const updateProject = useCallback((id: string, updater: (project: Project) => Project, options: { history?: boolean } = {}) => {
+    setProjects((current) => current.map((project) => {
+      if (project.id !== id) return project;
+      const updated = updater(project);
+      if (updated === project) return project;
+      if (options.history !== false) {
+        let history = histories.current.get(id);
+        if (!history) { history = { past: [], future: [], lastAt: 0 }; histories.current.set(id, history); }
+        const now = Date.now();
+        // React may run this updater twice in development: the same `project` is only recorded once.
+        if (history.past[history.past.length - 1] !== project && now - history.lastAt > HISTORY_BURST_MS) {
+          history.past.push(project);
+          if (history.past.length > HISTORY_LIMIT) history.past.shift();
+        }
+        history.lastAt = now;
+        history.future = [];
+      }
+      const next = { ...updated, updatedAt: new Date().toISOString() };
+      pendingSaves.current.set(id, next);
+      return next;
+    }));
+    setHistoryTick((tick) => tick + 1);
+    scheduleSave(id);
+  }, [scheduleSave]);
+
+  /** Moves one step back (or forward) in a project's history; the chart transitions to the restored state. */
+  const travel = useCallback((id: string, direction: "undo" | "redo") => {
+    const history = histories.current.get(id);
+    const current = projectsRef.current.find((project) => project.id === id);
+    const target = direction === "undo" ? history?.past.pop() : history?.future.pop();
+    if (!history || !current || !target) return;
+    (direction === "undo" ? history.future : history.past).push(current);
+    history.lastAt = 0;
+    const restored = { ...target, updatedAt: new Date().toISOString() };
+    pendingSaves.current.set(id, restored);
+    setProjects((projects) => projects.map((project) => (project.id === id ? restored : project)));
+    setHistoryTick((tick) => tick + 1);
+    scheduleSave(id);
+  }, [scheduleSave]);
+  const undo = useCallback((id: string) => travel(id, "undo"), [travel]);
+  const redo = useCallback((id: string) => travel(id, "redo"), [travel]);
+  // historyTick makes these re-read the history after every change.
+  const canUndo = useCallback((id: string) => Boolean(historyTick >= 0 && histories.current.get(id)?.past.length), [historyTick]);
+  const canRedo = useCallback((id: string) => Boolean(historyTick >= 0 && histories.current.get(id)?.future.length), [historyTick]);
+
   const deleteProject = useCallback((id: string) => {
     window.clearTimeout(saveTimers.current.get(id));
     saveTimers.current.delete(id);
     pendingSaves.current.delete(id);
     setProjects((current) => current.filter((project) => project.id !== id));
+    histories.current.delete(id);
     removeProject(id).catch(() => undefined);
   }, []);
 
   const chart = useMemo(() => ({ contrast: prefs.contrast === "high", fontScale: fontScale[prefs.fontSize], reducedMotion: prefs.motion === "reduced" }), [prefs.contrast, prefs.fontSize, prefs.motion]);
-  const api: AppApi = useMemo(() => ({ locale, dark, chart, tr, notify, navigate, projects, loaded, addProject, updateProject, deleteProject }), [locale, dark, chart, tr, notify, navigate, projects, loaded, addProject, updateProject, deleteProject]);
+  const api: AppApi = useMemo(() => ({ locale, dark, chart, tr, notify, navigate, projects, loaded, addProject, updateProject, deleteProject, undo, redo, canUndo, canRedo }), [locale, dark, chart, tr, notify, navigate, projects, loaded, addProject, updateProject, deleteProject, undo, redo, canUndo, canRedo]);
 
   const addChartTo = (project: Project | null) => {
     if (!pickerEntry) return;
@@ -184,11 +286,9 @@ export default function DataVizLab() {
       updateProject(project.id, (current) => ({ ...current, visualizations: [...current.visualizations, viz], activeVizId: viz.id }));
       navigate({ view: "studio", id: project.id });
     } else {
-      const created = createProject({ name: title, locale, withSample: true });
-      const viz = { ...created.visualizations[0], chartId: pickerEntry.id, title };
-      const next = { ...created, visualizations: [viz] };
-      addProject(next);
-      navigate({ view: "studio", id: next.id });
+      const created = createProject({ name: "", locale, withSample: true, chartId: pickerEntry.id });
+      addProject(created);
+      navigate({ view: "studio", id: created.id });
     }
     setPickerEntry(null);
     notify(tr("vizAdded"));
@@ -244,7 +344,13 @@ export default function DataVizLab() {
         {route.view === "home" && <HomeView api={api} />}
         {route.view === "projects" && <ProjectsView api={api} />}
         {route.view === "catalog" && <CatalogView api={api} onUseChart={setPickerEntry} />}
-        {route.view === "studio" && <StudioView key={route.id} api={api} projectId={route.id} />}
+        {route.view === "studio" && (
+          <ErrorBoundary resetKeys={[route.id]} fallback={(retry) => <ViewError tr={tr} retry={retry} />}>
+            <Suspense fallback={<section className="page studio-page" aria-busy="true"><p className="loading-line" role="status">DataVizLab…</p></section>}>
+              <StudioView key={route.id} api={api} projectId={route.id} />
+            </Suspense>
+          </ErrorBoundary>
+        )}
       </main>
 
       <footer className="site-footer">
@@ -268,7 +374,7 @@ export default function DataVizLab() {
           <div className="picker-list">
             {[...projects].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt)).map((project) => (
               <button key={project.id} type="button" onClick={() => addChartTo(project)}>
-                <span className="picker-viz"><MiniViz entry={pickerEntry} index={0} /></span>
+                <span className="picker-viz"><MiniViz entry={pickerEntry} dark={dark} locale={locale} /></span>
                 <span><strong>{project.name}</strong><small>{project.visualizations.length} {project.visualizations.length === 1 ? tr("vizSingular") : tr("vizPlural")} · {project.rows.length} {tr("rows")}</small></span>
                 <ArrowUpRight size={16} />
               </button>
@@ -279,7 +385,13 @@ export default function DataVizLab() {
       )}
 
       <Assistant open={assistantOpen} onOpenChange={setAssistantOpen} locale={locale} getContext={assistantContext} />
-      <Tour active={tourActive} onClose={() => setTourActive(false)} locale={locale} route={route} getProjects={() => projectsRef.current} addProject={addProject} navigate={navigate} />
+      {tourLoaded && (
+        <ErrorBoundary fallback={() => null}>
+          <Suspense fallback={null}>
+            <Tour active={tourActive} onClose={() => setTourActive(false)} locale={locale} route={route} getProjects={() => projectsRef.current} addProject={addProject} navigate={navigate} />
+          </Suspense>
+        </ErrorBoundary>
+      )}
       {invitePresence.mounted && (
         <aside className="tour-invite" data-state={invitePresence.closing ? "closed" : "open"} aria-label={tr("tourInviteTitle")}>
           <span className="tour-invite-icon" aria-hidden="true"><Compass size={18} /></span>

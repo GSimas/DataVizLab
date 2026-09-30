@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="117" fill="#07110f"> 3 │ 9</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="147" fill="#07110f"> 4 │ 1  1  3</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="177" fill="#07110f"> 5 │ 2  2  3  4  8  8</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="207" fill="#07110f"> 6 │ 0  4  5  5  7  9</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="237" fill="#07110f"> 7 │ 1  2  2  4  4  5  7</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="267" fill="#07110f"> 8 │ 0  0  4  4  5  5  8  8</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="297" fill="#07110f"> 9 │ 1  5  7  8</text>
+<text dominant-baseline="central" text-anchor="start" style="font: 600 18px 'DM Mono', ui-monospace, monospace" xml:space="preserve" x="214.2" y="327" fill="#07110f">10 │ 0</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 322.5L704 322.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 261.5L704 261.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 200.5L704 200.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 138.5L704 138.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 77.5L704 77.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 16.5L704 16.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-grouped-bar-cls-4"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#34443d" stroke-linecap="round" class="t-grouped-bar-cls-4"></path>
+<path d="M33.2 158.3L52.8 158.3A4 4 0 0 1 56.8 162.3L56.8 383A1 1 0 0 1 55.8 384L30.2 384A1 1 0 0 1 29.2 383L29.2 162.3A4 4 0 0 1 33.2 158.3Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-5"></path>
+<path d="M147.9 209.8L167.4 209.8A4 4 0 0 1 171.4 213.8L171.4 383A1 1 0 0 1 170.4 384L144.9 384A1 1 0 0 1 143.9 383L143.9 213.8A4 4 0 0 1 147.9 209.8Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-5"></path>
+<path d="M262.5 121.5L282.1 121.5A4 4 0 0 1 286.1 125.5L286.1 383A1 1 0 0 1 285.1 384L259.5 384A1 1 0 0 1 258.5 383L258.5 125.5A4 4 0 0 1 262.5 121.5Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-5"></path>
+<path d="M377.2 174.2L396.8 174.2A4 4 0 0 1 400.8 178.2L400.8 383A1 1 0 0 1 399.8 384L374.2 384A1 1 0 0 1 373.2 383L373.2 178.2A4 4 0 0 1 377.2 174.2Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-5"></path>
+<path d="M491.9 103.1L511.4 103.1A4 4 0 0 1 515.4 107.1L515.4 383A1 1 0 0 1 514.4 384L488.9 384A1 1 0 0 1 487.9 383L487.9 107.1A4 4 0 0 1 491.9 103.1Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-5"></path>
+<path d="M606.5 79.8L626.1 79.8A4 4 0 0 1 630.1 83.8L630.1 383A1 1 0 0 1 629.1 384L603.5 384A1 1 0 0 1 602.5 383L602.5 83.8A4 4 0 0 1 606.5 79.8Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-5"></path>
+<path d="M63.5 92.1L83.1 92.1A4 4 0 0 1 87.1 96.1L87.1 383A1 1 0 0 1 86.1 384L60.5 384A1 1 0 0 1 59.5 383L59.5 96.1A4 4 0 0 1 63.5 92.1Z" fill="#8a66d9" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-6"></path>
+<path d="M178.2 235.6L197.8 235.6A4 4 0 0 1 201.8 239.6L201.8 383A1 1 0 0 1 200.8 384L175.2 384A1 1 0 0 1 174.2 383L174.2 239.6A4 4 0 0 1 178.2 235.6Z" fill="#8a66d9" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-6"></path>
+<path d="M292.9 33.2L312.5 33.2A4 4 0 0 1 316.5 37.2L316.5 383A1 1 0 0 1 315.5 384L289.9 384A1 1 0 0 1 288.9 383L288.9 37.2A4 4 0 0 1 292.9 33.2Z" fill="#8a66d9" ecmeta_series_index="1" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-6"></path>
+<path d="M407.5 269.9L427.1 269.9A4 4 0 0 1 431.1 273.9L431.1 383A1 1 0 0 1 430.1 384L404.5 384A1 1 0 0 1 403.5 383L403.5 273.9A4 4 0 0 1 407.5 269.9Z" fill="#8a66d9" ecmeta_series_index="1" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-6"></path>
+<path d="M522.2 62.6L541.8 62.6A4 4 0 0 1 545.8 66.6L545.8 383A1 1 0 0 1 544.8 384L519.2 384A1 1 0 0 1 518.2 383L518.2 66.6A4 4 0 0 1 522.2 62.6Z" fill="#8a66d9" ecmeta_series_index="1" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-6"></path>
+<path d="M636.9 219.6L656.5 219.6A4 4 0 0 1 660.5 223.6L660.5 383A1 1 0 0 1 659.5 384L633.9 384A1 1 0 0 1 632.9 383L632.9 223.6A4 4 0 0 1 636.9 219.6Z" fill="#8a66d9" ecmeta_series_index="1" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-6"></path>
+<path d="M93.9 296.9L113.5 296.9A4 4 0 0 1 117.5 300.9L117.5 383A1 1 0 0 1 116.5 384L90.9 384A1 1 0 0 1 89.9 383L89.9 300.9A4 4 0 0 1 93.9 296.9Z" fill="#c8800d" ecmeta_series_index="2" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-7"></path>
+<path d="M208.6 143.6L228.1 143.6A4 4 0 0 1 232.1 147.6L232.1 383A1 1 0 0 1 231.1 384L205.6 384A1 1 0 0 1 204.6 383L204.6 147.6A4 4 0 0 1 208.6 143.6Z" fill="#c8800d" ecmeta_series_index="2" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-7"></path>
+<path d="M323.2 305.5L342.8 305.5A4 4 0 0 1 346.8 309.5L346.8 383A1 1 0 0 1 345.8 384L320.2 384A1 1 0 0 1 319.2 383L319.2 309.5A4 4 0 0 1 323.2 305.5Z" fill="#c8800d" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-7"></path>
+<path d="M437.9 229.4L457.5 229.4A4 4 0 0 1 461.5 233.4L461.5 383A1 1 0 0 1 460.5 384L434.9 384A1 1 0 0 1 433.9 383L433.9 233.4A4 4 0 0 1 437.9 229.4Z" fill="#c8800d" ecmeta_series_index="2" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-7"></path>
+<path d="M552.6 276.1L572.1 276.1A4 4 0 0 1 576.1 280.1L576.1 383A1 1 0 0 1 575.1 384L549.6 384A1 1 0 0 1 548.6 383L548.6 280.1A4 4 0 0 1 552.6 276.1Z" fill="#c8800d" ecmeta_series_index="2" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-7"></path>
+<path d="M667.2 130.1L686.8 130.1A4 4 0 0 1 690.8 134.1L690.8 383A1 1 0 0 1 689.8 384L664.2 384A1 1 0 0 1 663.2 383L663.2 134.1A4 4 0 0 1 667.2 130.1Z" fill="#c8800d" ecmeta_series_index="2" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-grouped-bar-cls-7"></path>
+<style ><![CDATA[
+.t-grouped-bar-cls-4:hover {
+pointer-events:none;
+}
+.t-grouped-bar-cls-5:hover {
+cursor:pointer;
+fill:rgba(106,184,49,1);
+}
+.t-grouped-bar-cls-6:hover {
+cursor:pointer;
+fill:rgba(151,112,238,1);
+}
+.t-grouped-bar-cls-7:hover {
+cursor:pointer;
+fill:rgba(220,140,14,1);
+}
+
+]]>
+
+</style>
+</svg>

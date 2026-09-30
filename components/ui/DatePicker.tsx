@@ -1,44 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { CalendarDays, ChevronLeft, ChevronRight } from "lucide-react";
 import type { Locale } from "../../lib/catalog";
+import { formatCell } from "../../lib/columns";
+import { parseDate, toIsoDate } from "../../lib/dates";
 import { usePresence } from "../../lib/motion";
 import { Portal, useAnchoredPosition, useOutsidePress } from "./floating";
-
-type DateFormat = { order: "ymd" | "dmy" | "mdy"; sep: string; shortYear: boolean; pad: boolean };
-
-const valid = (y: number, m: number, d: number) => { const date = new Date(y, m - 1, d); return date.getFullYear() === y && date.getMonth() === m - 1 && date.getDate() === d ? date : null; };
-
-/** Reads full dates (2024-03-15, 15/03/2024, 3/15/24…) and remembers how they were written. */
-export function parseDate(text: string, locale: Locale): { date: Date; format: DateFormat } | null {
-  const iso = /^(\d{4})([-/.])(\d{1,2})\2(\d{1,2})$/.exec(text.trim());
-  if (iso) {
-    const date = valid(+iso[1], +iso[3], +iso[4]);
-    return date ? { date, format: { order: "ymd", sep: iso[2], shortYear: false, pad: iso[3].length === 2 } } : null;
-  }
-  const local = /^(\d{1,2})([-/.])(\d{1,2})\2(\d{2}|\d{4})$/.exec(text.trim());
-  if (!local) return null;
-  const a = +local[1];
-  const b = +local[3];
-  const shortYear = local[4].length === 2;
-  const year = shortYear ? 2000 + +local[4] : +local[4];
-  const pad = local[1].length === 2;
-  const dmyFirst = locale === "pt" ? a <= 31 && b <= 12 : !(a <= 12 && b <= 31);
-  const tries: Array<DateFormat["order"]> = dmyFirst ? ["dmy", "mdy"] : ["mdy", "dmy"];
-  for (const order of tries) {
-    const date = order === "dmy" ? valid(year, b, a) : valid(year, a, b);
-    if (date) return { date, format: { order, sep: local[2], shortYear, pad } };
-  }
-  return null;
-}
-
-export function formatDate(date: Date, format: DateFormat) {
-  const two = (n: number) => String(n).padStart(2, "0");
-  const d = format.pad ? two(date.getDate()) : String(date.getDate());
-  const m = format.pad ? two(date.getMonth() + 1) : String(date.getMonth() + 1);
-  const y = format.shortYear ? two(date.getFullYear() % 100) : String(date.getFullYear());
-  const parts = format.order === "ymd" ? [y, m, d] : format.order === "dmy" ? [d, m, y] : [m, d, y];
-  return parts.join(format.sep);
-}
 
 const sameDay = (a: Date, b: Date) => a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
 const addDays = (date: Date, days: number) => new Date(date.getFullYear(), date.getMonth(), date.getDate() + days);
@@ -109,28 +75,53 @@ function Calendar({ selected, onSelect, onClose, locale, labels }: CalendarProps
   );
 }
 
-type DateCellProps = { value: string; onChange: (value: string) => void; locale: Locale; ariaLabel: string; labels: Labels };
+type DateCellProps = { value: unknown; onChange: (value: string) => void; locale: Locale; ariaLabel: string; labels: Labels; invalid?: boolean; invalidTip?: string; formatHint: string; onlyDatesHint: string };
 
-/** Table cell for a date column: free text plus a DataVizLab calendar popover. */
-export function DateCell({ value, onChange, locale, ariaLabel, labels }: DateCellProps) {
+/**
+ * Table cell for a date column. Dates are stored as ISO (2024-03-15) and shown the way people
+ * write them; typing accepts only date characters and commits as soon as the text is a real date.
+ */
+export function DateCell({ value, onChange, locale, ariaLabel, labels, invalid, invalidTip, formatHint, onlyDatesHint }: DateCellProps) {
   const [open, setOpen] = useState(false);
+  const [draft, setDraft] = useState<string | null>(null);
+  const [warn, setWarn] = useState("");
   const anchorRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const { mounted, closing } = usePresence(open);
-  const parsed = parseDate(value, locale);
+  const stored = value == null ? "" : String(value);
+  const parsed = parseDate(stored, locale);
+  const shown = draft ?? formatCell({ type: "date" }, stored, locale);
   const popRef = useAnchoredPosition<HTMLDivElement>(anchorRef, mounted, { maxHeight: 400 });
   const close = useCallback(() => { setOpen(false); buttonRef.current?.focus({ preventScroll: true }); }, []);
   const refs = useMemo(() => [anchorRef, popRef], [popRef]);
   useOutsidePress(refs, open, useCallback(() => setOpen(false), []));
+  useEffect(() => {
+    if (!warn) return;
+    const timer = window.setTimeout(() => setWarn(""), 1800);
+    return () => window.clearTimeout(timer);
+  }, [warn]);
+
+  const type = (text: string) => {
+    if (!/^[\d/.-]*$/.test(text)) { setWarn(onlyDatesHint); return; }
+    setWarn("");
+    setDraft(text);
+    if (text === "") { onChange(""); return; }
+    const date = parseDate(text, locale);
+    if (date) onChange(toIsoDate(date.date));
+    else if (/^\d{1,4}[/.-]\d{1,2}[/.-]\d{2,4}$/.test(text)) setWarn(onlyDatesHint);
+  };
 
   const select = (date: Date) => {
-    onChange(formatDate(date, parsed?.format ?? { order: "ymd", sep: "-", shortYear: false, pad: true }));
+    setDraft(null);
+    onChange(toIsoDate(date));
     close();
   };
 
   return (
     <div ref={anchorRef} className="date-cell">
-      <input aria-label={ariaLabel} value={value} onChange={(event) => onChange(event.target.value)} />
+      <input aria-label={ariaLabel} inputMode="numeric" value={shown} placeholder={formatHint} aria-invalid={invalid || undefined} data-tip={invalid ? invalidTip : undefined}
+        onFocus={(event) => { setDraft(shown); if (invalid) event.target.select(); }} onBlur={() => { setDraft(null); setWarn(""); }} onChange={(event) => type(event.target.value)} />
+      {warn && <span className="cell-hint" role="alert">{warn}</span>}
       <button ref={buttonRef} type="button" aria-label={`${labels.open}: ${ariaLabel}`} aria-expanded={open} data-tip={labels.open} onClick={() => setOpen((current) => !current)}><CalendarDays size={14} /></button>
       {mounted && (
         <Portal>

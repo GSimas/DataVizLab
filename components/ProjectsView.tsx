@@ -1,12 +1,15 @@
 import { useMemo, useRef, useState } from "react";
 import { ArrowUpRight, Copy, Download, FileUp, PencilLine, Plus, Search, Sparkles, Table2, Trash2 } from "lucide-react";
 import { getEntry } from "../lib/catalog";
-import { columnsOf, parseFile, suggestMappings, visualizationsFrom } from "../lib/data";
+import { columnsOf } from "../lib/columns";
+import { DEFAULT_EXPORT_SIZE, suggestMappings, visualizationsFrom } from "../lib/data";
+import { importTable } from "../lib/importer";
 import { activeViz, blankConfig, createProject, uid, type Project } from "../lib/projects";
 import { formatDate, routeHref, type AppApi } from "./app";
 import { MiniViz } from "./MiniViz";
 import { Modal } from "./Modal";
-import { DEFAULT_EXPORT_SIZE, exportProjectArchive } from "../lib/export";
+// Exporting draws every chart, so the chart library loads only when an export is asked for.
+const exportArchive = (...args: Parameters<typeof import("../lib/export").exportProjectArchive>) => import("../lib/export").then(({ exportProjectArchive }) => exportProjectArchive(...args));
 
 type Draft = { name: string; description: string; withSample: boolean };
 
@@ -54,13 +57,15 @@ export function ProjectsView({ api }: { api: AppApi }) {
   };
 
   const importFile = async (file: File) => {
+    // Parsing and typing run in the import worker; large files get a note while the page stays usable.
+    if (file.size > 512 * 1024) notify(tr("processingFile"));
     try {
-      const parsed = await parseFile(file);
-      if (!parsed.rows.length) throw new Error("empty");
-      const base = createProject({ name: parsed.project?.name || file.name.replace(/\.[^.]+$/, ""), description: parsed.project?.description, locale, withSample: false });
-      const fallback = { ...blankConfig(locale), ...suggestMappings(parsed.rows) };
-      const visualizations = parsed.project ? visualizationsFrom(parsed.project, fallback) : [{ ...base.visualizations[0], ...suggestMappings(parsed.rows) }];
-      const project: Project = { ...base, rows: parsed.rows, dataName: parsed.dataName, visualizations, activeVizId: visualizations[0].id };
+      const table = await importTable(file, locale);
+      const base = createProject({ name: table.project?.name || file.name.replace(/\.[^.]+$/, ""), description: table.project?.description, locale, withSample: false });
+      const mappings = suggestMappings(table.rows, table.columnTypes);
+      const fallback = { ...blankConfig(locale), ...mappings };
+      const visualizations = table.project ? visualizationsFrom(table.project, fallback) : [{ ...base.visualizations[0], ...mappings }];
+      const project: Project = { ...base, rows: table.rows, columnTypes: table.columnTypes, dataName: table.dataName, visualizations, activeVizId: visualizations[0].id };
       addProject(project);
       notify(tr("projectImported"));
       navigate({ view: "studio", id: project.id });
@@ -120,7 +125,7 @@ export function ProjectsView({ api }: { api: AppApi }) {
             return (
               <article className="project-card" key={project.id} style={{ "--i": Math.min(index + 1, 12) } as React.CSSProperties}>
                 <a className="card-hit" href={routeHref({ view: "studio", id: project.id })} aria-label={`${tr("open")}: ${project.name}`} />
-                <div className="project-preview"><MiniViz entry={entry} index={index} /></div>
+                <div className="project-preview"><MiniViz entry={entry} dark={dark} locale={locale} /></div>
                 <div className="project-body">
                   <p className="card-meta"><span style={{ "--dot": `var(--fam-${entry.family})` } as React.CSSProperties}>{entry.name[locale]}</span><small>{vizCount} {vizCount === 1 ? tr("vizSingular") : tr("vizPlural")}</small></p>
                   <h3>{project.name}</h3>
@@ -132,7 +137,7 @@ export function ProjectsView({ api }: { api: AppApi }) {
                   <div className="project-actions">
                     <button type="button" onClick={() => { setEditing(project); setEditDraft({ name: project.name, description: project.description }); }} aria-label={`${tr("rename")}: ${project.name}`} data-tip={tr("rename")}><PencilLine size={14} /></button>
                     <button type="button" onClick={() => duplicate(project)} aria-label={`${tr("duplicate")}: ${project.name}`} data-tip={tr("duplicate")}><Copy size={14} /></button>
-                    <button type="button" onClick={() => { exportProjectArchive(project, locale, { dark, contrast: chart.contrast, fontScale: chart.fontScale, ...DEFAULT_EXPORT_SIZE }).then(() => notify(tr("downloadReady"))); }} aria-label={`${tr("exportZip")}: ${project.name}`} data-tip={tr("exportZip")}><Download size={14} /></button>
+                    <button type="button" onClick={() => { exportArchive(project, locale, { dark, contrast: chart.contrast, fontScale: chart.fontScale, ...DEFAULT_EXPORT_SIZE }).then(() => notify(tr("downloadReady"))); }} aria-label={`${tr("exportZip")}: ${project.name}`} data-tip={tr("exportZip")}><Download size={14} /></button>
                     <button type="button" className="danger" onClick={() => setDeleting(project)} aria-label={`${tr("delete")}: ${project.name}`} data-tip={tr("delete")}><Trash2 size={14} /></button>
                     <span className="open-arrow" aria-hidden="true"><ArrowUpRight size={16} /></span>
                   </div>

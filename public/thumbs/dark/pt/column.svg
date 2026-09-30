@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-column-cls-2"></path>
+<path d="M16 310.5L704 310.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-column-cls-2"></path>
+<path d="M16 237.5L704 237.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-column-cls-2"></path>
+<path d="M16 163.5L704 163.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-column-cls-2"></path>
+<path d="M16 89.5L704 89.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-column-cls-2"></path>
+<path d="M16 16.5L704 16.5" fill="none" pointer-events="visible" stroke="#1a2a24" class="t-column-cls-2"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#34443d" stroke-linecap="round" class="t-column-cls-2"></path>
+<path d="M28.9 209.7L60.4 209.7A4 4 0 0 1 64.4 213.7L64.4 383A1 1 0 0 1 63.4 384L25.9 384A1 1 0 0 1 24.9 383L24.9 213.7A4 4 0 0 1 28.9 209.7Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M86.2 204.6L117.8 204.6A4 4 0 0 1 121.8 208.6L121.8 383A1 1 0 0 1 120.8 384L83.2 384A1 1 0 0 1 82.2 383L82.2 208.6A4 4 0 0 1 86.2 204.6Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M143.6 186.5L175.1 186.5A4 4 0 0 1 179.1 190.5L179.1 383A1 1 0 0 1 178.1 384L140.6 384A1 1 0 0 1 139.6 383L139.6 190.5A4 4 0 0 1 143.6 186.5Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M200.9 192.9L232.4 192.9A4 4 0 0 1 236.4 196.9L236.4 383A1 1 0 0 1 235.4 384L197.9 384A1 1 0 0 1 196.9 383L196.9 196.9A4 4 0 0 1 200.9 192.9Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M258.2 175.7L289.8 175.7A4 4 0 0 1 293.8 179.7L293.8 383A1 1 0 0 1 292.8 384L255.2 384A1 1 0 0 1 254.2 383L254.2 179.7A4 4 0 0 1 258.2 175.7Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M315.6 159.8L347.1 159.8A4 4 0 0 1 351.1 163.8L351.1 383A1 1 0 0 1 350.1 384L312.6 384A1 1 0 0 1 311.6 383L311.6 163.8A4 4 0 0 1 315.6 159.8Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M372.9 164.8L404.4 164.8A4 4 0 0 1 408.4 168.8L408.4 383A1 1 0 0 1 407.4 384L369.9 384A1 1 0 0 1 368.9 383L368.9 168.8A4 4 0 0 1 372.9 164.8Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M430.2 152L461.8 152A4 4 0 0 1 465.8 156L465.8 383A1 1 0 0 1 464.8 384L427.2 384A1 1 0 0 1 426.2 383L426.2 156A4 4 0 0 1 430.2 152Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M487.6 143.5L519.1 143.5A4 4 0 0 1 523.1 147.5L523.1 383A1 1 0 0 1 522.1 384L484.6 384A1 1 0 0 1 483.6 383L483.6 147.5A4 4 0 0 1 487.6 143.5Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M544.9 132L576.4 132A4 4 0 0 1 580.4 136L580.4 383A1 1 0 0 1 579.4 384L541.9 384A1 1 0 0 1 540.9 383L540.9 136A4 4 0 0 1 544.9 132Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M602.2 104.6L633.8 104.6A4 4 0 0 1 637.8 108.6L637.8 383A1 1 0 0 1 636.8 384L599.2 384A1 1 0 0 1 598.2 383L598.2 108.6A4 4 0 0 1 602.2 104.6Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<path d="M659.6 68.3L691.1 68.3A4 4 0 0 1 695.1 72.3L695.1 383A1 1 0 0 1 694.1 384L656.6 384A1 1 0 0 1 655.6 383L655.6 72.3A4 4 0 0 1 659.6 68.3Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-column-cls-3"></path>
+<style ><![CDATA[
+.t-column-cls-2:hover {
+pointer-events:none;
+}
+.t-column-cls-3:hover {
+cursor:pointer;
+fill:rgba(106,184,49,1);
+}
+
+]]>
+
+</style>
+</svg>

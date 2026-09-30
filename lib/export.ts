@@ -1,4 +1,4 @@
-import * as echarts from "echarts";
+import * as echarts from "../components/echarts";
 import type { EChartsOption } from "echarts";
 import { chartOption, chartSurface, type ChartDisplay } from "../components/ChartRenderer";
 import type { Locale } from "./catalog";
@@ -8,14 +8,14 @@ import type { Project, Visualization } from "./projects";
 export type ExportFormat = "svg" | "jpg" | "png" | "project";
 
 /** How an export should look; independent of the on-screen theme. */
-export type ExportLook = { dark: boolean; contrast: boolean; fontScale: number; width: number; height: number };
+export type ExportLook = { dark: boolean; contrast: boolean; fontScale: number; width: number; height: number; locale?: Locale };
 
-export const DEFAULT_EXPORT_SIZE = { width: 1200, height: 700 };
+export { DEFAULT_EXPORT_SIZE } from "./data";
 
 const fileBase = (project: Project, viz: Visualization) => `${slugify(project.name, "projeto")}-${slugify(viz.title || viz.chartId, "grafico")}`;
 
 const staticOption = (project: Project, viz: Visualization, look: ExportLook, background: string): EChartsOption => {
-  const display: ChartDisplay = { dark: look.dark, contrast: look.contrast, fontScale: look.fontScale, reducedMotion: true };
+  const display: ChartDisplay = { dark: look.dark, contrast: look.contrast, fontScale: look.fontScale, reducedMotion: true, locale: look.locale };
   return { ...chartOption(project.rows, viz, display), animation: false, backgroundColor: background };
 };
 
@@ -48,7 +48,8 @@ export function renderRaster(project: Project, viz: Visualization, look: ExportL
 const dataUrlToBlob = async (url: string) => (await fetch(url)).blob();
 
 /** Downloads one visualization or the whole project. */
-export async function runExport(format: ExportFormat, project: Project, viz: Visualization, look: ExportLook, locale: Locale) {
+export async function runExport(format: ExportFormat, project: Project, viz: Visualization, plainLook: ExportLook, locale: Locale) {
+  const look = { ...plainLook, locale };
   if (format === "svg") {
     downloadBlob(new Blob([renderSvg(project, viz, look)], { type: "image/svg+xml" }), `${fileBase(project, viz)}.svg`);
   } else if (format === "jpg") {
@@ -61,7 +62,8 @@ export async function runExport(format: ExportFormat, project: Project, viz: Vis
 }
 
 /** Project ZIP with data, configuration and an SVG of every visualization. */
-export async function exportProjectArchive(project: Project, locale: Locale, look: ExportLook) {
+export async function exportProjectArchive(project: Project, locale: Locale, plainLook: ExportLook) {
+  const look = { ...plainLook, locale };
   const charts: Record<string, string> = {};
   if (project.rows.length) {
     project.visualizations.forEach((viz, index) => {

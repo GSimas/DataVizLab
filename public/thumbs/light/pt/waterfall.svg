@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-waterfall-cls-1053"></path>
+<path d="M16 310.5L704 310.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-waterfall-cls-1053"></path>
+<path d="M16 237.5L704 237.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-waterfall-cls-1053"></path>
+<path d="M16 163.5L704 163.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-waterfall-cls-1053"></path>
+<path d="M16 89.5L704 89.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-waterfall-cls-1053"></path>
+<path d="M16 16.5L704 16.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-waterfall-cls-1053"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-waterfall-cls-1053"></path>
+<path d="M36.6 384l57 0l0 0l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M134.9 384l57 0l0 -311.3l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M233.2 384l57 0l0 -169.3l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M331.5 384l57 0l0 -114.8l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M429.8 384l57 0l0 -77.3l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M528.1 384l57 0l0 -77.3l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M626.4 384l57 0l0 0l-57 0Z" fill="none" pointer-events="visible" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" ecmeta_silent="true" class="t-waterfall-cls-1053"></path>
+<path d="M531.1 300.5L582.1 300.5A3 3 0 0 1 585.1 303.5L585.1 303.7A3 3 0 0 1 582.1 306.7L531.1 306.7A3 3 0 0 1 528.1 303.7L528.1 303.5A3 3 0 0 1 531.1 300.5Z" fill="#478809" ecmeta_series_index="1" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-waterfall-cls-1054"></path>
+<path d="M137.9 27L188.9 27A3 3 0 0 1 191.9 30L191.9 69.7A3 3 0 0 1 188.9 72.7L137.9 72.7A3 3 0 0 1 134.9 69.7L134.9 30A3 3 0 0 1 137.9 27Z" fill="#c5372f" ecmeta_series_index="2" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-waterfall-cls-1055"></path>
+<path d="M236.2 72.7L287.2 72.7A3 3 0 0 1 290.2 75.7L290.2 211.7A3 3 0 0 1 287.2 214.7L236.2 214.7A3 3 0 0 1 233.2 211.7L233.2 75.7A3 3 0 0 1 236.2 72.7Z" fill="#c5372f" ecmeta_series_index="2" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-waterfall-cls-1055"></path>
+<path d="M334.5 214.7L385.5 214.7A3 3 0 0 1 388.5 217.7L388.5 266.2A3 3 0 0 1 385.5 269.2L334.5 269.2A3 3 0 0 1 331.5 266.2L331.5 217.7A3 3 0 0 1 334.5 214.7Z" fill="#c5372f" ecmeta_series_index="2" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-waterfall-cls-1055"></path>
+<path d="M432.8 269.2L483.8 269.2A3 3 0 0 1 486.8 272.2L486.8 303.7A3 3 0 0 1 483.8 306.7L432.8 306.7A3 3 0 0 1 429.8 303.7L429.8 272.2A3 3 0 0 1 432.8 269.2Z" fill="#c5372f" ecmeta_series_index="2" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-waterfall-cls-1055"></path>
+<path d="M39.6 27L90.6 27A3 3 0 0 1 93.6 30L93.6 381A3 3 0 0 1 90.6 384L39.6 384A3 3 0 0 1 36.6 381L36.6 30A3 3 0 0 1 39.6 27Z" fill="#2769b7" ecmeta_series_index="3" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-waterfall-cls-1056"></path>
+<path d="M629.4 300.5L680.4 300.5A3 3 0 0 1 683.4 303.5L683.4 381A3 3 0 0 1 680.4 384L629.4 384A3 3 0 0 1 626.4 381L626.4 303.5A3 3 0 0 1 629.4 300.5Z" fill="#2769b7" ecmeta_series_index="3" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-waterfall-cls-1056"></path>
+<style ><![CDATA[
+.t-waterfall-cls-1053:hover {
+pointer-events:none;
+}
+.t-waterfall-cls-1054:hover {
+cursor:pointer;
+fill:rgba(78,149,9,1);
+}
+.t-waterfall-cls-1055:hover {
+cursor:pointer;
+fill:rgba(216,60,51,1);
+}
+.t-waterfall-cls-1056:hover {
+cursor:pointer;
+fill:rgba(42,115,201,1);
+}
+
+]]>
+
+</style>
+</svg>

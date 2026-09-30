@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 331.5L704 331.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 279.5L704 279.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 226.5L704 226.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 173.5L704 173.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 121.5L704 121.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 68.5L704 68.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 16.5L704 16.5" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-ohlc-cls-1995"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-ohlc-cls-1995"></path>
+<path d="M21.7 43.3L21.7 81.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M18.1 47.5L21.7 47.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M21.7 79.1L25.4 79.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M33.2 37L33.2 78" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M29.5 70.1L33.2 70.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M33.2 56L36.9 56" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M44.7 39.1L44.7 63.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M41 59.6L44.7 59.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M44.7 46L48.3 46" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M56.1 23.4L56.1 74.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M52.5 36.5L56.1 36.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M56.1 69.1L59.8 69.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M67.6 46.5L67.6 97.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M63.9 70.1L67.6 70.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M67.6 83.3L71.3 83.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M79.1 65.9L79.1 164.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M75.4 82.2L79.1 82.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M79.1 152.7L82.7 152.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M90.5 125.3L90.5 164.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M86.9 146.9L90.5 146.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M90.5 143.7L94.2 143.7" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M102 129L102 160" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M98.3 156.9L102 156.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M102 133.8L105.7 133.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M113.5 113.3L113.5 174.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M109.8 134.3L113.5 134.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M113.5 160L117.1 160" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M124.9 138L124.9 222.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M121.3 158.5L124.9 158.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M124.9 213.7L128.6 213.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M136.4 189.5L136.4 248.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M132.7 215.2L136.4 215.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M136.4 244.7L140.1 244.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M147.9 237.9L147.9 269.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M144.2 245.7L147.9 245.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M147.9 260.5L151.5 260.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M159.3 246.8L159.3 290.4" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M155.7 259.4L159.3 259.4" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M159.3 262.6L163 262.6" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M170.8 255.7L170.8 293.6" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M167.1 265.7L170.8 265.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M170.8 273.6L174.5 273.6" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M182.3 264.1L182.3 303.6" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M178.6 270.4L182.3 270.4" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M182.3 297.3L185.9 297.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M193.7 270.4L193.7 315.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M190.1 274.1L193.7 274.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M193.7 306.2L197.4 306.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M205.2 302.5L205.2 344.6" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M201.5 307.8L205.2 307.8" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M205.2 327.2L208.9 327.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M216.7 258.9L216.7 331.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M213 320.9L216.7 320.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M216.7 262L220.3 262" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M228.1 261L228.1 305.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M224.5 265.2L228.1 265.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M228.1 294.1L231.8 294.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M239.6 318.8L239.6 345.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M235.9 322.5L239.6 322.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M239.6 322.5L243.3 322.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M251.1 279.9L251.1 333" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M247.4 326.7L251.1 326.7" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M251.1 288.3L254.7 288.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M262.5 224.7L262.5 328.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M258.9 292.5L262.5 292.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M262.5 236.8L266.2 236.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M274 234.2L274 277.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M270.3 236.8L274 236.8" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M274 260.5L277.7 260.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M285.5 231.5L285.5 279.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M281.8 265.7L285.5 265.7" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M285.5 242.6L289.1 242.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M296.9 230L296.9 270.4" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="24" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M293.3 242.6L296.9 242.6" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="24" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M296.9 254.7L300.6 254.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="24" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M308.4 223.1L308.4 256.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="25" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M304.7 252.6L308.4 252.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="25" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M308.4 240.5L312.1 240.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="25" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M319.9 204.2L319.9 249.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="26" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M316.2 239.4L319.9 239.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="26" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M319.9 220.5L323.5 220.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="26" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M331.3 184.2L331.3 293.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="27" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M327.7 221L331.3 221" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="27" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M331.3 278.9L335 278.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="27" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M342.8 259.4L342.8 298.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="28" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M339.1 281L342.8 281" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="28" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M342.8 264.7L346.5 264.7" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="28" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M354.3 238.9L354.3 278.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="29" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M350.6 255.7L354.3 255.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="29" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M354.3 272.5L357.9 272.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="29" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M365.7 292L365.7 327.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="30" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M362.1 296.7L365.7 296.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="30" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M365.7 312.5L369.4 312.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="30" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M377.2 254.7L377.2 353" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="31" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M373.5 323.5L377.2 323.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="31" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M377.2 265.2L380.9 265.2" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="31" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M388.7 220.5L388.7 283.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="32" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M385 271L388.7 271" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="32" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M388.7 225.8L392.3 225.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="32" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M400.1 189L400.1 207.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="33" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M396.5 201.6L400.1 201.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="33" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M400.1 191.6L403.8 191.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="33" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M411.6 186.9L411.6 225.8" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="34" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M407.9 190L411.6 190" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="34" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M411.6 214.2L415.3 214.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="34" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M423.1 144.3L423.1 222.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="35" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M419.4 213.7L423.1 213.7" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="35" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M423.1 159L426.7 159" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="35" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M434.5 141.1L434.5 221" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="36" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M430.9 167.4L434.5 167.4" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="36" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M434.5 197.9L438.2 197.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="36" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M446 166.4L446 198.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="37" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M442.3 189L446 189" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="37" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M446 176.9L449.7 176.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="37" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M457.5 149.5L457.5 196.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="38" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M453.8 185.3L457.5 185.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="38" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M457.5 176.9L461.1 176.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="38" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M468.9 162.1L468.9 197.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="39" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M465.3 176.3L468.9 176.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="39" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M468.9 175.8L472.6 175.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="39" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M480.4 184.2L480.4 207.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="40" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M476.7 192.1L480.4 192.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="40" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M480.4 191.6L484.1 191.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="40" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M491.9 167.4L491.9 208.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="41" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M488.2 185.3L491.9 185.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="41" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M491.9 204.7L495.5 204.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="41" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M503.3 154.8L503.3 207.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="42" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M499.7 201.1L503.3 201.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="42" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M503.3 179L507 179" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="42" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M514.8 161.6L514.8 187.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="43" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M511.1 176.9L514.8 176.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="43" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M514.8 165.3L518.5 165.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="43" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M526.3 142.7L526.3 172.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="44" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M522.6 161.6L526.3 161.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="44" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M526.3 158.5L529.9 158.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="44" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M537.7 124.8L537.7 211" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="45" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M534.1 161.1L537.7 161.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="45" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M537.7 206.3L541.4 206.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="45" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M549.2 190.5L549.2 319.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="46" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M545.5 206.8L549.2 206.8" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="46" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M549.2 272L552.9 272" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="46" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M560.7 272L560.7 314.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="47" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M557 300.9L560.7 300.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="47" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M560.7 278.3L564.3 278.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="47" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M572.1 234.7L572.1 289.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="48" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M568.5 262.6L572.1 262.6" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="48" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M572.1 247.3L575.8 247.3" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="48" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M583.6 233.6L583.6 268.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="49" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M579.9 249.9L583.6 249.9" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="49" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M583.6 247.8L587.3 247.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="49" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M595.1 206.8L595.1 259.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="50" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M591.4 247.8L595.1 247.8" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="50" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M595.1 220L598.7 220" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="50" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M606.5 169.5L606.5 222.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="51" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M602.9 214.2L606.5 214.2" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="51" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M606.5 189.5L610.2 189.5" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="51" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M618 170.6L618 197.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="52" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M614.3 182.7L618 182.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="52" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M618 189.5L621.7 189.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="52" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M629.5 149.5L629.5 237.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="53" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M625.8 189L629.5 189" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="53" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M629.5 218.9L633.1 218.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="53" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M640.9 202.6L640.9 296.7" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="54" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M637.3 213.1L640.9 213.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="54" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M640.9 282.5L644.6 282.5" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="54" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M652.4 283.1L652.4 318.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="55" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M648.7 286.2L652.4 286.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="55" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M652.4 308.8L656.1 308.8" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="55" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M663.9 266.2L663.9 314.1" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="56" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M660.2 300.4L663.9 300.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="56" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M663.9 280.4L667.5 280.4" fill="#000" stroke="#478809" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="56" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M675.3 273.6L675.3 300.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="57" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M671.7 278.9L675.3 278.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="57" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M675.3 287.3L679 287.3" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="57" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M686.8 264.7L686.8 326.2" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="58" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M683.1 283.1L686.8 283.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="58" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M686.8 300.9L690.5 300.9" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="58" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M698.3 291.5L698.3 338.8" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="59" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M694.6 305.1L698.3 305.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="59" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<path d="M698.3 335.1L701.9 335.1" fill="#000" stroke="#c5372f" stroke-width="1.6" ecmeta_series_index="0" ecmeta_data_index="59" ecmeta_ssr_type="chart" class="t-ohlc-cls-1996"></path>
+<style ><![CDATA[
+.t-ohlc-cls-1995:hover {
+pointer-events:none;
+}
+.t-ohlc-cls-1996:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+
+]]>
+
+</style>
+</svg>

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { ArrowRight, ArrowUpRight, BarChart3, Check, CircleAlert, Plus, Search, Table2 } from "lucide-react";
 import { catalog, familyColors, familyLabels, type VizEntry, type VizFamily } from "../lib/catalog";
 import type { TranslationKey } from "../lib/i18n";
@@ -15,15 +15,17 @@ export function CatalogView({ api, onUseChart }: { api: AppApi; onUseChart: (ent
   const [family, setFamily] = useState<VizFamily | "all">("all");
   const [visibleCount, setVisibleCount] = useState(PAGE);
   const [detail, setDetail] = useState<VizEntry | null>(null);
+  // The field answers every keystroke at once; the filtered grid follows right after, at lower priority.
+  const search = useDeferredValue(query);
 
   const filtered = useMemo(() => {
-    const needle = query.trim().toLocaleLowerCase(locale === "pt" ? "pt-BR" : "en");
+    const needle = search.trim().toLocaleLowerCase(locale === "pt" ? "pt-BR" : "en");
     return catalog.filter((entry) => {
       if (family !== "all" && entry.family !== family) return false;
       if (!needle) return true;
       return [entry.name.pt, entry.name.en, entry.what.pt, entry.what.en, entry.when.pt, entry.when.en, ...entry.aliases, ...entry.tags].join(" ").toLowerCase().includes(needle);
     });
-  }, [family, locale, query]);
+  }, [family, locale, search]);
 
   return (
     <>
@@ -56,7 +58,7 @@ export function CatalogView({ api, onUseChart }: { api: AppApi; onUseChart: (ent
             <article className="viz-card" key={entry.id} style={{ "--i": Math.min(index % PAGE, 12), "--dot": familyColors[entry.family] } as React.CSSProperties}>
               <button className="card-hit" type="button" onClick={() => setDetail(entry)} aria-label={`${tr("details")}: ${entry.name[locale]}`} />
               <p className="card-meta"><span style={{ "--dot": familyColors[entry.family] } as React.CSSProperties}>{familyLabels[entry.family][locale]}</span><small>{String(index + 1).padStart(2, "0")}</small></p>
-              <div className="mini-viz"><MiniViz entry={entry} index={index} /></div>
+              <div className="mini-viz"><MiniViz entry={entry} dark={api.dark} locale={locale} /></div>
               <h3>{entry.name[locale]}</h3>
               <p>{entry.what[locale]}</p>
               <footer className="card-foot"><span>{tr(complexityKey[entry.complexity])}</span><ArrowRight size={15} /></footer>
@@ -87,7 +89,7 @@ export function CatalogView({ api, onUseChart }: { api: AppApi; onUseChart: (ent
               <h2 id="detail-title" className="modal-title">{detail.name[locale]}</h2>
               <p className="detail-aliases">{detail.aliases.join(" · ")}</p>
             </div>
-            <div className="detail-viz"><MiniViz entry={detail} index={catalog.indexOf(detail)} /></div>
+            <div className="detail-viz"><MiniViz entry={detail} dark={api.dark} locale={locale} /></div>
           </div>
           <p className="detail-definition">{detail.what[locale]}</p>
           <div className="detail-grid">

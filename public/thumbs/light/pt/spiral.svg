@@ -1,0 +1,407 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M360 222L360 109" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="360" y="89" fill="#6b7772">Jan</text>
+<path d="M366 223.6L422.5 125.7" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="432.5" y="108.4263164512564" fill="#6b7772">Fev</text>
+<path d="M370.4 228L468.3 171.5" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="485.5736835487436" y="161.5" fill="#6b7772">Mar</text>
+<path d="M372 234L485 234" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="505" y="234" fill="#6b7772">Abr</text>
+<path d="M370.4 240L468.3 296.5" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="485.5736835487436" y="306.5" fill="#6b7772">Mai</text>
+<path d="M366 244.4L422.5 342.3" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="432.5" y="359.5736835487436" fill="#6b7772">Jun</text>
+<path d="M360 246L360 359" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="360" y="379" fill="#6b7772">Jul</text>
+<path d="M354 244.4L297.5 342.3" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="287.5" y="359.5736835487436" fill="#6b7772">Ago</text>
+<path d="M349.6 240L251.7 296.5" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="234.42631645125638" y="306.5" fill="#6b7772">Set</text>
+<path d="M348 234L235 234" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="215" y="234.00000000000003" fill="#6b7772">Out</text>
+<path d="M349.6 228L251.7 171.5" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="234.4263164512564" y="161.5" fill="#6b7772">Nov</text>
+<path d="M354 223.6L297.5 125.7" fill="#000" stroke="#e4e1d7" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 11px sans-serif" x="287.49999999999994" y="108.42631645125643" fill="#6b7772">Dez</text>
+<circle cx="360" cy="214" r="10.6" fill="rgb(78,128,28)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-spiral-cls-1230"></circle>
+<path d="M360 214L370.7 215.4" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="370.7" cy="215.4" r="11.1" fill="rgb(66,116,22)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-spiral-cls-1231"></circle>
+<path d="M370.7 215.4L379.9 222.5" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="379.9" cy="222.5" r="10.5" fill="rgb(80,131,29)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-spiral-cls-1232"></circle>
+<path d="M379.9 222.5L384.4 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="384.4" cy="234" r="8.3" fill="rgb(137,181,81)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-spiral-cls-1233"></circle>
+<path d="M384.4 234L382.4 247" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="382.4" cy="247" r="7.5" fill="rgb(162,198,111)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-spiral-cls-1234"></circle>
+<path d="M382.4 247L373.7 257.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="373.7" cy="257.7" r="5.3" fill="rgb(214,229,187)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-spiral-cls-1235"></circle>
+<path d="M373.7 257.7L360 262.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="262.9" r="4.5" fill="rgb(229,237,212)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-spiral-cls-1236"></circle>
+<path d="M360 262.9L344.8 260.3" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="344.8" cy="260.3" r="4.1" fill="rgb(236,240,222)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-spiral-cls-1237"></circle>
+<path d="M344.8 260.3L332.4 249.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="332.4" cy="249.9" r="4" fill="rgb(238,241,226)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-spiral-cls-1238"></circle>
+<path d="M332.4 249.9L326.7 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="326.7" cy="234" r="5.6" fill="rgb(209,226,178)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-spiral-cls-1239"></circle>
+<path d="M326.7 234L329.9 216.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="329.9" cy="216.6" r="7.2" fill="rgb(173,205,124)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-spiral-cls-1240"></circle>
+<path d="M329.9 216.6L341.9 202.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="341.9" cy="202.6" r="9.4" fill="rgb(104,157,42)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-spiral-cls-1241"></circle>
+<path d="M341.9 202.6L360 196.3" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="196.3" r="10.3" fill="rgb(85,136,32)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-spiral-cls-1242"></circle>
+<path d="M360 196.3L379.6 200" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="379.6" cy="200" r="11.6" fill="rgb(56,105,17)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-spiral-cls-1243"></circle>
+<path d="M379.6 200L395.3 213.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="395.3" cy="213.6" r="10.6" fill="rgb(78,128,28)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-spiral-cls-1230"></circle>
+<path d="M395.3 213.6L402.2 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="402.2" cy="234" r="9.2" fill="rgb(111,162,49)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-spiral-cls-1244"></circle>
+<path d="M402.2 234L397.8 255.8" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="397.8" cy="255.8" r="8" fill="rgb(148,188,94)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-spiral-cls-1245"></circle>
+<path d="M397.8 255.8L382.6 273.1" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="382.6" cy="273.1" r="6.3" fill="rgb(195,219,154)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-spiral-cls-1246"></circle>
+<path d="M382.6 273.1L360 280.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="280.6" r="4.9" fill="rgb(222,233,199)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-spiral-cls-1247"></circle>
+<path d="M360 280.6L336 275.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="336" cy="275.7" r="4.1" fill="rgb(237,240,224)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-spiral-cls-1248"></circle>
+<path d="M336 275.7L317.1 258.8" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="317.1" cy="258.8" r="5.3" fill="rgb(214,229,187)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-spiral-cls-1235"></circle>
+<path d="M317.1 258.8L308.9 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="308.9" cy="234" r="6" fill="rgb(201,223,165)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-spiral-cls-1249"></circle>
+<path d="M308.9 234L314.5 207.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="314.5" cy="207.7" r="8.3" fill="rgb(139,182,83)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="22" ecmeta_ssr_type="chart" class="t-spiral-cls-1250"></circle>
+<path d="M314.5 207.7L333 187.2" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="333" cy="187.2" r="9.8" fill="rgb(97,149,38)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="23" ecmeta_ssr_type="chart" class="t-spiral-cls-1251"></circle>
+<path d="M333 187.2L360 178.5" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="24" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="178.5" r="10.2" fill="rgb(86,138,33)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="24" ecmeta_ssr_type="chart" class="t-spiral-cls-1252"></circle>
+<path d="M360 178.5L388.5 184.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="25" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="388.5" cy="184.7" r="11.1" fill="rgb(66,116,22)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="25" ecmeta_ssr_type="chart" class="t-spiral-cls-1231"></circle>
+<path d="M388.5 184.7L410.6 204.8" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="26" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="410.6" cy="204.8" r="10.4" fill="rgb(81,132,30)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="26" ecmeta_ssr_type="chart" class="t-spiral-cls-1253"></circle>
+<path d="M410.6 204.8L419.9 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="27" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="419.9" cy="234" r="9.4" fill="rgb(104,157,42)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="27" ecmeta_ssr_type="chart" class="t-spiral-cls-1241"></circle>
+<path d="M419.9 234L413.2 264.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="28" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="413.2" cy="264.7" r="8.1" fill="rgb(144,186,90)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="28" ecmeta_ssr_type="chart" class="t-spiral-cls-1254"></circle>
+<path d="M413.2 264.7L391.4 288.5" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="29" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="391.4" cy="288.5" r="5.8" fill="rgb(205,224,170)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="29" ecmeta_ssr_type="chart" class="t-spiral-cls-1255"></circle>
+<path d="M391.4 288.5L360 298.4" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="30" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="298.4" r="5.5" fill="rgb(210,227,179)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="30" ecmeta_ssr_type="chart" class="t-spiral-cls-1256"></circle>
+<path d="M360 298.4L327.1 291" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="31" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="327.1" cy="291" r="4.6" fill="rgb(227,236,208)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="31" ecmeta_ssr_type="chart" class="t-spiral-cls-1257"></circle>
+<path d="M327.1 291L301.7 267.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="32" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="301.7" cy="267.7" r="4.8" fill="rgb(223,233,201)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="32" ecmeta_ssr_type="chart" class="t-spiral-cls-1258"></circle>
+<path d="M301.7 267.7L291.2 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="33" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="291.2" cy="234" r="6.6" fill="rgb(189,217,145)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="33" ecmeta_ssr_type="chart" class="t-spiral-cls-1259"></circle>
+<path d="M291.2 234L299.1 198.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="34" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="299.1" cy="198.9" r="7.9" fill="rgb(151,191,98)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="34" ecmeta_ssr_type="chart" class="t-spiral-cls-1260"></circle>
+<path d="M299.1 198.9L324.1 171.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="35" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="324.1" cy="171.9" r="9.6" fill="rgb(99,152,39)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="35" ecmeta_ssr_type="chart" class="t-spiral-cls-1261"></circle>
+<path d="M324.1 171.9L360 160.8" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="36" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="160.8" r="10.6" fill="rgb(78,128,28)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="36" ecmeta_ssr_type="chart" class="t-spiral-cls-1230"></circle>
+<path d="M360 160.8L397.4 169.3" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="37" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="397.4" cy="169.3" r="10.8" fill="rgb(72,123,25)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="37" ecmeta_ssr_type="chart" class="t-spiral-cls-1262"></circle>
+<path d="M397.4 169.3L426 195.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="38" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="426" cy="195.9" r="10.7" fill="rgb(75,125,27)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="38" ecmeta_ssr_type="chart" class="t-spiral-cls-1263"></circle>
+<path d="M426 195.9L437.7 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="39" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="437.7" cy="234" r="9.5" fill="rgb(102,154,41)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="39" ecmeta_ssr_type="chart" class="t-spiral-cls-1264"></circle>
+<path d="M437.7 234L428.6 273.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="40" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="428.6" cy="273.6" r="7.9" fill="rgb(150,189,96)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="40" ecmeta_ssr_type="chart" class="t-spiral-cls-1265"></circle>
+<path d="M428.6 273.6L400.3 303.8" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="41" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="400.3" cy="303.8" r="7.5" fill="rgb(162,198,111)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="41" ecmeta_ssr_type="chart" class="t-spiral-cls-1234"></circle>
+<path d="M400.3 303.8L360 316.1" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="42" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="316.1" r="5.8" fill="rgb(205,224,170)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="42" ecmeta_ssr_type="chart" class="t-spiral-cls-1255"></circle>
+<path d="M360 316.1L318.2 306.4" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="43" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="318.2" cy="306.4" r="4.9" fill="rgb(221,232,197)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="43" ecmeta_ssr_type="chart" class="t-spiral-cls-1266"></circle>
+<path d="M318.2 306.4L286.3 276.5" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="44" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="286.3" cy="276.5" r="5.6" fill="rgb(208,226,176)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="44" ecmeta_ssr_type="chart" class="t-spiral-cls-1267"></circle>
+<path d="M286.3 276.5L273.5 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="45" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="273.5" cy="234" r="6.2" fill="rgb(196,220,156)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="45" ecmeta_ssr_type="chart" class="t-spiral-cls-1268"></circle>
+<path d="M273.5 234L283.8 190" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="46" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="283.8" cy="190" r="8.9" fill="rgb(118,167,57)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="46" ecmeta_ssr_type="chart" class="t-spiral-cls-1269"></circle>
+<path d="M283.8 190L315.2 156.5" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="47" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="315.2" cy="156.5" r="9.6" fill="rgb(99,152,39)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="47" ecmeta_ssr_type="chart" class="t-spiral-cls-1261"></circle>
+<path d="M315.2 156.5L360 143" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="48" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="143" r="11.3" fill="rgb(62,112,20)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="48" ecmeta_ssr_type="chart" class="t-spiral-cls-1270"></circle>
+<path d="M360 143L406.2 153.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="49" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="406.2" cy="153.9" r="11.7" fill="rgb(55,103,16)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="49" ecmeta_ssr_type="chart" class="t-spiral-cls-1271"></circle>
+<path d="M406.2 153.9L441.4 187" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="50" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="441.4" cy="187" r="12" fill="rgb(47,95,12)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="50" ecmeta_ssr_type="chart" class="t-spiral-cls-1272"></circle>
+<path d="M441.4 187L455.4 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="51" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="455.4" cy="234" r="10.1" fill="rgb(89,141,34)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="51" ecmeta_ssr_type="chart" class="t-spiral-cls-1273"></circle>
+<path d="M455.4 234L443.9 282.5" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="52" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="443.9" cy="282.5" r="8.3" fill="rgb(139,182,83)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="52" ecmeta_ssr_type="chart" class="t-spiral-cls-1250"></circle>
+<path d="M443.9 282.5L409.2 319.2" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="53" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="409.2" cy="319.2" r="7" fill="rgb(178,209,131)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="53" ecmeta_ssr_type="chart" class="t-spiral-cls-1274"></circle>
+<path d="M409.2 319.2L360 333.9" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="54" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="333.9" r="5.6" fill="rgb(208,226,176)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="54" ecmeta_ssr_type="chart" class="t-spiral-cls-1267"></circle>
+<path d="M360 333.9L309.3 321.8" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="55" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="309.3" cy="321.8" r="5" fill="rgb(219,231,194)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="55" ecmeta_ssr_type="chart" class="t-spiral-cls-1275"></circle>
+<path d="M309.3 321.8L271 285.4" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="56" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="271" cy="285.4" r="6.4" fill="rgb(193,218,151)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="56" ecmeta_ssr_type="chart" class="t-spiral-cls-1276"></circle>
+<path d="M271 285.4L255.7 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="57" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="255.7" cy="234" r="7.2" fill="rgb(173,205,124)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="57" ecmeta_ssr_type="chart" class="t-spiral-cls-1240"></circle>
+<path d="M255.7 234L268.4 181.1" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="58" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="268.4" cy="181.1" r="8.4" fill="rgb(135,180,79)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="58" ecmeta_ssr_type="chart" class="t-spiral-cls-1277"></circle>
+<path d="M268.4 181.1L306.4 141.1" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="59" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="306.4" cy="141.1" r="10.4" fill="rgb(83,134,31)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="59" ecmeta_ssr_type="chart" class="t-spiral-cls-1278"></circle>
+<path d="M306.4 141.1L360 125.3" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="60" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="125.3" r="11.4" fill="rgb(61,110,19)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="60" ecmeta_ssr_type="chart" class="t-spiral-cls-1279"></circle>
+<path d="M360 125.3L415.1 138.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="61" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="415.1" cy="138.6" r="11.9" fill="rgb(50,98,13)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="61" ecmeta_ssr_type="chart" class="t-spiral-cls-1280"></circle>
+<path d="M415.1 138.6L456.7 178.2" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="62" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="456.7" cy="178.2" r="11.6" fill="rgb(56,105,17)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="62" ecmeta_ssr_type="chart" class="t-spiral-cls-1243"></circle>
+<path d="M456.7 178.2L473.2 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="63" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="473.2" cy="234" r="10.6" fill="rgb(79,130,29)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="63" ecmeta_ssr_type="chart" class="t-spiral-cls-1281"></circle>
+<path d="M473.2 234L459.3 291.3" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="64" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="459.3" cy="291.3" r="8.7" fill="rgb(125,172,66)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="64" ecmeta_ssr_type="chart" class="t-spiral-cls-1282"></circle>
+<path d="M459.3 291.3L418.1 334.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="65" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="418.1" cy="334.6" r="7.3" fill="rgb(169,203,120)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="65" ecmeta_ssr_type="chart" class="t-spiral-cls-1283"></circle>
+<path d="M418.1 334.6L360 351.6" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="66" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="360" cy="351.6" r="6.6" fill="rgb(189,217,145)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="66" ecmeta_ssr_type="chart" class="t-spiral-cls-1259"></circle>
+<path d="M360 351.6L300.5 337.1" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="67" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="300.5" cy="337.1" r="5.4" fill="rgb(212,228,183)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="67" ecmeta_ssr_type="chart" class="t-spiral-cls-1284"></circle>
+<path d="M300.5 337.1L255.6 294.3" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="68" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="255.6" cy="294.3" r="6.2" fill="rgb(196,220,156)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="68" ecmeta_ssr_type="chart" class="t-spiral-cls-1268"></circle>
+<path d="M255.6 294.3L238 234" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="69" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="238" cy="234" r="7.6" fill="rgb(160,197,109)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="69" ecmeta_ssr_type="chart" class="t-spiral-cls-1285"></circle>
+<path d="M238 234L253 172.2" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="70" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="253" cy="172.2" r="9.8" fill="rgb(97,149,38)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="70" ecmeta_ssr_type="chart" class="t-spiral-cls-1251"></circle>
+<path d="M253 172.2L297.5 125.7" fill="#000" stroke="#c9c6bb" stroke-width="1.4" ecmeta_series_index="0" ecmeta_data_index="71" ecmeta_ssr_type="chart" class="t-spiral-cls-1229"></path>
+<circle cx="297.5" cy="125.7" r="10.7" fill="rgb(76,127,27)" stroke="#f7f5ee" ecmeta_series_index="0" ecmeta_data_index="71" ecmeta_ssr_type="chart" class="t-spiral-cls-1286"></circle>
+<style ><![CDATA[
+.t-spiral-cls-1229:hover {
+cursor:pointer;
+fill:rgba(0,0,0,1);
+}
+.t-spiral-cls-1230:hover {
+cursor:pointer;
+fill:rgba(85,140,30,1);
+}
+.t-spiral-cls-1231:hover {
+cursor:pointer;
+fill:rgba(72,127,24,1);
+}
+.t-spiral-cls-1232:hover {
+cursor:pointer;
+fill:rgba(88,144,31,1);
+}
+.t-spiral-cls-1233:hover {
+cursor:pointer;
+fill:rgba(150,199,89,1);
+}
+.t-spiral-cls-1234:hover {
+cursor:pointer;
+fill:rgba(178,217,122,1);
+}
+.t-spiral-cls-1235:hover {
+cursor:pointer;
+fill:rgba(235,251,205,1);
+}
+.t-spiral-cls-1236:hover {
+cursor:pointer;
+fill:rgba(251,255,233,1);
+}
+.t-spiral-cls-1237:hover {
+cursor:pointer;
+fill:rgba(255,255,244,1);
+}
+.t-spiral-cls-1238:hover {
+cursor:pointer;
+fill:rgba(255,255,248,1);
+}
+.t-spiral-cls-1239:hover {
+cursor:pointer;
+fill:rgba(229,248,195,1);
+}
+.t-spiral-cls-1240:hover {
+cursor:pointer;
+fill:rgba(190,225,136,1);
+}
+.t-spiral-cls-1241:hover {
+cursor:pointer;
+fill:rgba(114,172,46,1);
+}
+.t-spiral-cls-1242:hover {
+cursor:pointer;
+fill:rgba(93,149,35,1);
+}
+.t-spiral-cls-1243:hover {
+cursor:pointer;
+fill:rgba(61,115,18,1);
+}
+.t-spiral-cls-1244:hover {
+cursor:pointer;
+fill:rgba(122,178,53,1);
+}
+.t-spiral-cls-1245:hover {
+cursor:pointer;
+fill:rgba(162,206,103,1);
+}
+.t-spiral-cls-1246:hover {
+cursor:pointer;
+fill:rgba(214,240,169,1);
+}
+.t-spiral-cls-1247:hover {
+cursor:pointer;
+fill:rgba(244,255,218,1);
+}
+.t-spiral-cls-1248:hover {
+cursor:pointer;
+fill:rgba(255,255,246,1);
+}
+.t-spiral-cls-1249:hover {
+cursor:pointer;
+fill:rgba(221,245,181,1);
+}
+.t-spiral-cls-1250:hover {
+cursor:pointer;
+fill:rgba(152,200,91,1);
+}
+.t-spiral-cls-1251:hover {
+cursor:pointer;
+fill:rgba(106,163,41,1);
+}
+.t-spiral-cls-1252:hover {
+cursor:pointer;
+fill:rgba(94,151,36,1);
+}
+.t-spiral-cls-1253:hover {
+cursor:pointer;
+fill:rgba(89,145,33,1);
+}
+.t-spiral-cls-1254:hover {
+cursor:pointer;
+fill:rgba(158,204,99,1);
+}
+.t-spiral-cls-1255:hover {
+cursor:pointer;
+fill:rgba(225,246,187,1);
+}
+.t-spiral-cls-1256:hover {
+cursor:pointer;
+fill:rgba(231,249,196,1);
+}
+.t-spiral-cls-1257:hover {
+cursor:pointer;
+fill:rgba(249,255,228,1);
+}
+.t-spiral-cls-1258:hover {
+cursor:pointer;
+fill:rgba(245,255,221,1);
+}
+.t-spiral-cls-1259:hover {
+cursor:pointer;
+fill:rgba(207,238,159,1);
+}
+.t-spiral-cls-1260:hover {
+cursor:pointer;
+fill:rgba(166,210,107,1);
+}
+.t-spiral-cls-1261:hover {
+cursor:pointer;
+fill:rgba(108,167,42,1);
+}
+.t-spiral-cls-1262:hover {
+cursor:pointer;
+fill:rgba(79,135,27,1);
+}
+.t-spiral-cls-1263:hover {
+cursor:pointer;
+fill:rgba(82,137,29,1);
+}
+.t-spiral-cls-1264:hover {
+cursor:pointer;
+fill:rgba(112,169,45,1);
+}
+.t-spiral-cls-1265:hover {
+cursor:pointer;
+fill:rgba(165,207,105,1);
+}
+.t-spiral-cls-1266:hover {
+cursor:pointer;
+fill:rgba(243,255,216,1);
+}
+.t-spiral-cls-1267:hover {
+cursor:pointer;
+fill:rgba(228,248,193,1);
+}
+.t-spiral-cls-1268:hover {
+cursor:pointer;
+fill:rgba(215,242,171,1);
+}
+.t-spiral-cls-1269:hover {
+cursor:pointer;
+fill:rgba(129,183,62,1);
+}
+.t-spiral-cls-1270:hover {
+cursor:pointer;
+fill:rgba(68,123,22,1);
+}
+.t-spiral-cls-1271:hover {
+cursor:pointer;
+fill:rgba(60,113,17,1);
+}
+.t-spiral-cls-1272:hover {
+cursor:pointer;
+fill:rgba(51,104,13,1);
+}
+.t-spiral-cls-1273:hover {
+cursor:pointer;
+fill:rgba(97,155,37,1);
+}
+.t-spiral-cls-1274:hover {
+cursor:pointer;
+fill:rgba(195,229,144,1);
+}
+.t-spiral-cls-1275:hover {
+cursor:pointer;
+fill:rgba(240,254,213,1);
+}
+.t-spiral-cls-1276:hover {
+cursor:pointer;
+fill:rgba(212,239,166,1);
+}
+.t-spiral-cls-1277:hover {
+cursor:pointer;
+fill:rgba(148,198,86,1);
+}
+.t-spiral-cls-1278:hover {
+cursor:pointer;
+fill:rgba(91,147,34,1);
+}
+.t-spiral-cls-1279:hover {
+cursor:pointer;
+fill:rgba(67,121,20,1);
+}
+.t-spiral-cls-1280:hover {
+cursor:pointer;
+fill:rgba(55,107,14,1);
+}
+.t-spiral-cls-1281:hover {
+cursor:pointer;
+fill:rgba(86,143,31,1);
+}
+.t-spiral-cls-1282:hover {
+cursor:pointer;
+fill:rgba(137,189,72,1);
+}
+.t-spiral-cls-1283:hover {
+cursor:pointer;
+fill:rgba(185,223,132,1);
+}
+.t-spiral-cls-1284:hover {
+cursor:pointer;
+fill:rgba(233,250,201,1);
+}
+.t-spiral-cls-1285:hover {
+cursor:pointer;
+fill:rgba(176,216,119,1);
+}
+.t-spiral-cls-1286:hover {
+cursor:pointer;
+fill:rgba(83,139,29,1);
+}
+
+]]>
+
+</style>
+</svg>

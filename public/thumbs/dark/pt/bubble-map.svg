@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 352.5L704 352.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 294.5L704 294.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 237.5L704 237.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 180.5L704 180.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 122.5L704 122.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 65.5L704 65.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16 16.5L704 16.5" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16.5 16L16.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M59.5 16L59.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M166.5 16L166.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M272.5 16L272.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M379.5 16L379.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M486.5 16L486.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M592.5 16L592.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M699.5 16L699.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M704.5 16L704.5 384" fill="none" pointer-events="visible" stroke="#1a2a24" stroke-dasharray="4,2" class="t-bubble-map-cls-445"></path>
+<path d="M16.5 384L16.5 16" fill="none" pointer-events="visible" stroke="#34443d" stroke-linecap="round" class="t-bubble-map-cls-445"></path>
+<path d="M16 384.5L704 384.5" fill="none" pointer-events="visible" stroke="#34443d" stroke-linecap="round" class="t-bubble-map-cls-445"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(36,0,0,36,406.9479,262.4486)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.041666666666666664" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(24.066,0,0,24.066,534.9876,263.5945)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.062328844970260894" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(26.144,0,0,26.144,494.4417,220.0523)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.057374272340235836" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(20.432,0,0,20.432,310.9181,348.3871)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.0734125937864004" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(17.683,0,0,17.683,368.536,320.8868)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.08482637388955677" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(20.5,0,0,20.5,345.062,289.9489)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.07317073170731707" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(22.643,0,0,22.643,556.3275,151.3015)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.06624522544846823" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(19.235,0,0,19.235,637.4194,104.3218)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.07798135895996633" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(18.864,0,0,18.864,607.5434,67.6548)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.07951813511212945" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(17.264,0,0,17.264,383.4739,190.2603)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.08688360596896502" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(18.482,0,0,18.482,336.5261,51.6129)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.0811616723681145" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(14.367,0,0,14.367,82.5806,52.7587)" fill="#04a19b" fill-opacity="0.72" stroke="#0c1a16" stroke-width="0.10440484830048465" stroke-opacity="0.72" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-bubble-map-cls-446"></path>
+<style ><![CDATA[
+.t-bubble-map-cls-445:hover {
+pointer-events:none;
+}
+.t-bubble-map-cls-446:hover {
+cursor:pointer;
+fill:rgba(4,177,170,1);
+}
+
+]]>
+
+</style>
+</svg>

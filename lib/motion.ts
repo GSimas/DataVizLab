@@ -18,19 +18,21 @@ type TransitionDocument = Document & { startViewTransition?: (update: () => void
  * `kind` lets CSS pick the choreography (see ::view-transition rules).
  * Falls back to a plain update without support or with reduced motion.
  */
-export function withViewTransition(update: () => void, kind: "page" | "theme" = "page") {
+export function withViewTransition(update: () => void, kind: "page" | "theme" | "locale" | "font" = "page", zoom = 1) {
   const doc = document as TransitionDocument;
   // The guided tour animates its own spotlight; a page snapshot would ghost it.
   if (!doc.startViewTransition || motionReduced() || document.documentElement.dataset.tour === "on") { update(); return; }
   const root = document.documentElement;
   root.dataset.vt = kind;
+  // Text-size swaps grow or shrink the outgoing page towards the new size while the new one settles in.
+  root.style.setProperty("--vt-zoom", String(zoom));
   const transition = doc.startViewTransition(() => flushSync(update));
   // A skipped or timed-out transition (e.g. a throttled background tab) rejects
   // these promises; the DOM update itself still happens, so they are safe to ignore.
   const ignore = () => undefined;
   transition.ready.catch(ignore);
   transition.updateCallbackDone.catch(ignore);
-  const cleanup = () => { if (root.dataset.vt === kind) delete root.dataset.vt; };
+  const cleanup = () => { if (root.dataset.vt === kind) { delete root.dataset.vt; root.style.removeProperty("--vt-zoom"); } };
   transition.finished.then(cleanup, cleanup);
 }
 

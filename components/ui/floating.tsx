@@ -8,14 +8,14 @@ export function Portal({ children }: { children: ReactNode }) {
 }
 
 type Placement = "bottom-start" | "bottom-end";
-type Options = { placement?: Placement; offset?: number; matchWidth?: boolean; maxHeight?: number };
+type Options = { placement?: Placement; offset?: number; matchWidth?: boolean; minWidth?: number; maxHeight?: number };
 
 /**
  * Pins a fixed-position floating element to its anchor, flipping above when
  * there is no room below. Returns the ref for the floating element; styles are
  * written directly, so scrolling never re-renders.
  */
-export function useAnchoredPosition<T extends HTMLElement>(anchor: RefObject<HTMLElement | null>, active: boolean, { placement = "bottom-start", offset = 6, matchWidth = false, maxHeight = 320 }: Options = {}) {
+export function useAnchoredPosition<T extends HTMLElement>(anchor: RefObject<HTMLElement | null>, active: boolean, { placement = "bottom-start", offset = 6, matchWidth = false, minWidth = 0, maxHeight = 320 }: Options = {}) {
   const floating = useRef<T>(null);
   useLayoutEffect(() => {
     if (!active) return;
@@ -33,7 +33,7 @@ export function useAnchoredPosition<T extends HTMLElement>(anchor: RefObject<HTM
       el.style.maxHeight = `${Math.max(140, Math.min(maxHeight, flip ? above : below))}px`;
       el.style.top = flip ? "" : `${rect.bottom + offset}px`;
       el.style.bottom = flip ? `${window.innerHeight - rect.top + offset}px` : "";
-      if (matchWidth) el.style.minWidth = `${rect.width}px`;
+      if (matchWidth || minWidth) el.style.minWidth = `${Math.max(minWidth, matchWidth ? rect.width : 0)}px`;
       const width = el.offsetWidth;
       const left = placement === "bottom-end" ? rect.right - width : rect.left;
       el.style.left = `${Math.max(margin, Math.min(left, window.innerWidth - width - margin))}px`;
@@ -44,7 +44,7 @@ export function useAnchoredPosition<T extends HTMLElement>(anchor: RefObject<HTM
     window.addEventListener("resize", schedule);
     window.addEventListener("scroll", schedule, true);
     return () => { cancelAnimationFrame(frame); window.removeEventListener("resize", schedule); window.removeEventListener("scroll", schedule, true); };
-  }, [active, anchor, placement, offset, matchWidth, maxHeight]);
+  }, [active, anchor, placement, offset, matchWidth, minWidth, maxHeight]);
   return floating;
 }
 

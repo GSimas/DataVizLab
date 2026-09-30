@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M119.5 237C131.4 237 131.4 237 135.3 237" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="143.3 237 133.3 231.5 133.3 242.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M211 237C222.9 237 222.9 185 226.7 185" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="234.7 185 224.7 179.5 224.7 190.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M197.3 203.5l51.2 0l0 15l-51.2 0Z" fill="#0c1a16" class="t-flowchart-cls-429"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 11px sans-serif" x="222.85714285714283" y="211" fill="#c3cbc7">Simples</text>
+<path d="M211 237C222.9 237 222.9 289 226.7 289" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="234.7 289 224.7 283.5 224.7 294.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M192.1 255.5l61.6 0l0 15l-61.6 0Z" fill="#0c1a16" class="t-flowchart-cls-429"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 11px sans-serif" x="222.85714285714283" y="263" fill="#c3cbc7">Complexo</text>
+<path d="M302.4 185C405.7 185 405.7 237 501 237" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="509 237 499 231.5 499 242.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M302.4 289C314.3 289 314.3 237 318.2 237" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="326.2 237 316.2 231.5 316.2 242.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M393.8 237C405.7 237 405.7 237 409.6 237" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="417.6 237 407.6 231.5 407.6 242.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M485.3 237C497.1 237 497.1 237 501 237" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="509 237 499 231.5 499 242.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M576.7 237C588.6 237 588.6 185 592.5 185" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="600.5 185 590.5 179.5 590.5 190.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M573.1 203.5l30.9 0l0 15l-30.9 0Z" fill="#0c1a16" class="t-flowchart-cls-429"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 11px sans-serif" x="588.5714285714287" y="211" fill="#c3cbc7">Sim</text>
+<path d="M576.7 237C588.6 237 588.6 289 592.5 289" fill="none" pointer-events="visible" stroke="#34443d" stroke-width="1.8" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-flowchart-cls-427"></path>
+<polygon points="600.5 289 590.5 283.5 590.5 294.5" fill="#34443d" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-flowchart-cls-428"></polygon>
+<path d="M570 255.5l37.1 0l0 15l-37.1 0Z" fill="#0c1a16" class="t-flowchart-cls-429"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: 600 11px sans-serif" x="588.5714285714287" y="263" fill="#c3cbc7">Não</text>
+<path d="M60.9 214L110.5 214A9 9 0 0 1 119.5 223L119.5 251A9 9 0 0 1 110.5 260L60.9 260A9 9 0 0 1 51.9 251L51.9 223A9 9 0 0 1 60.9 214Z" fill="#04a19b" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-flowchart-cls-430"></path>
+<polygon points="177.1 197 211 237 177.1 277 143.3 237" fill="#c8800d" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-flowchart-cls-431"></polygon>
+<path d="M243.7 162L293.4 162A9 9 0 0 1 302.4 171L302.4 199A9 9 0 0 1 293.4 208L243.7 208A9 9 0 0 1 234.7 199L234.7 171A9 9 0 0 1 243.7 162Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-flowchart-cls-432"></path>
+<path d="M243.7 266L293.4 266A9 9 0 0 1 302.4 275L302.4 303A9 9 0 0 1 293.4 312L243.7 312A9 9 0 0 1 234.7 303L234.7 275A9 9 0 0 1 243.7 266Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-flowchart-cls-432"></path>
+<polygon points="542.9 197 576.7 237 542.9 277 509 237" fill="#c8800d" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-flowchart-cls-431"></polygon>
+<path d="M335.2 214L384.8 214A9 9 0 0 1 393.8 223L393.8 251A9 9 0 0 1 384.8 260L335.2 260A9 9 0 0 1 326.2 251L326.2 223A9 9 0 0 1 335.2 214Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-flowchart-cls-432"></path>
+<path d="M426.6 214L476.3 214A9 9 0 0 1 485.3 223L485.3 251A9 9 0 0 1 476.3 260L426.6 260A9 9 0 0 1 417.6 251L417.6 223A9 9 0 0 1 426.6 214Z" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-flowchart-cls-432"></path>
+<path d="M609.5 162L659.1 162A9 9 0 0 1 668.1 171L668.1 199A9 9 0 0 1 659.1 208L609.5 208A9 9 0 0 1 600.5 199L600.5 171A9 9 0 0 1 609.5 162Z" fill="#418ad1" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-flowchart-cls-433"></path>
+<path d="M609.5 266L659.1 266A9 9 0 0 1 668.1 275L668.1 303A9 9 0 0 1 659.1 312L609.5 312A9 9 0 0 1 600.5 303L600.5 275A9 9 0 0 1 609.5 266Z" fill="#418ad1" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-flowchart-cls-433"></path>
+<path d="M-27.8 -14l55.7 0l0 28l-55.7 0Z" transform="translate(85.7143 237)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" y="-7" transform="translate(85.7143 237)" fill="#fff">Abrir </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="7" transform="translate(85.7143 237)" fill="#fff">chamado</text>
+<path d="M-27.8 -7l55.7 0l0 14l-55.7 0Z" transform="translate(177.1429 237)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" transform="translate(177.1429 237)" fill="#fff">Classificar</text>
+<path d="M-27.8 -21l55.7 0l0 42l-55.7 0Z" transform="translate(268.5714 185)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" y="-14" transform="translate(268.5714 185)" fill="#fff">Resolver </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" transform="translate(268.5714 185)" fill="#fff">no 1º </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="14" transform="translate(268.5714 185)" fill="#fff">nível</text>
+<path d="M-27.8 -14l55.7 0l0 28l-55.7 0Z" transform="translate(268.5714 289)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" y="-7" transform="translate(268.5714 289)" fill="#fff">Escalar ao </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="7" transform="translate(268.5714 289)" fill="#fff">especialista</text>
+<path d="M-27.8 -14l55.7 0l0 28l-55.7 0Z" transform="translate(542.8571 237)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" y="-7" transform="translate(542.8571 237)" fill="#fff">Cliente </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="7" transform="translate(542.8571 237)" fill="#fff">satisfeito?</text>
+<path d="M-27.8 -14l55.7 0l0 28l-55.7 0Z" transform="translate(360 237)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="-7" transform="translate(360 237)" fill="#fff">Diagnostica</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="7" transform="translate(360 237)" fill="#fff">r</text>
+<path d="M-27.8 -7l55.7 0l0 14l-55.7 0Z" transform="translate(451.4286 237)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" transform="translate(451.4286 237)" fill="#fff">Corrigir</text>
+<path d="M-27.8 -14l55.7 0l0 28l-55.7 0Z" transform="translate(634.2857 185)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" y="-7" transform="translate(634.2857 185)" fill="#fff">Encerrar </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="7" transform="translate(634.2857 185)" fill="#fff">chamado</text>
+<path d="M-27.8 -14l55.7 0l0 28l-55.7 0Z" transform="translate(634.2857 289)" fill="none" pointer-events="visible" class="t-flowchart-cls-427"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" xml:space="preserve" y="-7" transform="translate(634.2857 289)" fill="#fff">Registrar </text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:10.5px;font-family:sans-serif;font-weight:600;" y="7" transform="translate(634.2857 289)" fill="#fff">pendência</text>
+<style ><![CDATA[
+.t-flowchart-cls-427:hover {
+cursor:pointer;
+}
+.t-flowchart-cls-428:hover {
+cursor:pointer;
+fill:rgba(57,74,67,1);
+}
+.t-flowchart-cls-429:hover {
+cursor:pointer;
+fill:rgba(13,28,24,1);
+}
+.t-flowchart-cls-430:hover {
+cursor:pointer;
+fill:rgba(4,177,170,1);
+}
+.t-flowchart-cls-431:hover {
+cursor:pointer;
+fill:rgba(220,140,14,1);
+}
+.t-flowchart-cls-432:hover {
+cursor:pointer;
+fill:rgba(106,184,49,1);
+}
+.t-flowchart-cls-433:hover {
+cursor:pointer;
+fill:rgba(71,151,229,1);
+}
+
+]]>
+
+</style>
+</svg>

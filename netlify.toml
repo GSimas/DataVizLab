@@ -4,3 +4,31 @@
 
 [build.environment]
   NEXT_TELEMETRY_DISABLED = "1"
+
+# Netlify compresses text responses (Brotli, falling back to gzip) on its CDN; nothing to configure for that.
+
+# Build files carry a content hash in their name: cache them for a year and never revalidate.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Catalog thumbnails are always requested with ?v=<content hash> (components/thumbs.generated.ts).
+[[headers]]
+  for = "/thumbs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The service worker must be re-checked on every visit so a new version is picked up.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"

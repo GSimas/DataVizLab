@@ -34,7 +34,7 @@ export function ExportModal({ project, viz, size, dark, contrast, fontScale, loc
   const [busy, setBusy] = useState(false);
   const [preview, setPreview] = useState("");
   const hasData = project.rows.length > 0;
-  const look: ExportLook = { dark: theme === "dark", contrast, fontScale, width: Math.max(480, Math.round(size.width)), height: Math.max(320, Math.round(size.height)) };
+  const look: ExportLook = { dark: theme === "dark", contrast, fontScale, width: Math.max(480, Math.round(size.width)), height: Math.max(320, Math.round(size.height)), locale };
   const lookKey = `${theme}-${contrast}-${fontScale}-${look.width}-${look.height}`;
 
   // Small raster preview of what will be exported (transparency shown on a checkerboard).

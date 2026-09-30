@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M16.5 16L16.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M114.5 16L114.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M212.5 16L212.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M311.5 16L311.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M409.5 16L409.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M507.5 16L507.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M605.5 16L605.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M704.5 16L704.5 384" fill="none" pointer-events="visible" stroke="#e4e1d7" class="t-term-frequency-cls-1502"></path>
+<path d="M16.5 16L16.5 384" fill="none" pointer-events="visible" stroke="#c9c6bb" stroke-linecap="round" class="t-term-frequency-cls-1502"></path>
+<path d="M16 18.6L607.3 18.6A5 5 0 0 1 612.3 23.6L612.3 25.1A5 5 0 0 1 607.3 30.1L16 30.1L16 18.6Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 35.3L548.3 35.3A5 5 0 0 1 553.3 40.3L553.3 41.9A5 5 0 0 1 548.3 46.9L16 46.9L16 35.3Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 52L472.9 52A5 5 0 0 1 477.9 57L477.9 58.6A5 5 0 0 1 472.9 63.6L16 63.6L16 52Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 68.8L446.7 68.8A5 5 0 0 1 451.7 73.8L451.7 75.3A5 5 0 0 1 446.7 80.3L16 80.3L16 68.8Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 85.5L407.4 85.5A5 5 0 0 1 412.4 90.5L412.4 92A5 5 0 0 1 407.4 97L16 97L16 85.5Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 102.2L397.6 102.2A5 5 0 0 1 402.6 107.2L402.6 108.8A5 5 0 0 1 397.6 113.8L16 113.8L16 102.2Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 119L325.5 119A5 5 0 0 1 330.5 124L330.5 125.5A5 5 0 0 1 325.5 130.5L16 130.5L16 119Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 135.7L312.4 135.7A5 5 0 0 1 317.4 140.7L317.4 142.2A5 5 0 0 1 312.4 147.2L16 147.2L16 135.7Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 152.4L243.6 152.4A5 5 0 0 1 248.6 157.4L248.6 159A5 5 0 0 1 243.6 164L16 164L16 152.4Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 169.1L227.2 169.1A5 5 0 0 1 232.2 174.1L232.2 175.7A5 5 0 0 1 227.2 180.7L16 180.7L16 169.1Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 185.9L201 185.9A5 5 0 0 1 206 190.9L206 192.4A5 5 0 0 1 201 197.4L16 197.4L16 185.9Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 202.6L191.2 202.6A5 5 0 0 1 196.2 207.6L196.2 209.1A5 5 0 0 1 191.2 214.1L16 214.1L16 202.6Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 219.3L181.4 219.3A5 5 0 0 1 186.4 224.3L186.4 225.9A5 5 0 0 1 181.4 230.9L16 230.9L16 219.3Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 236L171.5 236A5 5 0 0 1 176.5 241L176.5 242.6A5 5 0 0 1 171.5 247.6L16 247.6L16 236Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 252.8L155.2 252.8A5 5 0 0 1 160.2 257.8L160.2 259.3A5 5 0 0 1 155.2 264.3L16 264.3L16 252.8Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 269.5L145.3 269.5A5 5 0 0 1 150.3 274.5L150.3 276A5 5 0 0 1 145.3 281L16 281L16 269.5Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 286.2L135.5 286.2A5 5 0 0 1 140.5 291.2L140.5 292.8A5 5 0 0 1 135.5 297.8L16 297.8L16 286.2Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 303L128.9 303A5 5 0 0 1 133.9 308L133.9 309.5A5 5 0 0 1 128.9 314.5L16 314.5L16 303Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="17" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 319.7L119.1 319.7A5 5 0 0 1 124.1 324.7L124.1 326.2A5 5 0 0 1 119.1 331.2L16 331.2L16 319.7Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="18" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 336.4L99.5 336.4A5 5 0 0 1 104.5 341.4L104.5 343A5 5 0 0 1 99.5 348L16 348L16 336.4Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="19" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 353.1L89.6 353.1A5 5 0 0 1 94.6 358.1L94.6 359.7A5 5 0 0 1 89.6 364.7L16 364.7L16 353.1Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="20" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<path d="M16 369.9L73.2 369.9A5 5 0 0 1 78.2 374.9L78.2 376.4A5 5 0 0 1 73.2 381.4L16 381.4L16 369.9Z" fill="#478809" ecmeta_series_index="0" ecmeta_data_index="21" ecmeta_ssr_type="chart" class="t-term-frequency-cls-1503"></path>
+<style ><![CDATA[
+.t-term-frequency-cls-1502:hover {
+pointer-events:none;
+}
+.t-term-frequency-cls-1503:hover {
+cursor:pointer;
+fill:rgba(78,149,9,1);
+}
+
+]]>
+
+</style>
+</svg>

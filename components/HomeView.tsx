@@ -9,14 +9,10 @@ export function HomeView({ api }: { api: AppApi }) {
     <section className="home-hero">
       <div className="hero-field" aria-hidden="true">
         <span className="crosshair" />
-        <span className="hud hud-tl">DVL / 001</span>
-        <span className="hud hud-tr">27°35′S — 48°32′W</span>
-        <span className="data-tag tag-a">n = local</span>
-        <span className="data-tag tag-b">r = 0.96 ↗</span>
       </div>
       <div className="home-copy">
         <p className="eyebrow"><span />{tr("homeEyebrow")}</p>
-        <h1>{tr("heroTitleA")} <em>{tr("heroTitleB")}</em></h1>
+        <h1>{tr("heroTitleA")} <em data-glow={tr("heroTitleB")}>{tr("heroTitleB")}</em></h1>
         <p className="home-lead">{tr("heroText")}</p>
         <div className="home-actions" data-tour="home-actions">
           <a className="button button-primary" href={routeHref({ view: "projects" })}>{tr("ctaProjects")}<ArrowDown size={16} /></a>

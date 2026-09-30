@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M484.1 284.2Q368.6 240 408.1 357.2" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M484.1 284.2Q363.5 239.8 305.3 354.4" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M484.1 284.2Q359.9 236.1 233.8 278.9" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M484.1 284.2Q360.1 230.8 237.8 173.7" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M408.1 357.2Q359.7 243.5 305.3 354.4" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M408.1 357.2Q356.1 239.7 233.8 278.9" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M408.1 357.2Q360.1 231 313.5 104.2" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M305.3 354.4Q351.2 234.3 237.8 173.7" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M233.8 278.9Q347.6 230.5 237.8 173.7" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M233.8 278.9Q356.5 227.3 416.3 108.3" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M237.8 173.7Q356.7 222 416.3 108.3" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M416.3 108.3Q360.5 218.5 313.5 104.2" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M416.3 108.3Q369.1 222.4 485.7 181.9" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M313.5 104.2Q363.9 227.3 484.1 284.2" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M485.7 181.9Q360 230.9 233.8 278.9" fill="none" pointer-events="visible" stroke="#61a82d" stroke-width="6" stroke-opacity="0.55" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-390"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(18,0,0,18,484.0571,284.2431)" fill="#61a82d" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-391"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(16.733,0,0,16.733,408.0667,357.1531)" fill="#8a66d9" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-392"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(15.295,0,0,15.295,305.3069,354.4248)" fill="#c8800d" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-393"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(18,0,0,18,233.7994,278.9417)" fill="#04a19b" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-394"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(16.733,0,0,16.733,237.7613,173.7052)" fill="#cb473d" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-395"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(15.295,0,0,15.295,313.5403,104.2463)" fill="#418ad1" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-396"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(16.733,0,0,16.733,416.2571,108.2802)" fill="#c34e97" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-397"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(13.589,0,0,13.589,485.7413,181.8662)" fill="#9d9631" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-non-ribbon-chord-cls-398"></path>
+<style ><![CDATA[
+.t-non-ribbon-chord-cls-390:hover {
+cursor:pointer;
+}
+.t-non-ribbon-chord-cls-391:hover {
+cursor:pointer;
+fill:rgba(106,184,49,1);
+}
+.t-non-ribbon-chord-cls-392:hover {
+cursor:pointer;
+fill:rgba(151,112,238,1);
+}
+.t-non-ribbon-chord-cls-393:hover {
+cursor:pointer;
+fill:rgba(220,140,14,1);
+}
+.t-non-ribbon-chord-cls-394:hover {
+cursor:pointer;
+fill:rgba(4,177,170,1);
+}
+.t-non-ribbon-chord-cls-395:hover {
+cursor:pointer;
+fill:rgba(223,78,67,1);
+}
+.t-non-ribbon-chord-cls-396:hover {
+cursor:pointer;
+fill:rgba(71,151,229,1);
+}
+.t-non-ribbon-chord-cls-397:hover {
+cursor:pointer;
+fill:rgba(214,85,166,1);
+}
+.t-non-ribbon-chord-cls-398:hover {
+cursor:pointer;
+fill:rgba(172,165,53,1);
+}
+
+]]>
+
+</style>
+</svg>

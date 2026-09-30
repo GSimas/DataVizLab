@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 720 400">
+<rect width="720" height="400" x="0" y="0" fill="none"></rect>
+<path d="M360 79A3 3 0 0 1 363.1 76A136 136 0 0 1 425.3 92.7A3 3 0 0 1 426.5 96.8L360 212Z" fill="#61a82d" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="t-nightingale-cls-563"></path>
+<path d="M421.3 105.9A3 3 0 0 1 425.4 104.8A125.5 125.5 0 0 1 467.2 146.6A3 3 0 0 1 466.1 150.7L360 212Z" fill="#8a66d9" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="t-nightingale-cls-564"></path>
+<path d="M452.5 158.6A3 3 0 0 1 456.6 159.8A109.8 109.8 0 0 1 469.8 208.9A3 3 0 0 1 466.8 212L360 212Z" fill="#c8800d" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="t-nightingale-cls-565"></path>
+<path d="M424.9 212A3 3 0 0 1 427.9 215.1A68 68 0 0 1 420.4 243.2A3 3 0 0 1 416.2 244.5L360 212Z" fill="#04a19b" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="t-nightingale-cls-566"></path>
+<path d="M407.2 239.2A3 3 0 0 1 408.2 243.5A57.5 57.5 0 0 1 391.5 260.2A3 3 0 0 1 387.2 259.2L360 212Z" fill="#cb473d" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="t-nightingale-cls-567"></path>
+<path d="M382 250.1A3 3 0 0 1 380.7 254.3A47.1 47.1 0 0 1 363.2 259A3 3 0 0 1 360 256L360 212Z" fill="#418ad1" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="t-nightingale-cls-568"></path>
+<path d="M360 258.6A3 3 0 0 1 356.8 261.6A49.7 49.7 0 0 1 338 256.5A3 3 0 0 1 336.7 252.4L360 212Z" fill="#c34e97" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="t-nightingale-cls-569"></path>
+<path d="M335.4 254.6A3 3 0 0 1 331.1 255.6A52.3 52.3 0 0 1 316.4 240.9A3 3 0 0 1 317.4 236.6L360 212Z" fill="#9d9631" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="t-nightingale-cls-570"></path>
+<path d="M294.7 249.7A3 3 0 0 1 290.5 248.5A78.5 78.5 0 0 1 281.6 215.1A3 3 0 0 1 284.6 212L360 212Z" fill="#61a82d" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="t-nightingale-cls-563"></path>
+<path d="M279.4 212A3 3 0 0 1 276.4 208.9A83.7 83.7 0 0 1 286 172.9A3 3 0 0 1 290.2 171.7L360 212Z" fill="#8a66d9" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="t-nightingale-cls-564"></path>
+<path d="M285.6 169.1A3 3 0 0 1 284.6 164.9A88.9 88.9 0 0 1 312.9 136.6A3 3 0 0 1 317.1 137.6L360 212Z" fill="#c8800d" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="t-nightingale-cls-565"></path>
+<path d="M306.6 119.5A3 3 0 0 1 307.8 115.4A109.8 109.8 0 0 1 356.9 102.2A3 3 0 0 1 360 105.2L360 212Z" fill="#04a19b" stroke="#0c1a16" stroke-width="2" stroke-linejoin="round" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="t-nightingale-cls-566"></path>
+<style ><![CDATA[
+.t-nightingale-cls-563:hover {
+cursor:pointer;
+fill:rgba(106,184,49,1);
+}
+.t-nightingale-cls-564:hover {
+cursor:pointer;
+fill:rgba(151,112,238,1);
+}
+.t-nightingale-cls-565:hover {
+cursor:pointer;
+fill:rgba(220,140,14,1);
+}
+.t-nightingale-cls-566:hover {
+cursor:pointer;
+fill:rgba(4,177,170,1);
+}
+.t-nightingale-cls-567:hover {
+cursor:pointer;
+fill:rgba(223,78,67,1);
+}
+.t-nightingale-cls-568:hover {
+cursor:pointer;
+fill:rgba(71,151,229,1);
+}
+.t-nightingale-cls-569:hover {
+cursor:pointer;
+fill:rgba(214,85,166,1);
+}
+.t-nightingale-cls-570:hover {
+cursor:pointer;
+fill:rgba(172,165,53,1);
+}
+
+]]>
+
+</style>
+</svg>
