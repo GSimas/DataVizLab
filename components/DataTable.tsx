@@ -1,5 +1,5 @@
-import { useMemo, useRef } from "react";
-import { X } from "lucide-react";
+import { useEffect, useMemo, useRef } from "react";
+import { Plus, X } from "lucide-react";
 import type { Locale } from "../lib/catalog";
 import { CURRENCIES, categoryOptions, choiceToSpec, currencySymbol, formatCell, invalidCounts, isCellValid, specToChoice, type CellValue, type ColumnSpec, type ColumnSpecs, type ColumnType } from "../lib/columns";
 import type { TranslationKey } from "../lib/i18n";
@@ -32,12 +32,22 @@ type Props = {
   onDeleteRow: (rowIndex: number) => void;
   onType: (column: string, spec: ColumnSpec) => void;
   onAddOption: (column: string, option: string) => void;
+  onAddRow: () => void;
+  onAddColumn: () => void;
 };
 
 /** Editable table with one typed editor per column: category lists, numeric fields, dates, times… */
-export function DataTable({ rows, columns, specs, locale, tr, onCell, onDeleteRow, onType, onAddOption }: Props) {
+export function DataTable({ rows, columns, specs, locale, tr, onCell, onDeleteRow, onType, onAddOption, onAddRow, onAddColumn }: Props) {
   const tableRef = useRef<HTMLTableElement>(null);
   const hoverColumn = useRef(-1);
+  const focusNewRow = useRef(false);
+
+  // A row added from the table's own button is ready to type into.
+  useEffect(() => {
+    if (!focusNewRow.current) return;
+    focusNewRow.current = false;
+    tableRef.current?.querySelector<HTMLElement>("tbody tr:last-child td:nth-child(2) :is(input, button)")?.focus();
+  }, [rows.length]);
   const invalid = useMemo(() => invalidCounts(rows, specs, locale), [rows, specs, locale]);
   const choices = useMemo(() => typeChoices(tr, locale), [tr, locale]);
   const options = useMemo(() => Object.fromEntries(columns.filter((column) => specs[column]?.type === "category").map((column) => [column, categoryOptions(specs[column], rows, column, locale)])), [columns, specs, rows, locale]);
@@ -87,7 +97,7 @@ export function DataTable({ rows, columns, specs, locale, tr, onCell, onDeleteRo
                 </span>
               </th>
             ))}
-            <th />
+            <th><button type="button" className="col-add" onClick={onAddColumn} aria-label={tr("addColumnTitle")} data-tip={tr("addColumnTitle")}><Plus size={15} /></button></th>
           </tr>
         </thead>
         <tbody>
@@ -99,6 +109,15 @@ export function DataTable({ rows, columns, specs, locale, tr, onCell, onDeleteRo
             </tr>
           ))}
         </tbody>
+        {columns.length > 0 && (
+          <tfoot>
+            <tr>
+              <td colSpan={columns.length + 2}>
+                <button type="button" className="row-add" onClick={() => { focusNewRow.current = true; onAddRow(); }}><Plus size={14} />{tr("addRow")}</button>
+              </td>
+            </tr>
+          </tfoot>
+        )}
       </table>
       {rows.length > VISIBLE_ROWS && <div className="table-limit">+ {rows.length - VISIBLE_ROWS} {tr("rows")} · {tr("tableLimit")}</div>}
     </div>

@@ -431,6 +431,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .data-table td input:focus { background: var(--tint); box-shadow: inset 0 0 0 2px var(--accent); }
 .data-table td button.row-delete { width: 100%; height: 34px; display: grid; place-items: center; border: 0; background: none; color: var(--muted-2); }
 .data-table td button.row-delete:hover { color: var(--danger); }
+.data-table th:last-child { padding: 0; }
+.data-table th button.col-add { width: 28px; height: 28px; display: grid; place-items: center; margin: 0 auto; border: 1px dashed var(--line-strong); background: none; color: var(--muted); transition: border-color var(--dur-1), color var(--dur-1), background var(--dur-1); }
+.data-table th button.col-add:hover { border-style: solid; border-color: var(--accent); background: var(--tint); color: var(--accent); }
+.data-table tfoot td { border-right: 0; border-bottom: 0; }
+.data-table td button.row-add { width: 100%; height: 36px; display: flex; align-items: center; gap: 1.1rem; padding: 0 16px; border: 0; background: none; color: var(--muted); font: 500 .6rem var(--mono); letter-spacing: .08em; text-transform: uppercase; transition: color var(--dur-1), background var(--dur-1); }
+.data-table td button.row-add:hover { background: var(--tint); color: var(--accent); }
+.data-table td button.row-add svg { flex: none; }
 .table-limit { padding: .8rem; border-top: 1px solid var(--line); color: var(--muted); font: 400 .6rem var(--mono); letter-spacing: .06em; text-align: center; text-transform: uppercase; }
 
 /* ---------- Modals ---------- */

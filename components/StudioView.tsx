@@ -436,14 +436,12 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
         <div className="table-header">
           <p><Table2 size={16} /><span><strong>{tr("tableEditor")}</strong><small>{tr("tableHint")}</small></span></p>
           <div>
-            <button type="button" onClick={() => setRows((current) => [...current, Object.fromEntries(columns.map((column) => [column, ""]))])} disabled={!columns.length}><Plus size={14} />{tr("addRow")}</button>
-            <button type="button" onClick={() => { setColumnName(""); setColumnChoice("text"); setColumnModalOpen(true); }}><Plus size={14} />{tr("addColumn")}</button>
             <button type="button" className="danger" onClick={() => setRows(() => [])} disabled={!rows.length}><Trash2 size={14} />{tr("clear")}</button>
           </div>
         </div>
-        {columns.length > 0 && (
-          <DataTable rows={rows} columns={columns} specs={specs} locale={locale} tr={tr} onCell={updateCell} onDeleteRow={(rowIndex) => setRows((current) => current.filter((_, index) => index !== rowIndex))} onType={changeType} onAddOption={addOption} />
-        )}
+        <DataTable rows={rows} columns={columns} specs={specs} locale={locale} tr={tr} onCell={updateCell} onDeleteRow={(rowIndex) => setRows((current) => current.filter((_, index) => index !== rowIndex))} onType={changeType} onAddOption={addOption}
+          onAddRow={() => setRows((current) => [...current, Object.fromEntries(columns.map((column) => [column, ""]))])}
+          onAddColumn={() => { setColumnName(""); setColumnChoice("text"); setColumnModalOpen(true); }} />
       </div>
 
       {exportSize && (
