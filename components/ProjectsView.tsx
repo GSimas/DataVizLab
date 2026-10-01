@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { ArrowUpRight, Copy, Download, FileUp, PencilLine, Plus, Search, Sparkles, Table2, Trash2 } from "lucide-react";
 import { getEntry } from "../lib/catalog";
 import { columnsOf } from "../lib/columns";
-import { DEFAULT_EXPORT_SIZE, suggestMappings, visualizationsFrom } from "../lib/data";
+import { DEFAULT_EXPORT_SIZE, applySheets, hasSheets, sheetsFromImports, suggestMappings, visualizationsFrom } from "../lib/data";
 import { importTable } from "../lib/importer";
 import { activeViz, blankConfig, createProject, uid, type Project } from "../lib/projects";
 import { formatDate, routeHref, type AppApi } from "./app";
@@ -56,23 +56,37 @@ export function ProjectsView({ api }: { api: AppApi }) {
     notify(tr("projectDuplicated"));
   };
 
-  const importFile = async (file: File) => {
-    // Parsing and typing run in the import worker; large files get a note while the page stays usable.
-    if (file.size > 512 * 1024) notify(tr("processingFile"));
-    try {
-      const table = await importTable(file, locale);
-      const base = createProject({ name: table.project?.name || file.name.replace(/\.[^.]+$/, ""), description: table.project?.description, locale, withSample: false });
-      const mappings = suggestMappings(table.rows, table.columnTypes);
-      const fallback = { ...blankConfig(locale), ...mappings };
-      const visualizations = table.project ? visualizationsFrom(table.project, fallback) : [{ ...base.visualizations[0], ...mappings }];
-      const project: Project = { ...base, rows: table.rows, columnTypes: table.columnTypes, dataName: table.dataName, visualizations, activeVizId: visualizations[0].id };
-      addProject(project);
-      notify(tr("projectImported"));
-      navigate({ view: "studio", id: project.id });
-    } catch (error) {
-      notify(error instanceof Error && error.message === "too-large" ? tr("tooLarge") : tr("invalidFile"));
-    }
+  /** One file becomes a project as before; several files (or a workbook with several sheets) become one project with a sheet per table. */
+  const importFiles = async (files: File[]) => {
     if (fileRef.current) fileRef.current.value = "";
+    if (!files.length) return;
+    // Parsing and typing run in the import worker; large files get a note while the page stays usable.
+    if (files.some((file) => file.size > 512 * 1024) || files.length > 1) notify(tr("processingFile"));
+    const settled = await Promise.allSettled(files.map((file) => importTable(file, locale)));
+    const read = settled.flatMap((result, index) => (result.status === "fulfilled" ? [{ fileName: files[index].name, table: result.value }] : []));
+    const failed = settled.find((result): result is PromiseRejectedResult => result.status === "rejected");
+    if (!read.length) {
+      notify(failed?.reason instanceof Error && failed.reason.message === "too-large" ? tr("tooLarge") : tr("invalidFile"));
+      return;
+    }
+    const [{ fileName, table }] = read;
+    const name = table.project?.name || fileName.replace(/\.[^.]+$/, "") + (read.length > 1 ? ` + ${read.length - 1}` : "");
+    const base = createProject({ name, description: table.project?.description, locale, withSample: false });
+    const mappings = suggestMappings(table.rows, table.columnTypes);
+    const fallback = { ...blankConfig(locale), ...mappings };
+    // A project file brings its own visualizations, but only when it is imported on its own.
+    const extra = read.length === 1 && table.project ? visualizationsFrom(table.project, fallback) : [];
+    let project: Project;
+    if (read.length > 1 || hasSheets(table)) {
+      // Each table (every file, every sheet of a workbook) becomes a tab of the project, with its own visualization.
+      project = applySheets({ ...base, visualizations: [] }, sheetsFromImports(read), extra, blankConfig(locale));
+    } else {
+      const visualizations = extra.length ? extra : [{ ...base.visualizations[0], ...mappings }];
+      project = { ...base, rows: table.rows, columnTypes: table.columnTypes, dataName: table.dataName, visualizations, activeVizId: visualizations[0].id };
+    }
+    addProject(project);
+    notify(failed ? tr("someFilesFailed").replace("{n}", String(files.length - read.length)) : tr("projectImported"));
+    navigate({ view: "studio", id: project.id });
   };
 
   return (
@@ -86,7 +100,7 @@ export function ProjectsView({ api }: { api: AppApi }) {
         <div className="page-actions">
           <button className="button button-primary" type="button" data-tour="new-project" onClick={() => openCreate(false)}>{tr("newProject")}<Plus size={16} /></button>
           <button className="button button-outline" type="button" onClick={() => fileRef.current?.click()}>{tr("importProject")}<FileUp size={16} /></button>
-          <input ref={fileRef} className="hidden-input" type="file" accept=".zip,.json,.csv,.tsv,.txt,.xls,.xlsx" onChange={(event) => event.target.files?.[0] && importFile(event.target.files[0])} />
+          <input ref={fileRef} className="hidden-input" type="file" multiple accept=".zip,.json,.csv,.tsv,.txt,.xls,.xlsx" onChange={(event) => importFiles(Array.from(event.target.files ?? []))} />
         </div>
       </header>
 
@@ -130,7 +144,7 @@ export function ProjectsView({ api }: { api: AppApi }) {
                   <p className="card-meta"><span style={{ "--dot": `var(--fam-${entry.family})` } as React.CSSProperties}>{entry.name[locale]}</span><small>{vizCount} {vizCount === 1 ? tr("vizSingular") : tr("vizPlural")}</small></p>
                   <h3>{project.name}</h3>
                   {project.description && <p className="project-desc">{project.description}</p>}
-                  <p className="project-stats"><Table2 size={13} />{project.rows.length ? `${project.rows.length} ${tr("rows")} · ${columnsOf(project.rows).length} ${tr("columns")}` : tr("noData")}</p>
+                  <p className="project-stats"><Table2 size={13} />{project.sheets && project.sheets.length > 1 ? `${project.sheets.length} ${tr("sheets")} · ` : ""}{project.rows.length ? `${project.rows.length} ${tr("rows")} · ${columnsOf(project.rows).length} ${tr("columns")}` : tr("noData")}</p>
                 </div>
                 <footer className="project-foot">
                   <small>{tr("updated")} {formatDate(project.updatedAt, locale)}</small>

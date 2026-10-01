@@ -1,18 +1,19 @@
 import { useEffect, useEffectEvent, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { ArrowLeft, ArrowUpRight, Check, CircleAlert, Clipboard, Copy, Download, FileSpreadsheet, Move, Plus, Redo2, ShieldCheck, Sparkles, Table2, Trash2, Undo2, Upload } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Check, CircleAlert, Clipboard, Copy, Download, FilePlus2, FileSpreadsheet, Layers, Move, Plus, Redo2, ShieldCheck, Sparkles, Table2, Trash2, Undo2, Upload } from "lucide-react";
 import { ChartRenderer, type ChartConfig, type ChartDisplay, type ChartRendererHandle, type DataRow } from "./ChartRenderer";
 import { isNavigable } from "./chartNavigation";
 import { DataTable, typeChoices } from "./DataTable";
 import { catalog, familyLabels, getEntry, type VizEntry, type VizFamily } from "../lib/catalog";
 import { auditChart } from "../lib/audit";
 import { categoryOptions, choiceToSpec, columnsOf, convertColumn, kindOfSpec, resolveSpecs, specToChoice, type CellValue, type ColumnKind, type ColumnSpec } from "../lib/columns";
-import { suggestMappings, visualizationsFrom } from "../lib/data";
+import { appendSheets, applySheets, hasSheets, sheetLabel, sheetsFromImports, suggestMappings, visualizationsFrom } from "../lib/data";
 import { importTable, type PreparedImport } from "../lib/importer";
 import type { TranslationKey } from "../lib/i18n";
-import { activeViz, blankConfig, makeViz, type Project, type Visualization } from "../lib/projects";
+import { activateViz, activeViz, addSheet, blankConfig, makeViz, removeSheet, sheetsOf, switchSheet, vizzesOnActiveSheet, type Project, type Visualization } from "../lib/projects";
 import { matchSample, sampleConfig, sampleFor, type Sample } from "../lib/samples";
 import { routeHref, type AppApi } from "./app";
 import { MiniViz } from "./MiniViz";
+import { SheetTabs } from "./SheetTabs";
 import { Modal } from "./Modal";
 import { ExportModal } from "./ExportModal";
 import { ErrorBoundary } from "./ErrorBoundary";
@@ -93,9 +94,12 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
   const [pendingSample, setPendingSample] = useState<Sample | null>(null);
   const [exportSize, setExportSize] = useState<{ width: number; height: number } | null>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+  const appendRef = useRef<HTMLInputElement>(null);
+  const [dropTarget, setDropTarget] = useState<"replace" | "append" | null>(null);
   const chartRef = useRef<ChartRendererHandle>(null);
 
   const viz = activeViz(project);
+  const tabs = vizzesOnActiveSheet(project);
   const { rows } = project;
   const columns = useMemo(() => columnsOf(rows), [rows]);
   // Column types are declared, not re-guessed while cells are edited; only columns without a stored type are inferred.
@@ -123,7 +127,7 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
     const patch: Partial<ChartConfig> = { chartId: entry.id, ...(isDefaultTitle(viz.title) ? { title: entry.name[locale] } : {}) };
     // While the table still holds an untouched sample (and nothing else depends on it), switching chart also switches
     // to the sample that suits the new chart, so the example always makes sense for what is on screen.
-    const current = project.visualizations.length === 1 ? matchSample(rows, locale) : null;
+    const current = project.visualizations.length === 1 && !project.sheets ? matchSample(rows, locale) : null;
     if (current) {
       const next = sampleFor(entry.id, locale);
       if (next.datasetId !== current) {
@@ -143,29 +147,58 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
     const nextColumns = new Set(columnsOf(table.rows));
     const mappings = suggestMappings(table.rows, table.columnTypes);
     update((current) => {
-      const remapped = current.visualizations.map((item) => nextColumns.has(item.xField) && nextColumns.has(item.yField) ? item : { ...item, ...mappings });
-      const visualizations = [...remapped, ...extra];
-      return { ...current, rows: table.rows, columnTypes: table.columnTypes, dataName, visualizations, activeVizId: extra[0]?.id ?? current.activeVizId };
+      // In a project with sheets, a single table replaces only the open sheet.
+      const onSheet = (item: Visualization) => !current.sheets || item.sheetId === current.activeSheetId;
+      const remapped = current.visualizations.map((item) => onSheet(item) && !(nextColumns.has(item.xField) && nextColumns.has(item.yField)) ? { ...item, ...mappings } : item);
+      const added = current.sheets ? extra.map((item) => ({ ...item, sheetId: current.activeSheetId })) : extra;
+      const visualizations = [...remapped, ...added];
+      return { ...current, rows: table.rows, columnTypes: table.columnTypes, dataName, visualizations, activeVizId: added[0]?.id ?? current.activeVizId };
     });
-    notify(tr("imported"));
   };
 
-  const handleFile = async (file: File) => {
+  /** Reads one or more files. "replace" swaps the project's data for them (one file keeps the classic single table);
+   *  "append" adds every table as a new sheet next to the ones already there. */
+  const handleFiles = async (files: File[], mode: "replace" | "append") => {
+    if (!files.length) return;
     // Large files take a moment in the worker; the page stays usable and says what is happening.
-    if (file.size > 512 * 1024) notify(tr("processingFile"));
-    try {
-      const table = await importTable(file, locale);
-      const extra = table.project ? visualizationsFrom(table.project, { ...blankConfig(locale), ...suggestMappings(table.rows, table.columnTypes) }) : [];
-      applyTable(table, table.dataName, extra);
-    } catch (error) {
-      notify(error instanceof Error && error.message === "too-large" ? tr("tooLarge") : tr("invalidFile"));
+    if (files.length > 1 || files.some((file) => file.size > 512 * 1024)) notify(tr("processingFile"));
+    const settled = await Promise.allSettled(files.map((file) => importTable(file, locale)));
+    const read = settled.flatMap((result, index) => (result.status === "fulfilled" ? [{ fileName: files[index].name, table: result.value }] : []));
+    const failed = files.length - read.length;
+    if (!read.length) {
+      const reason = settled.find((result): result is PromiseRejectedResult => result.status === "rejected")?.reason;
+      notify(reason instanceof Error && reason.message === "too-large" ? tr("tooLarge") : tr("invalidFile"));
+      return;
     }
-    if (fileRef.current) fileRef.current.value = "";
+    const done = (message: string) => notify(failed ? tr("someFilesFailed").replace("{n}", String(failed)) : message);
+    if (mode === "append") {
+      const incoming = sheetsFromImports(read);
+      update((current) => appendSheets(current, incoming, blankConfig(locale), `${tr("sheetDefault")} 1`));
+      done(tr("sheetsAdded").replace("{n}", String(incoming.length)));
+      return;
+    }
+    const [{ table }] = read;
+    // A project file brings its own visualizations, but only when it is opened on its own.
+    const extra = read.length === 1 && table.project ? visualizationsFrom(table.project, { ...blankConfig(locale), ...suggestMappings(table.rows, table.columnTypes) }) : [];
+    if (read.length === 1 && !hasSheets(table)) applyTable(table, table.dataName, extra);
+    else {
+      // Several files, or a workbook with several sheets: the data becomes one tab per table.
+      const incoming = sheetsFromImports(read);
+      update((current) => applySheets(current, incoming, extra, blankConfig(locale)));
+    }
+    done(tr("imported"));
   };
+
+  // Files dropped on the upload zone replace the data; dropped on the sheet bar they become new sheets.
+  const dropProps = (mode: "replace" | "append") => ({
+    onDragOver: (event: React.DragEvent) => { if (!event.dataTransfer.types.includes("Files")) return; event.preventDefault(); event.dataTransfer.dropEffect = "copy"; setDropTarget(mode); },
+    onDragLeave: (event: React.DragEvent) => { if (!event.currentTarget.contains(event.relatedTarget as Node)) setDropTarget(null); },
+    onDrop: (event: React.DragEvent) => { event.preventDefault(); setDropTarget(null); handleFiles(Array.from(event.dataTransfer.files), mode); },
+  });
 
   const importPaste = async (close: () => void) => {
     if (!pasteValue.trim()) { notify(tr("emptyPaste")); return; }
-    try { applyTable(await importTable(pasteValue, locale), locale === "pt" ? "tabela-colada.csv" : "pasted-table.csv"); close(); } catch { notify(tr("invalidFile")); }
+    try { applyTable(await importTable(pasteValue, locale), locale === "pt" ? "tabela-colada.csv" : "pasted-table.csv"); notify(tr("imported")); close(); } catch { notify(tr("invalidFile")); }
   };
 
   /** Replaces the table with a sample and points the active visualization at it (title and fields included). */
@@ -174,6 +207,7 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
     const fallback = suggestMappings(sample.rows, sample.columnTypes);
     const visualizations = current.visualizations.map((item) => {
       if (item.id === current.activeVizId) return { ...item, ...sampleConfig(sample) };
+      if (current.sheets && item.sheetId !== current.activeSheetId) return item;
       return fields.has(item.xField) ? item : { ...item, ...fallback };
     });
     return { ...current, rows: sample.rows, dataName: sample.dataName, columnTypes: sample.columnTypes, visualizations };
@@ -196,11 +230,25 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
     update((current) => ({ ...current, visualizations: [...current.visualizations, next], activeVizId: next.id }));
   };
   const deleteViz = () => update((current) => {
-    if (current.visualizations.length < 2) return current;
-    const index = current.visualizations.findIndex((item) => item.id === current.activeVizId);
-    const visualizations = current.visualizations.filter((item) => item.id !== current.activeVizId);
-    return { ...current, visualizations, activeVizId: visualizations[Math.max(0, index - 1)].id };
+    // A sheet always keeps at least one visualization.
+    const shown = vizzesOnActiveSheet(current);
+    if (shown.length < 2) return current;
+    const index = shown.findIndex((item) => item.id === current.activeVizId);
+    const remaining = shown.filter((item) => item.id !== current.activeVizId);
+    return { ...current, visualizations: current.visualizations.filter((item) => item.id !== current.activeVizId), activeVizId: remaining[Math.max(0, index - 1)].id };
   });
+
+  const sheets = useMemo(() => (project.sheets ? sheetsOf(project) : []), [project]);
+  const newSheet = () => update((current) => {
+    const taken = new Set((current.sheets ?? []).map((sheet) => sheet.name));
+    let number = (current.sheets?.length ?? 1) + 1;
+    while (taken.has(`${tr("sheetDefault")} ${number}`)) number++;
+    return addSheet(current, `${tr("sheetDefault")} ${number}`, blankConfig(locale), `${tr("sheetDefault")} 1`);
+  });
+  // Opening a sheet is navigation, not an edit: it stays out of the undo history.
+  const openSheet = (id: string) => update((current) => switchSheet(current, id), { history: false });
+  const renameSheet = (id: string, name: string) => update((current) => ({ ...current, sheets: current.sheets?.map((sheet) => (sheet.id === id ? { ...sheet, name } : sheet)) }));
+  const deleteSheet = () => update((current) => (current.activeSheetId ? removeSheet(current, current.activeSheetId) : current));
 
   const updateCell = (rowIndex: number, column: string, value: CellValue) => setRows((current) => current.map((row, index) => index === rowIndex ? { ...row, [column]: value } : row));
 
@@ -257,9 +305,9 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
   const redoLabel = `${tr("redo")} (${isMac() ? "⇧⌘Z" : "Ctrl+Y"})`;
 
   // Switching tabs is navigation, not an edit: it stays out of the undo history.
-  const selectViz = (id: string) => update((current) => ({ ...current, activeVizId: id }), { history: false });
+  const selectViz = (id: string) => update((current) => activateViz(current, id), { history: false });
   const onTabKey = (event: React.KeyboardEvent) => {
-    const ids = project.visualizations.map((item) => item.id);
+    const ids = tabs.map((item) => item.id);
     const index = ids.indexOf(viz.id);
     const target = { ArrowRight: index + 1, ArrowLeft: index - 1, Home: 0, End: ids.length - 1 }[event.key];
     if (target === undefined) return;
@@ -278,7 +326,7 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
     if (!strip || !tab || !bar) return;
     bar.style.width = `${tab.offsetWidth}px`;
     bar.style.transform = `translateX(${tab.offsetLeft}px)`;
-  }, [viz.id, viz.title, project.visualizations.length, locale]);
+  }, [viz.id, viz.title, tabs.length, locale]);
 
   // Every chart of the catalog is available; the family favorites come first.
   const typeGroups: SelectGroup[] = (Object.keys(familyLabels) as VizFamily[]).map((familyId) => {
@@ -311,16 +359,28 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
         <input className="project-name-input" value={project.name} onChange={(event) => update((current) => ({ ...current, name: event.target.value }))} onBlur={(event) => { if (!event.target.value.trim()) update((current) => ({ ...current, name: tr("newProject") })); }} aria-label={tr("projectName")} maxLength={90} />
         <p className="studio-meta">
           <span>{project.dataName || tr("noData")}</span>
+          {sheets.length > 1 && <span>{sheets.length} {tr("sheets")}</span>}
           <span>{rows.length} {tr("rows")} · {columns.length} {tr("columns")}</span>
           <span className="saved"><i />{tr("savedLocally")}</span>
         </p>
       </header>
 
+      <div className={dropTarget === "append" ? "sheet-bar is-drop" : "sheet-bar"} data-tour="sheet-bar" {...dropProps("append")}>
+        <span className="sheet-bar-label"><Layers size={14} aria-hidden="true" />{tr("sheetBarLabel")}</span>
+        {project.sheets && project.activeSheetId ? (
+          <SheetTabs variant="bar" sheets={sheets} activeId={project.activeSheetId} label={tr("sheetsLabel")} renameHint={tr("renameSheetHint")} rowsLabel={tr("rows")} onSelect={openSheet} onRename={renameSheet} />
+        ) : (
+          <span className="sheet-tablist"><span className="sheet-tab is-active is-static"><span className="sheet-tab-name">{rows.length ? sheetLabel(project.dataName, `${tr("sheetDefault")} 1`) : tr("noData")}</span>{rows.length > 0 && <small>{rows.length}</small>}</span></span>
+        )}
+        <button type="button" className="sheet-bar-add" onClick={() => appendRef.current?.click()} data-tip={tr("addSpreadsheetHint")}><FilePlus2 size={14} />{tr("addSpreadsheet")}</button>
+        <input ref={appendRef} className="hidden-input" type="file" multiple accept=".csv,.tsv,.txt,.xls,.xlsx,.json" onChange={(event) => { const files = Array.from(event.target.files ?? []); event.target.value = ""; handleFiles(files, "append"); }} />
+      </div>
+
       <div ref={tabsRef} className="viz-tabs" data-tour="viz-tabs">
         <span className="tab-indicator" aria-hidden="true" />
         {/* The tablist holds only the tabs (it lays out as if it were not there); add, duplicate and delete sit beside it. */}
         <div className="viz-tablist" role="tablist" aria-label={tr("visualizations")} onKeyDown={onTabKey}>
-          {project.visualizations.map((item) => (
+          {tabs.map((item) => (
             <button key={item.id} id={`${panelId}-tab-${item.id}`} type="button" role="tab" aria-selected={item.id === viz.id} aria-controls={panelId} tabIndex={item.id === viz.id ? 0 : -1} className={item.id === viz.id ? "viz-tab is-active" : "viz-tab"} onClick={() => selectViz(item.id)}>
               <span className="tab-dot" style={{ background: `var(--fam-${getEntry(item.chartId).family})` }} />
               <span className="tab-label">{item.title || getEntry(item.chartId).name[locale]}</span>
@@ -330,7 +390,7 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
         <button type="button" className="viz-tab viz-tab-add" onClick={addViz}><Plus size={14} />{tr("newViz")}</button>
         <span className="tab-tools">
           <button type="button" onClick={duplicateViz} aria-label={tr("duplicateViz")} data-tip={tr("duplicateViz")}><Copy size={14} /></button>
-          <button type="button" className="danger" onClick={deleteViz} disabled={project.visualizations.length < 2} aria-label={tr("deleteViz")} data-tip={tr("deleteViz")}><Trash2 size={14} /></button>
+          <button type="button" className="danger" onClick={deleteViz} disabled={tabs.length < 2} aria-label={tr("deleteViz")} data-tip={tr("deleteViz")}><Trash2 size={14} /></button>
         </span>
       </div>
 
@@ -338,13 +398,29 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
         <aside className="studio-sidebar">
           <section className="control-group" data-tour="data-panel">
             <h2 className="control-title"><span>01</span>{tr("data")}</h2>
-            <input ref={fileRef} className="hidden-input" type="file" accept=".csv,.tsv,.txt,.xls,.xlsx,.json,.zip" onChange={(event) => event.target.files?.[0] && handleFile(event.target.files[0])} />
-            <button className="upload-zone" type="button" onClick={() => fileRef.current?.click()}><Upload size={18} /><strong>{tr("upload")}</strong><small>{tr("fileHint")}</small></button>
+            <input ref={fileRef} className="hidden-input" type="file" multiple accept=".csv,.tsv,.txt,.xls,.xlsx,.json,.zip" onChange={(event) => { const files = Array.from(event.target.files ?? []); event.target.value = ""; handleFiles(files, "replace"); }} />
+            <button className={dropTarget === "replace" ? "upload-zone is-drop" : "upload-zone"} type="button" onClick={() => fileRef.current?.click()} {...dropProps("replace")}><Upload size={18} /><strong>{tr("upload")}</strong><small>{tr("fileHint")}</small></button>
             <div className="mini-actions">
               <button type="button" onClick={() => setPasteOpen(true)}><Clipboard size={14} />{tr("paste")}</button>
               <button type="button" onClick={applySample} data-tip={tr("sampleFor").replace("{chart}", getEntry(viz.chartId).name[locale])}><Sparkles size={14} />{tr("sampleData")}</button>
+              <button type="button" className="mini-wide" onClick={() => appendRef.current?.click()} data-tip={tr("addSpreadsheetHint")}><FilePlus2 size={14} />{tr("addSpreadsheet")}</button>
             </div>
-            {rows.length > 0 && <div className="data-file"><FileSpreadsheet size={16} /><div><strong>{project.dataName}</strong><span>{rows.length} {tr("rows")} · {columns.length} {tr("columns")}</span></div><Check size={15} /></div>}
+            {sheets.length > 1 ? (
+              <ul className="sheet-list" aria-label={tr("sheetsLabel")}>
+                {sheets.map((sheet) => {
+                  const open = sheet.id === project.activeSheetId;
+                  return (
+                    <li key={sheet.id}>
+                      <button type="button" className={open ? "data-file is-active" : "data-file"} aria-current={open ? "true" : undefined} onClick={() => openSheet(sheet.id)}>
+                        <FileSpreadsheet size={16} />
+                        <span><strong>{sheet.name}</strong><span>{sheet.rows.length} {tr("rows")} · {columnsOf(sheet.rows).length} {tr("columns")} · {project.visualizations.filter((item) => item.sheetId === sheet.id).length} {tr("vizShort")}</span></span>
+                        {open ? <Check size={15} /> : <ArrowUpRight size={14} />}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : rows.length > 0 && <div className="data-file"><FileSpreadsheet size={16} /><div><strong>{project.dataName}</strong><span>{rows.length} {tr("rows")} · {columns.length} {tr("columns")}</span></div><Check size={15} /></div>}
           </section>
 
           <section className="control-group" data-tour="viz-panel">
@@ -436,12 +512,15 @@ function Studio({ project, update, tr, locale, display, notify, history }: Studi
         <div className="table-header">
           <p><Table2 size={16} /><span><strong>{tr("tableEditor")}</strong><small>{tr("tableHint")}</small></span></p>
           <div>
+            {!project.sheets && <button type="button" onClick={newSheet}><Plus size={14} />{tr("addSheet")}</button>}
+            {sheets.length > 1 && <button type="button" className="danger" onClick={deleteSheet}><Trash2 size={14} />{tr("deleteSheet")}</button>}
             <button type="button" className="danger" onClick={() => setRows(() => [])} disabled={!rows.length}><Trash2 size={14} />{tr("clear")}</button>
           </div>
         </div>
         <DataTable rows={rows} columns={columns} specs={specs} locale={locale} tr={tr} onCell={updateCell} onDeleteRow={(rowIndex) => setRows((current) => current.filter((_, index) => index !== rowIndex))} onType={changeType} onAddOption={addOption}
           onAddRow={() => setRows((current) => [...current, Object.fromEntries(columns.map((column) => [column, ""]))])}
           onAddColumn={() => { setColumnName(""); setColumnChoice("text"); setColumnModalOpen(true); }} />
+        {project.sheets && project.activeSheetId && <SheetTabs sheets={sheets} activeId={project.activeSheetId} label={tr("sheetsLabel")} addLabel={tr("addSheet")} renameHint={tr("renameSheetHint")} onSelect={openSheet} onAdd={newSheet} onRename={renameSheet} />}
       </div>
 
       {exportSize && (

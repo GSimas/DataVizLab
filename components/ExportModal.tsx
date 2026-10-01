@@ -3,7 +3,7 @@ import { ArrowDownToLine, FileArchive, FileImage, Image as ImageIcon, PenTool } 
 import type { Locale } from "../lib/catalog";
 import type { TranslationKey } from "../lib/i18n";
 import { renderRaster, runExport, type ExportFormat, type ExportLook } from "../lib/export";
-import type { Project, Visualization } from "../lib/projects";
+import { rowsForViz, type Project, type Visualization } from "../lib/projects";
 import { Modal } from "./Modal";
 import { Segmented } from "./ui/Controls";
 
@@ -33,7 +33,7 @@ export function ExportModal({ project, viz, size, dark, contrast, fontScale, loc
   const [theme, setTheme] = useState<"dark" | "light">(dark ? "dark" : "light");
   const [busy, setBusy] = useState(false);
   const [preview, setPreview] = useState("");
-  const hasData = project.rows.length > 0;
+  const hasData = rowsForViz(project, viz).length > 0;
   const look: ExportLook = { dark: theme === "dark", contrast, fontScale, width: Math.max(480, Math.round(size.width)), height: Math.max(320, Math.round(size.height)), locale };
   const lookKey = `${theme}-${contrast}-${fontScale}-${look.width}-${look.height}`;
 

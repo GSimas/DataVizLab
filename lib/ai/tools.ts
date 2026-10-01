@@ -4,7 +4,7 @@ import { catalog, familyLabels, getEntry, type Locale } from "../catalog";
 import { COLUMN_TYPES, coerceCell, columnsOf, defaultCurrency, kindOfSpec, renameColumnSpec, resolveSpecs, withoutColumn, type CellValue, type ColumnKind, type ColumnSpec, type ColumnType } from "../columns";
 import type { ExportFormat } from "../export";
 import type { Prefs } from "../prefs";
-import { activeViz, createProject, makeViz, uid, type Project } from "../projects";
+import { activateViz, activeViz, createProject, makeViz, uid, type Project } from "../projects";
 import type { ToolDef } from "./providers";
 import type { Sharing } from "./session";
 
@@ -256,7 +256,7 @@ export const TOOLS: ToolSpec[] = [
       if (view === "studio") {
         const project = findProject(ctx, input);
         const vizId = str(input.visualization_id);
-        if (vizId && project.visualizations.some((viz) => viz.id === vizId)) ctx.updateProject(project.id, (current) => ({ ...current, activeVizId: vizId }));
+        if (vizId && project.visualizations.some((viz) => viz.id === vizId)) ctx.updateProject(project.id, (current) => activateViz(current, vizId));
         ctx.navigate({ view: "studio", id: project.id });
       } else if (view === "home" || view === "projects" || view === "catalog") ctx.navigate({ view });
       else throw new ToolError("Unknown view");
@@ -317,7 +317,7 @@ export const TOOLS: ToolSpec[] = [
       if (!project.visualizations.some((viz) => viz.id === target)) throw new ToolError("Visualization not found. Use get_project to list visualization ids.");
       const patch = applyVizChanges(project, (input.changes ?? {}) as Input);
       const before = snapshot(project);
-      ctx.updateProject(project.id, (current) => ({ ...current, activeVizId: target, visualizations: current.visualizations.map((viz) => (viz.id === target ? { ...viz, ...patch } : viz)) }));
+      ctx.updateProject(project.id, (current) => activateViz({ ...current, visualizations: current.visualizations.map((viz) => (viz.id === target ? { ...viz, ...patch } : viz)) }, target));
       return { content: json({ ok: true, visualization_id: target }), undo: restore(ctx, before) };
     },
   },
@@ -348,13 +348,16 @@ export const TOOLS: ToolSpec[] = [
     },
     run: (input, ctx) => {
       const project = findProject(ctx, input);
-      if (project.visualizations.length < 2) throw new ToolError("A project must keep at least one visualization.");
       const target = str(input.visualization_id);
-      if (!project.visualizations.some((viz) => viz.id === target)) throw new ToolError("Visualization not found.");
+      const doomed = project.visualizations.find((viz) => viz.id === target);
+      if (!doomed) throw new ToolError("Visualization not found.");
+      // Each sheet of a workbook keeps at least one visualization of its own.
+      if (project.visualizations.filter((viz) => viz.sheetId === doomed.sheetId).length < 2) throw new ToolError("A project (or each of its sheets) must keep at least one visualization.");
       const before = snapshot(project);
       ctx.updateProject(project.id, (current) => {
         const visualizations = current.visualizations.filter((viz) => viz.id !== target);
-        return { ...current, visualizations, activeVizId: current.activeVizId === target ? visualizations[0].id : current.activeVizId };
+        const next = current.activeVizId === target ? visualizations.find((viz) => viz.sheetId === doomed.sheetId)!.id : current.activeVizId;
+        return { ...current, visualizations, activeVizId: next };
       });
       return { content: json({ ok: true }), undo: restore(ctx, before) };
     },

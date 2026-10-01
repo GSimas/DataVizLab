@@ -971,3 +971,49 @@ main, .site-footer { position: relative; z-index: 1; }
 .select-trigger.select-trigger-chip:hover, .select-trigger.select-trigger-chip[data-open] { border: 0; box-shadow: none; color: var(--accent); }
 .select-trigger-chip .select-value small { display: none; }
 .select-trigger-chip .select-chevron { width: 11px; height: 11px; }
+
+/* Sheets of a workbook: tabs under the editable table, like a spreadsheet program. */
+.sheet-tabs { display: flex; align-items: stretch; border-top: 1px solid var(--line); background: var(--bg-soft, transparent); }
+.sheet-tablist { display: flex; min-width: 0; overflow-x: auto; }
+.sheet-tab, .sheet-rename { flex: 0 0 auto; max-width: 220px; min-height: 38px; padding: 0 1rem; border: 0; border-right: 1px solid var(--line); border-top: 2px solid transparent; background: none; color: var(--muted); font: 500 .74rem var(--mono); letter-spacing: .04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color .2s, background .2s; }
+.sheet-tab:hover { color: var(--ink); background: var(--surface-2, var(--surface)); }
+.sheet-tab.is-active { color: var(--ink); border-top-color: var(--signal); background: var(--surface-2, var(--surface)); }
+:root[data-theme="light"] .sheet-tab.is-active { border-top-color: var(--accent); }
+.sheet-rename { width: 160px; color: var(--ink); background: var(--surface-2, var(--surface)); border-top-color: var(--accent); outline: none; }
+.sheet-add { width: 38px; display: grid; place-items: center; border: 0; background: none; color: var(--accent); }
+.sheet-add:hover { background: var(--surface-2, var(--surface)); }
+.sheet-tab { display: inline-flex; align-items: center; gap: .5rem; }
+.sheet-tab-name { overflow: hidden; text-overflow: ellipsis; }
+.sheet-tab small { color: var(--muted); font: 400 .58rem var(--mono); }
+.sheet-tab.is-static { cursor: default; }
+
+/* Sheet bar: the project's spreadsheets right above its visualizations (level 1 → level 2 tabs). */
+.sheet-bar { display: flex; align-items: stretch; gap: 0; margin-bottom: .25rem; border: 1px solid var(--line); background: var(--surface); transition: border-color .2s, background .2s; }
+.sheet-bar.is-drop, .upload-zone.is-drop { border-color: var(--accent); border-style: dashed; background: var(--tint); }
+.sheet-bar-label { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .5rem; padding: 0 .9rem; border-right: 1px solid var(--line); color: var(--muted); font: 500 .6rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.sheet-bar-label svg { color: var(--accent); }
+.sheet-bar .sheet-tablist { flex: 1 1 auto; }
+.sheet-bar .sheet-tab { min-height: 40px; border-top: 0; border-bottom: 2px solid transparent; }
+.sheet-bar .sheet-tab.is-active { border-bottom-color: var(--signal); background: var(--surface-2); }
+:root[data-theme="light"] .sheet-bar .sheet-tab.is-active { border-bottom-color: var(--accent); }
+.sheet-bar .sheet-rename { border-top: 0; border-bottom: 2px solid var(--accent); }
+.sheet-bar-add { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .45rem; margin-left: auto; padding: 0 .9rem; border: 0; border-left: 1px solid var(--line); background: none; color: var(--accent); font: 500 .6rem var(--mono); letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.sheet-bar-add:hover { background: var(--tint); }
+
+/* Data panel: third action across the row, and the list of sheets (click to open). */
+.mini-actions .mini-wide { grid-column: 1 / -1; }
+.sheet-list { display: grid; gap: .35rem; margin: .6rem 0 0; padding: 0; list-style: none; }
+.sheet-list .data-file { width: 100%; margin: 0; border-color: var(--line); background: none; color: var(--ink); text-align: left; transition: border-color .2s, background .2s; }
+.sheet-list .data-file > svg:first-child { color: var(--muted); }
+.sheet-list .data-file > span { min-width: 0; display: flex; flex-direction: column; }
+.sheet-list .data-file > svg:last-child { color: var(--muted); }
+.sheet-list .data-file:hover { border-color: var(--accent); }
+.sheet-list .data-file.is-active { border-color: color-mix(in srgb, var(--good) 32%, var(--line)); background: var(--tint); }
+.sheet-list .data-file.is-active > svg { color: var(--good); }
+
+@media (max-width: 560px) {
+  .sheet-bar { flex-wrap: wrap; }
+  .sheet-bar-label { min-height: 34px; }
+  .sheet-bar .sheet-tablist { order: 3; flex-basis: 100%; border-top: 1px solid var(--line); }
+  .sheet-bar-add { min-height: 34px; }
+}

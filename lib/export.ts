@@ -3,7 +3,7 @@ import type { EChartsOption } from "echarts";
 import { chartOption, chartSurface, type ChartDisplay } from "../components/ChartRenderer";
 import type { Locale } from "./catalog";
 import { downloadBlob, downloadProjectZip, slugify } from "./data";
-import type { Project, Visualization } from "./projects";
+import { rowsForViz, type Project, type Visualization } from "./projects";
 
 export type ExportFormat = "svg" | "jpg" | "png" | "project";
 
@@ -16,7 +16,7 @@ const fileBase = (project: Project, viz: Visualization) => `${slugify(project.na
 
 const staticOption = (project: Project, viz: Visualization, look: ExportLook, background: string): EChartsOption => {
   const display: ChartDisplay = { dark: look.dark, contrast: look.contrast, fontScale: look.fontScale, reducedMotion: true, locale: look.locale };
-  return { ...chartOption(project.rows, viz, display), animation: false, backgroundColor: background };
+  return { ...chartOption(rowsForViz(project, viz), viz, display), animation: false, backgroundColor: background };
 };
 
 /** True vector output: rendered with ECharts' SVG renderer (server-side mode, no DOM). */
@@ -65,10 +65,9 @@ export async function runExport(format: ExportFormat, project: Project, viz: Vis
 export async function exportProjectArchive(project: Project, locale: Locale, plainLook: ExportLook) {
   const look = { ...plainLook, locale };
   const charts: Record<string, string> = {};
-  if (project.rows.length) {
-    project.visualizations.forEach((viz, index) => {
-      charts[`charts/${String(index + 1).padStart(2, "0")}-${slugify(viz.title || viz.chartId, "grafico")}.svg`] = renderSvg(project, viz, look);
-    });
-  }
+  project.visualizations.forEach((viz, index) => {
+    if (!rowsForViz(project, viz).length) return;
+    charts[`charts/${String(index + 1).padStart(2, "0")}-${slugify(viz.title || viz.chartId, "grafico")}.svg`] = renderSvg(project, viz, look);
+  });
   await downloadProjectZip(project, locale, charts);
 }
