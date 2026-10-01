@@ -1017,3 +1017,41 @@ main, .site-footer { position: relative; z-index: 1; }
   .sheet-bar .sheet-tablist { order: 3; flex-basis: 100%; border-top: 1px solid var(--line); }
   .sheet-bar-add { min-height: 34px; }
 }
+
+/* ---------- Home fits the window: hero and footer share one screen, no page scroll ---------- */
+.app-shell[data-view="home"] { height: 100svh; display: flex; flex-direction: column; overflow: hidden; }
+.app-shell[data-view="home"] > main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.app-shell[data-view="home"] .home-hero { flex: 1 1 auto; min-height: 0; padding: calc(var(--header-h) + clamp(.5rem, 3svh, 3rem)) var(--gutter) clamp(3.25rem, 9svh, 7rem); }
+.app-shell[data-view="home"] .eyebrow { margin-bottom: clamp(.6rem, 2.4svh, 1.75rem); }
+.app-shell[data-view="home"] .home-copy h1 { font-size: clamp(2.4rem, min(9.4vw, 12.5svh), 7.6rem); }
+.app-shell[data-view="home"] .home-lead { margin-top: clamp(.75rem, 3svh, 2.25rem); }
+.app-shell[data-view="home"] .home-actions { margin-top: clamp(1rem, 3.4svh, 2.6rem); }
+.app-shell[data-view="home"] .continue-link { margin-top: clamp(.7rem, 2.6svh, 2.25rem); }
+.app-shell[data-view="home"] .status-row { bottom: clamp(.9rem, 3svh, 2.25rem); }
+/* The footer keeps its content in one compact band. */
+.app-shell[data-view="home"] .site-footer { flex: 0 0 auto; min-height: 0; align-items: center; gap: .6rem 2rem; padding-block: clamp(.75rem, 2.2svh, 1.4rem); padding-right: calc(var(--gutter) + 56px); }
+.app-shell[data-view="home"] .footer-brand { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1.25rem; }
+.app-shell[data-view="home"] .footer-brand p { margin: 0; font-size: .78rem; }
+.app-shell[data-view="home"] .footer-meta { gap: .45rem; }
+@media (max-width: 1100px) {
+  .app-shell[data-view="home"] .site-footer { grid-template-columns: 1fr auto; }
+  .app-shell[data-view="home"] .footer-meta { justify-self: end; align-items: flex-end; }
+}
+@media (max-width: 760px) {
+  .app-shell[data-view="home"] .site-footer { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .app-shell[data-view="home"] .footer-brand { justify-content: center; }
+  .app-shell[data-view="home"] .footer-brand p, .app-shell[data-view="home"] .footer-brand .brand-subtitle { display: none; }
+  .app-shell[data-view="home"] .footer-meta { justify-self: center; align-items: center; }
+  .app-shell[data-view="home"] .footer-links { justify-content: center; gap: .5rem 1.1rem; }
+}
+@media (max-width: 560px) {
+  .app-shell[data-view="home"] .home-hero { padding-bottom: clamp(4.25rem, 12svh, 9rem); }
+  .app-shell[data-view="home"] .home-actions { gap: .6rem; }
+  /* The header already carries the brand; on a phone the footer keeps only its links and credit. */
+  .app-shell[data-view="home"] .footer-brand { display: none; }
+  .app-shell[data-view="home"] .footer-meta { gap: .3rem; }
+}
+/* Too short for everything (a phone on its side): let the page scroll rather than cut content off. */
+@media (max-height: 480px) {
+  .app-shell[data-view="home"] { height: auto; overflow: visible; }
+}
